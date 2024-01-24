@@ -30,6 +30,21 @@ main {
     color:#000000;
 }
 
+#library-container {
+    /*change the value to block to display when the button is clicked*/
+    display: none; 
+}
+
+#instruction-container {
+    /*change the value to block to display when the button is clicked*/
+    display: none;
+}
+
+#pay-container {
+    /*change the value to block to display when the button is clicked*/
+    display: none;
+}
+
 
 footer {
     width: 100%;
