@@ -1,6 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
+/*Asterisk Wildcard selector to override default style added by the browser*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background: gray;
+    min-height: 100vh;
+    background: lightgray;
     font-family: 'Quicksand', sans-serif;
+    color: #ffffff;
+    display:flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    background-color: #000000;
+    color: #ffffff;
+    
+ 
+}
+
+main {
+    /*make main element to take up any surplus space */
+    flex: 1 0 auto;
+    color:#000000;
+}
+
+
+footer {
+    width: 100%;
+    background: #000000;
+}
+
+/* -- Media Queries Section --- */
+
+@media screen and (max-width: 320px){
+    
 }
