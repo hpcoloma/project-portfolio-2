@@ -30,6 +30,12 @@ main {
     color:#000000;
 }
 
+.menu-container {
+    /*change the value to block to display when the button is clicked*/
+    display: none;
+}
+
+
 #library-container {
     /*change the value to block to display when the button is clicked*/
     display: none; 
@@ -45,6 +51,9 @@ main {
     display: none;
 }
 
+.nojs {
+    /*Add styling*/
+}
 
 footer {
     width: 100%;
