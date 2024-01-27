@@ -14,6 +14,10 @@ body {
     color: #ffffff;
     display:flex;
     flex-direction: column;
+    background: url("/assets/images/PayCalcs-bg.webp");
+    width: 100%;
+    position: relative;
+    animation: zoom 3s;
 }
 
 h1 {
@@ -28,6 +32,9 @@ main {
     /*make main element to take up any surplus space */
     flex: 1 0 auto;
     color:#000000;
+    position: absolute;
+
+    
 }
 
 .menu-container {
