@@ -21,8 +21,8 @@ body {
 }
 
 h1 {
-    text-align: center;
-    background-color: #000000;
+    /*CHANGE THIS BACKGROUND LATER
+    background-color: #000000;*/
     color: #ffffff;
     
  
@@ -32,13 +32,25 @@ main {
     /*make main element to take up any surplus space */
     flex: 1 0 auto;
     color:#000000;
-    position: absolute;
+    /*general styles for main*/
+    display: block;
+    width: 90%;
+    height: auto;
+    align-self: center;
 
+  
+}
+
+main > div {
+    background-color: ;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     
 }
 
 .menu-container {
-    /*change the value to block to display when the button is clicked*/
+    /*this container displays on load*/
     display: none;
    
 }
