@@ -5,12 +5,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
 }
 
 body {
     min-height: 100vh;
     background: lightgray;
-    font-family: 'Quicksand', sans-serif;
     color: #ffffff;
     display:flex;
     flex-direction: column;
@@ -33,6 +33,7 @@ main {
 .menu-container {
     /*change the value to block to display when the button is clicked*/
     display: none;
+   
 }
 
 
