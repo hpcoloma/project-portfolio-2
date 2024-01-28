@@ -54,7 +54,6 @@ header a {
 main {
     /*make main element to take up any surplus space */
     flex: 1 0 auto;
-    color:#000000;
     /*general styles for main*/
     width: 90%;
     height: auto;
@@ -92,13 +91,13 @@ main > div {
 .info-container {
     max-width: 85%;
     max-height: 80%;
-    background-color: #C7E8FE;
+    background-color: #c2e0f2;
     border: 2px solid #0D0D0D;
     border-radius: 8px;
 }
 
 .info-header {
-    background-color: #4586db;
+    background-color: #3b8fd9;
     font-weight: bold;
 }
 
@@ -115,8 +114,8 @@ main > div {
 
 .nojs {
     width: 100%;
-    background-color: #C7E8FE;
-    border: 2px solid #0D0D0D;
+    background-color: #F27B35;
+    border: 3px solid #0D0D0D;
     border-radius: 8px;
 
 }
@@ -159,11 +158,6 @@ main > div {
  .tabs-container button:hover {
     background-color: rgb(242,123,53,0.8) ;
  }
-
- .tabs .active {
-    background-color: red ;
- }
-
 
 /*Tabs content*/
 .tabscontent {
