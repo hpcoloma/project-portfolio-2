@@ -19,13 +19,24 @@
 </head>
 
 <body>
-    <main>
-    <div class="calculator-container">
-       <div class="top-container" id="top-container">
-            <h1>Irish Pay Tax Calculator</h1>
-            
+    <!--Header-->
+    <header>
+        <div class="top-container" id="top-container">
+            <a href="index.html"> 
+            <div class="img-wrap">
+                <img src="assets/images/taxIcon.png" id="logo-img" alt="Irish Tax Salary Calculator">
+            </div>
+            <div class="img-title">
+                <h1>Irish Pay Tax Calculator</h1>
+            </div>
+            </a>
         </div>
-        <br>
+    </header>
+
+
+    <!--Main Content-->
+    <main>
+        <div class="calculator-container">
         <div class="mid-container" id="mid-container">
             <!--navigation button will display here on bigger screen-->
             <h4>The Irish Pay Tax Calculator is an app designed to calculate net pay base on your total income, tax deductions, pension contribution and other personal circumstances. This will help you estimate your take-home pay taking into consideration tax regulations and allowances.</h4>
@@ -58,14 +69,14 @@
         <!--X button code - <span>&times;</span>-->
         <h3>Terminology</h3>
         <ul>
-            <li>Gross Pay - is the employee&#39;s pay of any kind</li>
-            <li>Taxable Pay - is your gross pay, less any contributions you make.</li>
-            <li>Income Tax -  is a levy imposed by the government on the money you earn, whether you're an individual or a business</li>
-            <li>Tax Credits - </li>
-            <li>Tax Allowance - </li>
-            <li>Universal Social Charge (USC) - is a tax that has replaced both the income levy and the health levy (also known as the health contribution) since 1 January 2011. You pay the USC if your gross income is more than €13,000 per year.</li>
-            <li>Pay Related Social Income (PRSI) - contributions are paid into the Social Insurance Fund (SIF) which helps pay for benefits and pensions.</li>
-            <li>Pension Contribution - defined contribution plan.</li>
+            <li><h4>Gross Pay</h4> - is the employee&#39;s pay of any kind</li>
+            <li><h4>Taxable Pay</h4> - is your gross pay, less any contributions you make.</li>
+            <li><h4>Income Tax</h4> -  is a levy imposed by the government on the money you earn, whether you're an individual or a business</li>
+            <li><h4>Tax Credits</h4> - </li>
+            <li><h4>Tax Allowance</h4> - </li>
+            <li><h4>Universal Social Charge (USC)</h4> - is a tax that has replaced both the income levy and the health levy (also known as the health contribution) since 1 January 2011. You pay the USC if your gross income is more than €13,000 per year.</li>
+            <li><h4>Pay Related Social Income (PRSI)</h4> - contributions are paid into the Social Insurance Fund (SIF) which helps pay for benefits and pensions.</li>
+            <li><h4>Pension Contribution</h4> - defined contribution plan.</li>
         </ul>
         <br>
         <h3>How is your tax calculated?</h3>
@@ -74,8 +85,19 @@
     <!--Instructions-->
     <div class="info-container" id="instruction-container">
         <!--X button code - <span>&times;</span>-->
-        
-
+        <p>All figures entered must be a yearly figure.</p> 
+        <p>To use our salary calculator:</p>
+        <br>
+        <h3>Basic:</h3>
+        <p>Enter your Gross Yearly Salary or the one you would like to get and then click Calculate.</p>
+        <br><br>
+        <h3>Advanced:</h3>
+        <p>Additional information are required to calculate your take-home pay. 
+        <br>Choose you marital status between Single or Married. Add the percentage of your pension contributions. Additional information are required to calculate pay.</p>
+        <br>
+        <p>Once done, a table will display your Yearly, Monthly and Weekly salary information. This will detail all income and deductions.
+            <br>
+            This calculator is based on 2024 Tax Information from the Revenue website. For more information, please click <a href="https://revenue.ie">here</a></p>
     </div>
 
     <!--Calulate Pay-->
