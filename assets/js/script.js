@@ -4,6 +4,9 @@ let menu = document.getElementById('menu-container').innerHTML;
 
 
 
+//Event Listeners
+
+
 //FUNCTIONS
 
 window.onload = menuOptions();
@@ -13,5 +16,7 @@ window.onload = menuOptions();
 function menuOptions() {
     document.getElementById("main-container").innerHTML = menu;
    // document.getElementById("mid-container").innerHTML;
+
+   
 }
 
