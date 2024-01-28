@@ -59,49 +59,52 @@ I also checked the colour combination contrast on
 ![Eightshapes Grid Contrast](assets/images/colourContrast.PNG)
 
 ### Fonts
-I wanted a plain sans serif text that is easy to read both on big and small screens. Also, that looks like a calculator texts. Quicksand is a display sans serif with rounded terminals. According to Google, Quicksand was 'built on a foundation of geometric shapes to give the impression of friendliness. [Google Fonts](https://fonts.google.com/) 
+I wanted a plain sans serif text that is easy to read both on big and small screens. Also, that looks like a calculator texts. Quicksand is a display sans serif with rounded terminals. Ir's rounded ;etterformds give a soft and approachable feel, making it suitable for user interfaces. Quicksand maintains good readability, making it easy for users to view and understand salary-related information. The font's versatility allows it to adapt top various design styles while maintaining a cotemporary look. Font was downloaded from [Google Fonts](https://fonts.google.com/).
 
 ### Imagery Used
-Some of the images I used were downloaded from the web (list of websites bon the credits section) and some are my own original photos. They were resized for easy loading of the website. I created the logo to match the color scheme I chose for my website.
+I have very limited images used on this project. The logo was sourced from [Flaticon](https://flaticon.com) and the background was from [Stackoverflow](https://stackoverflow.com/). 
+These images were reduced using [TinyPNG](https://tinypng.com).
 
 ## **Features**<a name="features"></a>
-- Header - Contains three menu items. Navigation bar should be available on all pages.
-![Header](assets/readme/header.PNG)
+- Header
 
-- Hero Image & Text - The hero image showcase the top best seller product and the text best describe our products.
-![Hero Image](assets/readme/Heroimage.PNG)
+- Main 
+    - Information - luist all terminologies that the user may come accross on processing pay.
 
-- Best Seller section - show the top 3 products that customers always order.
-![Best Seller](assets/readme/bestseller.PNG)
+    INSERT PHOTO HERE
 
-- Testimonials section - these are endorsement from happy and returning customers, who validate the worth of our product.
-![Testimonials](assets/readme/testimonials.PNG)
+    - Instruction - provides instruction on how to use Basic and Advance feature
+        - Basic - provides a standard calculation of take-home pay base on the salary entered, assuming that the user is a single person with no dependents and other income.
+        
+    INSERT PHOTO HERE
 
-- Footer section - shows contact information and links to our social media pages
-![Footer](assets/readme/footer.PNG)
 
-- Products page - gives you all the products we bake.
-![Products](assets/readme/products.PNG)
+        - Advanced - calculates take-home pay base on salary, other income such as BIK and pension contribution. Factors such as dependents and status are considered. 
 
-- Contact Us page provides you a form to complete for you to place the order or ask a questions. You can also see more contact information.
-![Contact Us](assets/readme/contactus.PNG)
 
-- The aim is to makew the website responsive to mobile devices first and the style for all other devices will be added to make it responsive to all devices.
-- Photos will be reduced in size but not in quality for faster loading.
-- All sections are responsive to different device size.
+    INSERT PHOTO HERE
+
+
+    - Calculate Pay - this provides the form to collect data entered by user to calculate pay. User can choose to do BASIC or ADVANCED calculcation.
+
+
+    INSERT PHOTO HERE
+
+
 
 ## **Technology Used**<a name="technology"></a>
 - **Language**
     - HTML
     - CSS3
+    - Javascript
 - **Frameworks, Libararies & Programs**
-    - Photoshop was used to create the logo and wireframes.
-    - [Google Fonts](www.googlefonts.com) to import PT Serif to the stylesheet.
-    - [Font Awesome](www.fontawesome) for footer and contact information icons.
-    - [GitHub](www.github) for hosting project codes, maintaining repository.
-    - [Codeanywhere](www.codeanywhere.com) I initially used this to build my project but find it very slow a lot of times, it takes time for the updates to take effect and longer time to load my workspace.
-    - [Gitpod](www.gitpod) I switch to Gitpod and find it easier to use and faster.
-    - [Favicon](www.favicon.io) to create favicon for my title.
+    - Photoshop to enhanced logo downlaoded from Flaticon.
+    - [Balsamiq] for the wireframes
+    - [Google Fonts](https://www.googlefonts.com) to import Quicksand to the stylesheet.
+    - [GitHub](https://github.com/) for hosting project codes, maintaining repository.
+    - [Gitpod](https://www.gitpod.io/d) used to work on my wokspace and build the app.
+    - [Flaticon](https://www.flaticon.com) where I downlaoded the my logo.
+    - [Favicon](https://favicon.io/) used to create favicons from logo
     - [Am I Responsive](https://amiresponsive.co.uk/) to show the image of the website on different device size.
 
 ## **Testing**<a name="testing"></a>
