@@ -2,7 +2,7 @@
 
 /*Asterisk Wildcard selector to override default style added by the browser*/
 * {
-    padding: 2px 2px;
+    padding: 2px -0.5px;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
