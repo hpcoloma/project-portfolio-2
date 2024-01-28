@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 
 /*Asterisk Wildcard selector to override default style added by the browser*/
 * {
@@ -68,7 +68,7 @@ main {
 }
 
 main > div {
-    background-color: rgb(86,191,181,0.8);
+    background-color: rgb(86,191,181,0.9);
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -92,8 +92,32 @@ main > div {
 .menu-container {
     /*this container displays on load*/
     display: none;
-  
 }
+
+.info-container {
+    max-width: 85%;
+    max-height: 80%;
+    background-color: #C7E8FE;
+    border: 2px solid #0D0D0D;
+    border-radius: 8px;
+}
+
+.info-header {
+    background-color: #4586db;
+    font-weight: bold;
+}
+
+.info-text {
+    padding-left: 10px;
+}
+
+.close {
+    font-size: 2rem;
+    float: right;
+    cursor: pointer;
+    line-height: 15px;
+}
+
 
 #library-container {
     /*change the value to block to display when the button is clicked*/
@@ -102,7 +126,7 @@ main > div {
 
 #instruction-container {
     /*change the value to block to display when the button is clicked*/
-    display: none;
+    /*display: none;*/
 }
 
 #pay-container {
