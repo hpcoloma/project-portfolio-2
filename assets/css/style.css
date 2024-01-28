@@ -104,6 +104,7 @@ main > div {
 
 .info-text {
     padding-left: 10px;
+    padding-top: 10px;
 }
 
 .close {
@@ -152,22 +153,26 @@ main > div {
     padding: 14px 16px;
     transition: 0.3s;
     background-color: #F2AE2E;
-    width: 150px;
+    width: 100px;
     font-size: 15px;
+    border-radius: 3px;
+
  }
 
  .tabs-container button:hover {
-    background-color: rgb(242,123,53,0.8) ;
- }
-
- .tablinks:active {
-    border-bottom-color: blue;
+    background-color: rgb(86,191,181);
  }
 
 /*Tabs content*/
 .tabscontent {
     padding: 6px 12px;
-    display:none;
+    background-color: rgb(86,191,181);
+    display: none;
+    width: 90%;
+}
+
+.tab-contents {
+    align-items: center;
 }
 
 /*Footer*/

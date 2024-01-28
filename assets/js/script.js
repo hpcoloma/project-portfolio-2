@@ -2,17 +2,18 @@
 
 let menu = document.getElementById('menu-container').innerHTML;
 let tabButtons = document.querySelectorAll('.tablinks');
-let tabContents = document.querySelectorAll('.tabscontent');
+let i;
+
 
 
 //Iteration Statement
 
-for (let i=0; i<tabButtons.length; i++) {
+for (let i = 0; i < tabButtons.length; i++) {
     tabButtons[i].addEventListener('click', ()=> {
         let tabId = tabButtons[i].getAttribute('data-tab');
-    
+        let tabContents = document.querySelectorAll('.tabscontent');
     //To hide all tabs
-    for (let j=0; j < tabContents.length; j++) {
+    for (let j = 0; j < tabContents.length; j++) {
         tabContents[j].style.display = 'none';
    }
 

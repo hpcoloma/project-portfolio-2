@@ -45,10 +45,36 @@ PayCalcs IE is an app designed to calculate net pay base on your total income, t
 ### Site Owner Goals
 ## **Design**<a name="design"></a>
 ### Wireframes
-- **Desktop Wireframes**
+I used [Balsamiq](https://balsamiq.com) to generate digital sketches of how I want my site to look like on different devices. Balsamiq had helped me visualised my idea and finalised my design before I start writing my codes.
+
+- **Home screen/Main Menu**
+
+    INSERT PHOTO HERE
+
+- **Information**
+
+    INSERT PHOTO HERE
+
+
+- **Instruction**
+
+    INSERT PHOTO HERE
+
+
+- **Calculate Pay**
+    - *Basic and results*
+
+        INSERT PHOTO HERE
+
+
+    - *Advanced and results*
+
+
+        INSERT PHOTO HERE
+
     
 ### Colour Scheme
-I wanted a combination of earthy tones with vibrant pops of colors that creates a versatile and balanced palette. I searched for a logo that would match my project idea. Logo that has a calculator and euro sign. I found this [image](https://cdn-icons-png.flaticon.com/128/9720/9720608.png) on the web for my logo and this [background image](https://cdn.stackoverflow.co/images/jo7n4k8s/production/81cf622ff38560139839d5be23fff951bd33a243-1420x920.png?rect=0,87,1420,746&w=1200&h=630&auto=format&dpr=2) and instantly feel inlove with the colors. So I created a palette for all the colors in the photos.
+I wanted a combination of earthy tones with vibrant pops of colors that creates a versatile and balanced palette. I searched for a logo that would match my project idea. Logo that has a calculator and euro sign. I found this [LOGO IMAGE](https://cdn-icons-png.flaticon.com/128/9720/9720608.png) on the web for my logo. I changed the dollar sign to euro sign. I also found this [BACKGORUND IMAGE](https://cdn.stackoverflow.co/images/jo7n4k8s/production/81cf622ff38560139839d5be23fff951bd33a243-1420x920.png?rect=0,87,1420,746&w=1200&h=630&auto=format&dpr=2) and instantly liked the color combination. So I created a palette from these photos by uploading them to [Adobe Color](https://color.adobe.com) to get the hex codes for some of the color shades on the photos.
 
 ![Colour Palette used](assets/images/colourpalette1.PNG)
 ![Cour Palette used](assets/images/colourpalette2.PNG)
@@ -69,7 +95,7 @@ These images were reduced using [TinyPNG](https://tinypng.com).
 - Header
 
 - Main 
-    - Information - luist all terminologies that the user may come accross on processing pay.
+    - Information - list all terminologies that the user may come accross on processing pay.
 
     INSERT PHOTO HERE
 
@@ -104,50 +130,52 @@ These images were reduced using [TinyPNG](https://tinypng.com).
     - [GitHub](https://github.com/) for hosting project codes, maintaining repository.
     - [Gitpod](https://www.gitpod.io/d) used to work on my wokspace and build the app.
     - [Flaticon](https://www.flaticon.com) where I downlaoded the my logo.
-    - [Favicon](https://favicon.io/) used to create favicons from logo
+    - [Fontawesome] for menu icons.
+    - [Favicon](https://favicon.io/) used to create favicons using logo from flaticon.
     - [Am I Responsive](https://amiresponsive.co.uk/) to show the image of the website on different device size.
 
 ## **Testing**<a name="testing"></a>
 - **Code Validation**
     - [W3C Validator](https://validator.w3.org/#validate_by_input) for HTML validation.
-        - Home Page
-        ![Home Page](assets/readme/HomeChecker.PNG)
-        - Products
-        ![Products](assets/readme/ProdCheck.PNG)
-        - Contact Us
-        ![Contact Us](assets/readme/contactCheck.PNG)
-    - [W3c Validator](https://jigsaw.w3.org/css-validator/) for CSS validation.
-        [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fhpcoloma.github.io%2Flusciousbliss-ie&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+       
+       INSERT RESULT HERE
+
+     - [W3c Validator](https://jigsaw.w3.org/css-validator/) for CSS validation.
+        
+       INSERT RESULT HERE
+       
+
+    - [JSHint]() for Javascript code validation.
+    
+       INSERT RESULT HERE
+       
+
 - **Contrast Grid**
     - [Eightshapes Grid Contrast](https://contrast-grid.eightshapes.com/) for checking the colour contrast of my colour palette.
 - **Testing Performance**
     - Mobile
-        - Home 
-        ![Home Test Performance](assets/readme/HomeTest.PNG)
-        - Products
-        ![Products Test Performance](assets/readme/HomeTest.PNG)
-        - Contact Us
-        ![Contact Us Test Performance](assets/readme/HomeTest.PNG)
+     
+     
+       INSERT RESULT HERE
+       
+
     
     - Desktop
-        - Home 
-        ![Home Test Performance](assets/readme/HomeDtest.PNG)
-        - Products
-        ![Products Test Performance](assets/readme/ProdDtest.PNG)
-        - Contact Us
-        ![Contact Us Test Performance](assets/readme/ContDtest.PNG)
+       
+
+       INSERT RESULT HERE
+       
+
 
 - **Further Testing**
-    - The website was tested on Google Chrome, Safari and Microsoft Edge browsers.
-    - The following mobile devices were also used to view the website
+   
 
 ## **Future Enhancements**<a name="enhancements"></a>
-- The intention is to build an e-commerce website where odering is possible. 
-- Make online payment option available.
-- Click and collect orders.
-- Integrate with delivery channels such as Deliveroo, Uber Eats etc.
+
 
 ## **Deployment**<a name="deployments"></a>
+
+ADD MORE DETAILS
 
 The project was deployed to Github pages. Below are the steps used to deploy the site.
 
