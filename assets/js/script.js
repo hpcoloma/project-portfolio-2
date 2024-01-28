@@ -1,11 +1,25 @@
 //Global variables
 
 let menu = document.getElementById('menu-container').innerHTML;
+let tabButtons = document.querySelectorAll('.tablinks');
+let tabContents = document.querySelectorAll('.tabscontent');
 
 
+//Iteration Statement
 
-//Event Listeners
+for (let i=0; i<tabButtons.length; i++) {
+    tabButtons[i].addEventListener('click', ()=> {
+        let tabId = tabButtons[i].getAttribute('data-tab');
+    
+    //To hide all tabs
+    for (let j=0; j < tabContents.length; j++) {
+        tabContents[j].style.display = 'none';
+   }
 
+    //Show the active tab
+    document.getElementById(tabId).style.display = 'block';
+    });
+}
 
 //FUNCTIONS
 
@@ -16,7 +30,6 @@ window.onload = menuOptions();
 function menuOptions() {
     document.getElementById("main-container").innerHTML = menu;
    // document.getElementById("mid-container").innerHTML;
-
-   
+  
 }
 

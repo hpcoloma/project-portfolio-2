@@ -145,7 +145,7 @@ main > div {
 }
 
 /*Tabs button style*/
- .tabs button {
+ .tabs-container button {
     display: inline-block;
     border: none;
     cursor: pointer;
@@ -156,20 +156,19 @@ main > div {
     font-size: 15px;
  }
 
- .tabs button:hover {
+ .tabs-container button:hover {
     background-color: rgb(242,123,53,0.8) ;
  }
 
- .tabs button.active {
-    background-color: rgb(242,123,53,0.8) ;
+ .tabs .active {
+    background-color: red ;
  }
 
 
 /*Tabs content*/
 .tabscontent {
     padding: 6px 12px;
-    border: 1px solid red;
-    border-top: #4586db;
+    display:none;
 }
 
 /*Footer*/
