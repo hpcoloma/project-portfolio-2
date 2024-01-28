@@ -48,15 +48,18 @@ PayCalcs IE is an app designed to calculate net pay base on your total income, t
 - **Desktop Wireframes**
     
 ### Colour Scheme
-I wanted a combination of earthy tones with vibrant pops of colors that creates a versatile and balanced palette. I searched for a logo that would match my project idea. Logo that has a calculator and euro sign. I found this [image](https://cdn-icons-png.flaticon.com/128/9720/9720608.png) on the web for my logo and this [background image] (https://cdn.stackoverflow.co/images/jo7n4k8s/production/81cf622ff38560139839d5be23fff951bd33a243-1420x920.png?rect=0,87,1420,746&w=1200&h=630&auto=format&dpr=2) and instantly feel inlove with the colors. So I created a palette for all the colors in the photos.
+I wanted a combination of earthy tones with vibrant pops of colors that creates a versatile and balanced palette. I searched for a logo that would match my project idea. Logo that has a calculator and euro sign. I found this [image](https://cdn-icons-png.flaticon.com/128/9720/9720608.png) on the web for my logo and this [background image](https://cdn.stackoverflow.co/images/jo7n4k8s/production/81cf622ff38560139839d5be23fff951bd33a243-1420x920.png?rect=0,87,1420,746&w=1200&h=630&auto=format&dpr=2) and instantly feel inlove with the colors. So I created a palette for all the colors in the photos.
+
+![Colour Palette used](assets/images/colourpalette1.PNG)
+![Cour Palette used](assets/images/colourpalette2.PNG)
 
 I also checked the colour combination contrast on 
 [Eightshapes Grid Contrast](https://contrast-grid.eightshapes.com/)
 
-![Eightshapes Grid Contrast](assets/readme/ColorGrid.PNG)
+![Eightshapes Grid Contrast](assets/images/colourContrast.PNG)
 
 ### Fonts
-I wanted a plain Serif text that is easy to read. PT Serif is a transitional serif typeface with humanistic terminals. It is designed for use together with PT Sans, and is harmonized across metrics, proportions, weights and design. Fonts were downloaded from [Google Fonts](https://fonts.google.com/) 
+I wanted a plain sans serif text that is easy to read both on big and small screens. Also, that looks like a calculator texts. Quicksand is a display sans serif with rounded terminals. According to Google, Quicksand was 'built on a foundation of geometric shapes to give the impression of friendliness. [Google Fonts](https://fonts.google.com/) 
 
 ### Imagery Used
 Some of the images I used were downloaded from the web (list of websites bon the credits section) and some are my own original photos. They were resized for easy loading of the website. I created the logo to match the color scheme I chose for my website.

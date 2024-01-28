@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
 
 /*Asterisk Wildcard selector to override default style added by the browser*/
 * {
@@ -80,6 +80,7 @@ main > div {
     width: clamp(150px, 65%, 500px);  
     box-shadow: 5px 3px rgb(242,123,53,0.5);
     margin-bottom: 15px;
+    font-size:large
        
 }
 
@@ -157,6 +158,10 @@ main > div {
 
  .tabs-container button:hover {
     background-color: rgb(242,123,53,0.8) ;
+ }
+
+ .tablinks:active {
+    border-bottom-color: blue;
  }
 
 /*Tabs content*/
