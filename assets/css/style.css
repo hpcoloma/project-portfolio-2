@@ -2,7 +2,7 @@
 
 /*Asterisk Wildcard selector to override default style added by the browser*/
 * {
-    padding: 0;
+    padding: 2px 2px;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
@@ -16,9 +16,7 @@ body {
     flex-direction: column;
     background: url("/assets/images/PayCalcs-bg.webp");
     width: 100%;
-    position: relative;
-    animation: zoom 3s;
-}
+    
 
 h1 {
     color: #0d0d0d;
@@ -37,23 +35,34 @@ main {
 
   
 }
-
 main > div {
-    background-color: rgb(86,191,181,0.6);
+    background-color: rgb(86,191,181,0.8);
     display: flex;
     flex-direction: column;
     text-align: center;
     border: 2px solid #0d0d0d;
     border-radius: 8px;
+    padding-top: 5px;
+    padding-bottom: 20px;
     
+}
+
+#main-container > button {
+    background-color: #F2AE2E;
+    border-radius: 10px;
+    height: 80px;
+    width: clamp(150px, 65%, 500px);  
+    box-shadow: 5px 3px rgb(242,123,53,0.5);
+    margin-bottom: 15px;
+       
 }
 
 .menu-container {
     /*this container displays on load*/
     display: none;
+    
    
 }
-
 
 #library-container {
     /*change the value to block to display when the button is clicked*/
@@ -81,10 +90,9 @@ footer {
 
 /* -- Media Queries Section --- */
 
-@media screen and (min-width: 510px){
+@media screen and (min-width: 820px){
     main {
-        width: 70%;
-        height: auto;
+       width: 700px;
     }
 
     
