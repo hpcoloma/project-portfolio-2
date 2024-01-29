@@ -1,8 +1,9 @@
 //Global variables
 
 let menu = document.getElementById('menu-container').innerHTML;
-let libraryContainer = document.getElementById("library-container");
-
+let informationContainer = document.getElementById("information-container");
+let instructionContainer = document.getElementById("instruction-container");
+let payContainer = document.getElementById("pay-container");
 
 
 
@@ -39,34 +40,44 @@ function menuOptions() {
 }
 
 
-
-
-
-//To show/hide library container
-//Library container Show
-function showLibraryContainer() {
-    libraryContainer.style.display = 'block';
-}
-
-//Library container hide
-function hideLibraryContainer() {
-    libraryContainer.style.display = 'none';
-}
-
-//Information button elements
+//modal container elements
 let infoButton = document.getElementById("information-button");
-let infoButtonHide = document.getElementById("library-close");
+let infoButtonHide = document.getElementById("information-close");
+let instructButton = document.getElementById("instruction-button");
+let instructButtonHide = document.getElementById("instruction-close");
 
 
-//Information event listeners
-infoButton.addEventListener('click', showLibraryContainer);
-infoButtonHide.addEventListener('click', hideLibraryContainer);
+//Show-Hide event listeners
+infoButton.addEventListener('click', showInfoContainer);
+infoButtonHide.addEventListener('click', hideInfoContainer);
+instructButton.addEventListener('click', showInstructionContainer);
+instructButtonHide.addEventListener('click', hideInstructionContainer);
 
 
+//To show/hide elements
+//Show information container
+function showInfoContainer() {
+    informationContainer.style.display = 'block';
+}
+
+//Hide information container
+function hideInfoContainer() {
+    informationContainer.style.display = 'none';
+}
 
 //To show/hide instructions container
 //Instruction container show
+function showInstructionContainer() {
+    instructionContainer.style.display = 'block';
+}
+
 //Instruction container hide
+function hideInstructionContainer() {
+    instructionContainer.style.display = 'none';
+}
+
+
+
 
 
 
