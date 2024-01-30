@@ -34,8 +34,8 @@
 
     <!--Main Content-->
     <noscript class="nojs"><p>Many Internet Web sites contain JavaScript, a scripting programming language that runs on the web browser to make specific features on the web page functional. If JavaScript has been disabled within your browser, the content or the functionality of the web page can be limited or unavailabe.</p></noscript>
-    <main>
-        <div class="calculator-container">
+    <main id="main">
+        <div class="calculator-container" id="calculator-container">
         <div class="mid-container" id="mid-container">
             <!--navigation button will display here on bigger screen-->
             <h4>The Irish Pay Tax Calculator is an app designed to calculate net pay base on your total income, tax deductions, pension contribution and other personal circumstances. This will help you estimate your take-home pay taking into consideration tax regulations and allowances.</h4>
@@ -43,8 +43,7 @@
         <br>
         <div class="main-container" id="main-container">
             <!--container for the form, results and main menu-->
-            <h3>MAIN CONTAINER</h3>
-
+            
        
         </div>
     </div>
@@ -127,6 +126,8 @@
                     <button class="tablinks" data-tab="advanced">Advanced</button>
                 <!--Tab Contents-->
                 <div class="tab-contents">
+
+                    <!-- Basic Pay calculation-->
                     <div id="basic" class="tabscontent">
                         <h3>Your Details:</h3>
                         <br>
@@ -136,6 +137,8 @@
                         <br>
                         <input type="submit" value="Calculate Pay">
                     </div>
+                    
+                    <!-- Advanced Pay calculation-->
                     <div id="advanced" class="tabscontent">
                         <h3>Your Details:</h3>
                         <br>

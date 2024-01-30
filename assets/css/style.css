@@ -161,19 +161,19 @@ main > div {
 
 }
 
-#library-container {
+#information-container {
     /*change the value to block to display when the button is clicked*/
-    display: none;
+    
 }
 
 #instruction-container {
     /*change the value to block to display when the button is clicked*/
-    /*display: none;*/
+    
 }
 
 #pay-container {
     /*change the value to block to display when the button is clicked*/
-    /*display: none;*/
+    
 }
 
 /*Tabs Style*/
@@ -188,6 +188,7 @@ main > div {
 
 .tabs-container {
     min-height: 500px;
+    
 }
 
  .tabs-container button {
@@ -211,9 +212,14 @@ main > div {
 .tabscontent {
     padding: 6px 12px;
     background-color: rgb(86,191,181);
-    display: none;
     width: 90%;
 }
+
+.tab-contents #advanced {
+    display: none;
+}
+
+
 
 .tab-contents {
     align-items: center;

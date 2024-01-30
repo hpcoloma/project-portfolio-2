@@ -35,7 +35,7 @@ window.onload = menuOptions();
 //Display menu options in main container
 function menuOptions() {
     document.getElementById("main-container").innerHTML = menu;
-   // document.getElementById("mid-container").innerHTML;
+   document.getElementById("mid-container").innerHTML;
   
 }
 
@@ -54,6 +54,7 @@ infoButtonHide.addEventListener('click', hideInfoContainer);
 instructButton.addEventListener('click', showInstructionContainer);
 instructButtonHide.addEventListener('click', hideInstructionContainer);
 calcButtonHide.addEventListener('click', hideCalcsContainer);
+calcButton.addEventListener('click', showCalcContainer);
 
 
 //To show/hide info container
@@ -80,14 +81,16 @@ function hideInstructionContainer() {
 
 
 //To show calculate pay container occupying replacing all elements in the main-container
-function calculatePay() {
+function showCalcContainer() {
+    document.getElementById("main-container").innerHTML = payContainer;
+
     
 }
 
 //to hide pay container
 function hideCalcsContainer() {
     payContainer.style.display = 'none';
-    menuOptions();
+   
 }
 
 
