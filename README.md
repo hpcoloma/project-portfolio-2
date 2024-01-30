@@ -74,19 +74,19 @@ I used [Balsamiq](https://balsamiq.com) to generate digital sketches of how I wa
 
     
 ### Colour Scheme
-I wanted a combination of earthy tones with vibrant pops of colors that creates a versatile and balanced palette. I searched for a logo that would match my project idea. Logo that has a calculator and euro sign. I found this [LOGO IMAGE](https://cdn-icons-png.flaticon.com/128/9720/9720608.png) on the web for my logo. I changed the dollar sign to euro sign. I also found this [BACKGORUND IMAGE](https://cdn.stackoverflow.co/images/jo7n4k8s/production/81cf622ff38560139839d5be23fff951bd33a243-1420x920.png?rect=0,87,1420,746&w=1200&h=630&auto=format&dpr=2) and instantly liked the color combination. So I created a palette from these photos by uploading them to [Adobe Color](https://color.adobe.com) to get the hex codes for some of the color shades on the photos.
+I wanted a combination of earthy tones with vibrant pops of colors that creates a balanced palette. The color combination compliments each other, no color dominates or feels out of place. They harmonised and can be flexibly used in different design scenarios. I searched for a logo that would match my project idea. Logo that has a calculator and euro sign. I found this [LOGO IMAGE](https://cdn-icons-png.flaticon.com/128/9720/9720608.png) on the web for my logo. I changed the dollar sign to euro sign. I also found this [BACKGROUND IMAGE](https://cdn.stackoverflow.co/images/jo7n4k8s/production/81cf622ff38560139839d5be23fff951bd33a243-1420x920.png?rect=0,87,1420,746&w=1200&h=630&auto=format&dpr=2) and instantly liked the color combination. So I created a palette from these photos by uploading them to [Adobe Color](https://color.adobe.com) to get the hex codes for some of the color shades on the photos.
 
-![Colour Palette used](assets/images/colourpalette1.PNG)
-![Cour Palette used](assets/images/colourpalette2.PNG)
+![Colour Palette used](assets/images/colourpalette1.png)
+![Cour Palette used](assets/images/colourpalette2.png)
 
 I also checked the colour combination contrast on 
 [Eightshapes Grid Contrast](https://contrast-grid.eightshapes.com/)
 
-![Eightshapes Grid Contrast](assets/images/colourContrast.PNG)
+![Eightshapes Grid Contrast](assets/images/colourcontrast.png)
 Link to the resuls [here](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%232A968B%0D%0A%234486DB%0D%0A%23C9F2EB%0D%0A%23F2AE2E%0D%0A%23FF8C36%0D%0A%23FFFFFF%0D%0A%230D0D0D&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp)
 
 ### Fonts
-I wanted a plain sans serif text that is easy to read both on big and small screens. Also, that looks like a calculator texts. Quicksand is a display sans serif with rounded terminals. Ir's rounded ;etterformds give a soft and approachable feel, making it suitable for user interfaces. Quicksand maintains good readability, making it easy for users to view and understand salary-related information. The font's versatility allows it to adapt top various design styles while maintaining a cotemporary look. Font was downloaded from [Google Fonts](https://fonts.google.com/).
+I wanted a plain sans serif text that is easy to read both on big and small screens. Also, that looks like a calculator texts. Quicksand is a display sans serif with rounded terminals. It's rounded letterforms give a soft and approachable feel, making it suitable for user interfaces. Quicksand maintains good readability, making it easy for users to view and understand salary-related information. The font's versatility allows it to adapt top various design styles while maintaining a cotemporary look. Font was downloaded from [Google Fonts](https://fonts.google.com/).
 
 ### Imagery Used
 I have very limited images used on this project. The logo was sourced from [Flaticon](https://flaticon.com) and the background was from [Stackoverflow](https://stackoverflow.com/). 

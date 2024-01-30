@@ -45,16 +45,18 @@ let infoButton = document.getElementById("information-button");
 let infoButtonHide = document.getElementById("information-close");
 let instructButton = document.getElementById("instruction-button");
 let instructButtonHide = document.getElementById("instruction-close");
-
+let calcButton = document.getElementById("calculatePay-button");
+let calcButtonHide = document.getElementById("calc-close");
 
 //Show-Hide event listeners
 infoButton.addEventListener('click', showInfoContainer);
 infoButtonHide.addEventListener('click', hideInfoContainer);
 instructButton.addEventListener('click', showInstructionContainer);
 instructButtonHide.addEventListener('click', hideInstructionContainer);
+calcButtonHide.addEventListener('click', hideCalcsContainer);
 
 
-//To show/hide elements
+//To show/hide info container
 //Show information container
 function showInfoContainer() {
     informationContainer.style.display = 'block';
@@ -77,11 +79,16 @@ function hideInstructionContainer() {
 }
 
 
-
-
-
-
 //To show calculate pay container occupying replacing all elements in the main-container
+function calculatePay() {
+    
+}
+
+//to hide pay container
+function hideCalcsContainer() {
+    payContainer.style.display = 'none';
+    menuOptions();
+}
 
 
 //Basic calculation formula

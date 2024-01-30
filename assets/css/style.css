@@ -117,7 +117,7 @@ main > div {
 
 .info-container {
     max-width: 85%;
-    max-height: 80%;
+    max-height: 90%;
     background-color: #c2e0f2;
     border: 2px solid #0D0D0D;
     border-radius: 8px;
@@ -125,28 +125,12 @@ main > div {
     top: 0;
     left: 0;
     overflow-y: auto;
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s
-
+ 
 }
-
-/*Add animation*/
-@-webkit-keyframes animatetop {
-    from {top: -300px; opacity:0}
-    to {top:0; opacity:1}
-}
-
-@keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-  }
-
 
 .info-header {
     background-color: #3b8fd9;
-    font-weight: bold;
+    
 }
 
 
@@ -154,6 +138,7 @@ main > div {
 .info-text {
     padding-left: 10px;
     padding-top: 10px;
+    min-height: 60%;
 }
 
 .close {
@@ -188,7 +173,7 @@ main > div {
 
 #pay-container {
     /*change the value to block to display when the button is clicked*/
-    display: none;
+    /*display: none;*/
 }
 
 /*Tabs Style*/
@@ -200,6 +185,11 @@ main > div {
 }
 
 /*Tabs button style*/
+
+.tabs-container {
+    min-height: 500px;
+}
+
  .tabs-container button {
     display: inline-block;
     border: none;
