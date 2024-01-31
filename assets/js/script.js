@@ -108,9 +108,9 @@ function calculateSalary() {
     let netIncomeTax = 0;
 
     if (yearlySalary <= taxBand1) {
-        netIncomeTax = (yearlySalary * lowerRate) - (taxCreditSingle + taxCreditPaye);
+        netIncomeTax = Math.round((yearlySalary * lowerRate) - (taxCreditSingle + taxCreditPaye));
     } else {
-        netIncomeTax = ((taxBand1 * 0.20) + ((yearlySalary - taxBand1) * higherRate)) - (taxCreditPaye + taxCreditSingle);
+        netIncomeTax = Math.round(((taxBand1 * 0.20) + ((yearlySalary - taxBand1) * higherRate)) - (taxCreditPaye + taxCreditSingle));
     }
 
 
@@ -128,13 +128,14 @@ function calculateSalary() {
     let uscDeduction = 0;
 
     //USC Calculation
-    if (yearlySalary <= 12012) {
-
-        uscDeduction = yearlySalary * uscRate1;
-    } else if (yearlySalary <= 25760) {
-        uscDeduction = usc1 + ((yearlySalary - 12012) * uscRate2);
+    if (yearlySalary <= 13000) {
+        uscDeduction = 0;
+    } else if (yearlySalary > 12012 && yearlySalary <= 25760) {
+        uscDeduction = Math.round(usc1 + ((yearlySalary - 12012) * uscRate2));
+    } else if (yearlySalary > 25760 && yearlySalary <= 70044) {
+        uscDeduction = Math.round(usc1 + usc2 + ((yearlySalary - 25760) * uscRate3));
     } else {
-        uscDeduction = 500;
+        uscDeduction = Math.round(usc1 + usc2 + usc3 + ((yearlySalary - 70044) * uscRate4));
     }
 
 
@@ -155,7 +156,7 @@ function calculateSalary() {
     const prsiRate = 0.04;
 
     // Calculate PRSI deductions
-    const prsiDeduction = yearlySalary * prsiRate;
+    const prsiDeduction = Math.round(yearlySalary * prsiRate);
     const monthlyUsc = Math.round(uscDeduction / 12);
     const monthlyPrsi = Math.round(prsiDeduction / 12);
     const weeklyUsc = Math.round(uscDeduction / 52);
