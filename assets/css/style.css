@@ -11,9 +11,9 @@
 body {
     min-height: 100vh;
     color: #0D0D0D;
-    display:flex;
+    display: flex;
     flex-direction: column;
-    background: url(../images/paycalcsbg.png) no-repeat;
+    background: url(..images/paycalcsbg.png) no-repeat;
     width: 100%;
     padding-top: 5px;
 }
@@ -23,7 +23,7 @@ body {
 
 header {
     text-align: center;
-    
+
 }
 
 header img {
@@ -34,15 +34,15 @@ header img {
 
 
 header a {
-        text-decoration: none;
-        color: inherit;
-        
-    }
+    text-decoration: none;
+    color: inherit;
+
+}
 
 .img-title {
     display: flex;
     justify-content: space-around;
-    
+
 }
 
 #logo-img {
@@ -70,8 +70,8 @@ main {
 
 }
 
-main > div {
-    background-color: rgb(86,191,181,0.95);
+main>div {
+    background-color: rgb(86, 191, 181, 0.95);
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -79,18 +79,17 @@ main > div {
     border-radius: 8px;
     padding-top: 5px;
     padding-bottom: 20px;
-    
+
 }
 
-#main-container > button {
+#main-container>button {
     background-color: #F2AE2E;
     border-radius: 10px;
     height: 80px;
-    width: clamp(150px, 65%, 500px);  
-    box-shadow: 5px 3px rgb(242,123,53,0.5);
+    width: clamp(150px, 65%, 500px);
+    box-shadow: 5px 3px rgb(242, 123, 53, 0.5);
     margin-bottom: 15px;
-    font-size:large
-       
+    font-size: large
 }
 
 .menu-container {
@@ -110,8 +109,8 @@ main > div {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(192,224,242);
-    background-color: rgb(192,224,242, 0.5);
+    background-color: rgb(192, 224, 242);
+    background-color: rgb(192, 224, 242, 0.5);
 }
 
 
@@ -125,12 +124,12 @@ main > div {
     top: 0;
     left: 0;
     overflow-y: auto;
- 
+
 }
 
 .info-header {
     background-color: #3b8fd9;
-    
+
 }
 
 
@@ -163,12 +162,12 @@ main > div {
 
 #information-container {
     /*change the value to block to display when the button is clicked*/
-    
+
 }
 
 #instruction-container {
     /*change the value to block to display when the button is clicked*/
-    
+
 }
 
 #pay-container {
@@ -180,18 +179,18 @@ main > div {
 .tabs {
     overflow: hidden;
     padding-top: 5px;
-   
-    
+
+
 }
 
 /*Tabs button style*/
 
 .tabs-container {
     min-height: 300px;
-    
+
 }
 
- .tabs-container button {
+.tabs-container button {
     display: inline-block;
     border: none;
     cursor: pointer;
@@ -202,16 +201,16 @@ main > div {
     font-size: 15px;
     border-radius: 3px;
 
- }
+}
 
- .tabs-container button:hover {
-    background-color: rgb(86,191,181);
- }
+.tabs-container button:hover {
+    background-color: rgb(86, 191, 181);
+}
 
 /*Tabs content*/
 .tabscontent {
     padding: 6px 12px;
-    background-color: rgb(86,191,181);
+    background-color: rgb(86, 191, 181);
     width: 90%;
 }
 
@@ -234,12 +233,15 @@ table {
     align-self: center;
 }
 
-th, td {
+th,
+td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
 }
-th, td {
+
+th,
+td {
     background-color: #f2f2f2;
 }
 
@@ -251,10 +253,10 @@ footer {
 
 /* -- Media Queries Section --- */
 
-@media screen and (min-width: 820px){
+@media screen and (min-width: 820px) {
     main {
-       width: 700px;
+        width: 700px;
     }
 
-    
+
 }

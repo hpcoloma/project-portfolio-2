@@ -25,6 +25,7 @@
     - **Contrast Grid**
     - **Testing Performance**
     - **Further Testing**
+- [**Challenges**](#challenges)
 - [**Future Enhancements**](#enhancements)
 - [**Deployment**](#deployment)
 - [**Acknowledgements**](#acknowledgement)
@@ -169,7 +170,10 @@ These images were reduced using [TinyPNG](https://tinypng.com).
 
 
 - **Further Testing**
-   
+
+## **Challenges**<a name="challenges"></a>
+
+- Ran out of credit in Gitpod
 
 ## **Future Enhancements**<a name="enhancements"></a>
 
@@ -192,7 +196,7 @@ This project will not be live today without the help and support of the followin
 
 1. Arnold Ambida - my husband, who looks after my 3 children while I do this course.
 2. Matt Boden - my mentor who gave lots of tips and advise during our first meeting.
-3. Towbie - for recommending Gitpod. It saved me more time!
+3. 
 
 ## **Credits**<a name="credits"></a>
 

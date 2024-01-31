@@ -1,183 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Web base payroll calculator base on Budget 2024">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Web base payroll calculator base on Budget 2024"
+    />
 
     <!--Favicon-->
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
 
     <!--Fontawesome-->
-    <script src="https://kit.fontawesome.com/6a1ff66816.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/6a1ff66816.js"
+      crossorigin="anonymous"
+    ></script>
     <!--Stylesheet-->
-    <link rel="stylesheet" href="assets/css/style.css">
-    
-    
-    <title>Payroll Calculator</title>
-</head>
+    <link rel="stylesheet" href="assets/css/style.css" />
 
-<body>
+    <title>Payroll Calculator</title>
+  </head>
+
+  <body>
     <!--Header-->
     <header>
-        <div class="top-container" id="top-container">
-            <a href="index.html">
-                <img src="assets/images/taxicon.png" id="logo-img" alt="Irish Tax Salary Calculator">
-                <h1 class="img-title">PayCalcs IE</h1>
-            
-            
-            </a>
-        </div>
+      <div class="top-container" id="top-container">
+        <a href="index.html">
+          <img
+            src="assets/images/taxicon.png"
+            id="logo-img"
+            alt="Irish Tax Salary Calculator"
+          />
+          <h1 class="img-title">PayCalcs IE</h1>
+        </a>
+      </div>
     </header>
 
-
     <!--Main Content-->
-    <noscript class="nojs"><p>Many Internet Web sites contain JavaScript, a scripting programming language that runs on the web browser to make specific features on the web page functional. If JavaScript has been disabled within your browser, the content or the functionality of the web page can be limited or unavailabe.</p></noscript>
+    <noscript class="nojs"
+      ><p>
+        Many Internet Web sites contain JavaScript, a scripting programming
+        language that runs on the web browser to make specific features on the
+        web page functional. If JavaScript has been disabled within your
+        browser, the content or the functionality of the web page can be limited
+        or unavailabe.
+      </p></noscript
+    >
     <main id="main">
-        <div class="calculator-container" id="calculator-container">
+      <div class="calculator-container" id="calculator-container">
         <div class="mid-container" id="mid-container">
-            <!--navigation button will display here on bigger screen-->
-            <h4>The Irish Pay Tax Calculator is an app designed to calculate net pay base on your total income, tax deductions, pension contribution and other personal circumstances. This will help you estimate your take-home pay taking into consideration tax regulations and allowances.</h4>
+          <!--navigation button will display here on bigger screen-->
+          <h4>
+            The Irish Pay Tax Calculator is an app designed to calculate net pay
+            base on your total income, tax deductions, pension contribution and
+            other personal circumstances. This will help you estimate your
+            take-home pay taking into consideration tax regulations and
+            allowances.
+          </h4>
         </div>
-        <br>
+        <br />
         <div class="main-container" id="main-container">
-            <!--container for the form, results and main menu-->
-            
-       
+          <!--container for the form, results and main menu-->
         </div>
-    </div>
-</main>
-
-
-   
+      </div>
+    </main>
 
     <!--Menu buttons-->
     <div class="menu-container" id="menu-container">
-        <button class="menu-btn" id="information-button"><i class="fa-solid fa-circle-info"></i> Information</button>
-        <button class="menu-btn" id="instruction-button"><i class="fa-solid fa-book-open"></i> Instruction</button>
-        <button class="menu-btn" id="calculatePay-button"><i class="fa-solid fa-calculator"></i> Calculate Pay</button>
+      <button class="menu-btn" id="information-button">
+        <i class="fa-solid fa-circle-info"></i> Information
+      </button>
+      <button class="menu-btn" id="instruction-button">
+        <i class="fa-solid fa-book-open"></i> Instruction
+      </button>
+      <button class="menu-btn" id="calculatePay-button">
+        <i class="fa-solid fa-calculator"></i> Calculate Pay
+      </button>
     </div>
 
     <!--Information -->
     <div class="modal-container" id="information-container">
-    <div class="info-container">
+      <div class="info-container">
         <div class="info-content">
-            <div class="info-header">
-                <span class="close" id="information-close">&times;</span>
-                <h2>Terminology</h2>
-            </div>
-            <div class="info-text">
-                 <ul>
-                 <li><h4>Gross Pay</h4> - is the employee&#39;s pay of any kind</li>
-                 <li><h4>Taxable Pay</h4> - is your gross pay, less any contributions you make.</li>
-                 <li><h4>Income Tax</h4> -  is a levy imposed by the government on the money you earn, whether you're an individual or a business</li>
-                 <li><h4>Tax Credits</h4> - reduce the amount of Income Tax that you pay</li>
-                 <li><h4>Universal Social Charge (USC)</h4> - is a tax that has replaced both the income levy and the health levy (also known as the health contribution) since 1 January 2011. You pay the USC if your gross income is more than €13,000 per year.</li>
-                 <li><h4>Pay Related Social Income (PRSI)</h4> - contributions are paid into the Social Insurance Fund (SIF) which helps pay for benefits and pensions.</li>
-                 <li><h4>Pension Contribution</h4> - defined contribution plan.</li>
-                </ul>
-                <br>
-                <h3>How is your tax calculated?</h3>
-                <p> Please refer to this article - <a href="https://www.citizensinformation.ie/en/money-and-tax/tax/income-tax/how-your-tax-is-calculated/" target="_blank">TAX</a></p>
-                <br>
-            </div>
+          <div class="info-header">
+            <span class="close" id="information-close">&times;</span>
+            <h2>Terminology</h2>
+          </div>
+          <div class="info-text">
+            <ul>
+              <li>
+                <h4>Gross Pay</h4>
+                - is the employee&#39;s pay of any kind
+              </li>
+              <li>
+                <h4>Taxable Pay</h4>
+                - is your gross pay, less any contributions you make.
+              </li>
+              <li>
+                <h4>Income Tax</h4>
+                - is a levy imposed by the government on the money you earn,
+                whether you're an individual or a business
+              </li>
+              <li>
+                <h4>Tax Credits</h4>
+                - reduce the amount of Income Tax that you pay
+              </li>
+              <li>
+                <h4>Universal Social Charge (USC)</h4>
+                - is a tax that has replaced both the income levy and the health
+                levy (also known as the health contribution) since 1 January
+                2011. You pay the USC if your gross income is more than €13,000
+                per year.
+              </li>
+              <li>
+                <h4>Pay Related Social Income (PRSI)</h4>
+                - contributions are paid into the Social Insurance Fund (SIF)
+                which helps pay for benefits and pensions.
+              </li>
+              <li>
+                <h4>Pension Contribution</h4>
+                - defined contribution plan.
+              </li>
+            </ul>
+            <br />
+            <h3>How is your tax calculated?</h3>
+            <p>
+              Please refer to this article -
+              <a
+                href="https://www.citizensinformation.ie/en/money-and-tax/tax/income-tax/how-your-tax-is-calculated/"
+                target="_blank"
+                >TAX</a
+              >
+            </p>
+            <br />
+          </div>
         </div>
-    </div>
+      </div>
     </div>
     <!--Instructions-->
-    <div class="modal-container"  id="instruction-container">
-    <div class="info-container">
+    <div class="modal-container" id="instruction-container">
+      <div class="info-container">
         <div class="info-header">
-            <span class="close" id="instruction-close">&times;</span>
-            <h2>Instructions</h2>
+          <span class="close" id="instruction-close">&times;</span>
+          <h2>Instructions</h2>
         </div>
         <div class="info-text">
-            <p>All figures entered must be a yearly figure.</p> 
-            <p>To use our salary calculator:</p>
-            <br>
-            <h4>Basic:</h4>
-            <p>Enter your Gross Yearly Salary or the one you would like to get and then click Calculate.</p>
-            <br><br>
-            <h4>Advanced:</h4>
-            <p>Additional information are required to calculate your take-home pay.</p>
-            <br><p>Choose your marital status between Single or Married.</p>
-            <br><p>Add the percentage of your pension contributions. Additional information are required to calculate pay.</p>
-            <br>
-            <p>Once done, a table will display your Yearly, Monthly and Weekly salary information. This will detail all income and deductions.</p>
-            <br>
-            <p>This calculator is based on 2024 Tax Information from the Revenue website. For more information, please click <a href="https://revenue.ie">here</a></p>
-            <br>
+          <p>All figures entered must be a yearly figure.</p>
+          <p>To use our salary calculator:</p>
+          <br />
+          <h4>Basic:</h4>
+          <p>
+            Enter your Gross Yearly Salary or the one you would like to get and
+            then click Calculate.
+          </p>
+          <br /><br />
+          <h4>Advanced:</h4>
+          <p>
+            Additional information are required to calculate your take-home pay.
+          </p>
+          <br />
+          <p>Choose your marital status between Single or Married.</p>
+          <br />
+          <p>
+            Add the percentage of your pension contributions. Additional
+            information are required to calculate pay.
+          </p>
+          <br />
+          <p>
+            Once done, a table will display your Yearly, Monthly and Weekly
+            salary information. This will detail all income and deductions.
+          </p>
+          <br />
+          <p>
+            This calculator is based on 2024 Tax Information from the Revenue
+            website. For more information, please click
+            <a href="https://revenue.ie">here</a>
+          </p>
+          <br />
         </div>
-    </div>
+      </div>
     </div>
 
     <!--Calulate Pay-->
-    <div class="modal-container"  id="pay-container">
-        <div class="info-container">
-            <div class="info-header">
-              <span class="close" id="calc-close">&times;</span>
-               <h2>CALCULATE PAY</h2>
-            </div>      
-            <div class="info-text">
-                <div class="tabs-container">
-                <!--Tab Links-->
-                    <button class="tablinks" data-tab="basic">Basic</button>
-                    <button class="tablinks" data-tab="advanced">Advanced</button>
-                    <!--Tab Contents-->
-                    <div class="tab-contents">
-
-                    <!-- Basic Pay calculation-->
-                      <div id="basic" class="tabscontent">
-                        <h3>Your Details:</h3>
-                        <br>
-                        <label for="salary">Gross Salary: </label>
-                        <input type="number" id="salary" name="salary" placeholder="Enter yearly salary">
-                        <br>
-                        <br>
-                        <input type="submit" value="Calculate Pay" id="calculateButton">
-                      </div>
-                    
-                    <!-- Advanced Pay calculation-->
-                       <div id="advanced" class="tabscontent">
-                        <h3>Your Details:</h3>
-                        <br>
-                        <Label for="salary">Gross Salary: </Label>
-                        <input type="number" id="salary" name="salary" placeholder="Enter yearly salary" required>
-                        <br>
-                        <Label for="bik">Benefit In Kind: </Label>
-                        <input type="number" id="bik" name="bik" placeholder="1000" required>
-                        <br>
-                        <br>
-                        <input type="submit" value="Calculate Pay">
-                      </div>
-                    </div>
-                </div>
-            </div>
+    <div class="modal-container" id="pay-container">
+      <div class="info-container">
+        <div class="info-header">
+          <span class="close" id="calc-close">&times;</span>
+          <h2>CALCULATE PAY</h2>
         </div>
+        <div class="info-text">
+          <div class="tabs-container">
+            <!--Tab Links-->
+            <button class="tablinks" data-tab="basic">Basic</button>
+            <button class="tablinks" data-tab="advanced">Advanced</button>
+            <!--Tab Contents-->
+            <div class="tab-contents">
+              <!-- Basic Pay calculation-->
+              <div id="basic" class="tabscontent">
+                <h3>Your Details:</h3>
+                <br />
+                <label for="salary">Enter yearly salary:</label>
+                <input
+                  type="number"
+                  id="salary"
+                  placeholder="Enter yearly salary"
+                />
+                <br />
+                <button id="calculateButton">Calculate Salary</button>
+
+                <div class="calcResults" id="calcResultsContainer">
+                  <!-- Results will be printed here -->
+                </div>
+              </div>
+
+              <!-- Advanced Pay calculation-->
+              <div id="advanced" class="tabscontent">
+                <h3>Your Details:</h3>
+                <br />
+                <label for="salary">Gross Salary: </label>
+                <input
+                  type="number"
+                  id="salary"
+                  name="salary"
+                  placeholder="Enter yearly salary"
+                  required
+                />
+                <br />
+                <label for="bik">Benefit In Kind: </label>
+                <input
+                  type="number"
+                  id="bik"
+                  name="bik"
+                  placeholder="1000"
+                  required
+                />
+                <br />
+                <br />
+                <button id="calculateButton">Calculate Salary</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-<!--Results Table-->
-    <div class="calcResults">
-        <table id="tableResults">
-            <thead>
-                <tr>
-                    <th>Time Period</th>
-                    <th>Amount</th>
-                </tr>
-            </thead>
-            <tbody>
-            <!--Result will be printed here-->
-            </tbody>
-        </table>
-    </div>
-
-
-
-     <!--Footer-->
-     <footer>
-        <h3> Test Footer</h3>
+    <!--Footer-->
+    <footer>
+      <h3>Test Footer</h3>
     </footer>
     <script src="assets/js/script.js"></script>
-</body>
+  </body>
 </html>
