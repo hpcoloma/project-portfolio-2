@@ -115,9 +115,6 @@ function calculateSalary() {
 
 
     //USC Rates
-
-
-    //const uscRate = 0.02;
     const uscRate1 = 0.005;
     const uscRate2 = 0.02;
     const uscRate3 = 0.04;
@@ -138,26 +135,21 @@ function calculateSalary() {
         uscDeduction = Math.round(usc1 + usc2 + usc3 + ((yearlySalary - 70044) * uscRate4));
     }
 
-
-    //} else if (yearlySalary <= 25760) {
-    // USC rate for income between 12,012 and 20,244
-    //uscDeduction = usc1 + ((yearlySalary - 12012) * uscRate2);
-    //} else if (income <= 70044) {
-    // USC rate for income less than 70,044
-    //  uscDeduction = usc1 + usc2 + ((yearlySalary - 25760) * uscRate3);
-    //} else {
-    // USC rate for income over 70,044
-    //  uscDeduction = usc1 + usc2 + usc3 + ((yearlySalary - 70044) * uscRate4);
-    // }
-
-
-
-
+    //PRSI rates
     const prsiRate = 0.04;
+    let prsiDeduction = 0;
 
     // Calculate PRSI deductions
-    const prsiDeduction = Math.round(yearlySalary * prsiRate);
-    const monthlyUsc = Math.round(uscDeduction / 12);
+    if (yearlySalary <= 18304) {
+        prsiDeduction = 0;
+    } else if (yearlySalary)
+
+
+
+
+
+        //Monthly and weekly calculations
+        const monthlyUsc = Math.round(uscDeduction / 12);
     const monthlyPrsi = Math.round(prsiDeduction / 12);
     const weeklyUsc = Math.round(uscDeduction / 52);
     const weeklyPrsi = Math.round(prsiDeduction / 52);
