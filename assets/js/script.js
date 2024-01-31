@@ -7,6 +7,7 @@ let payContainer = document.getElementById("pay-container");
 
 
 
+
 let tabButtons = document.querySelectorAll('.tablinks');
 
 //Iteration Statement
@@ -28,15 +29,11 @@ for (let i = 0; i < tabButtons.length; i++) {
 }
 
 //FUNCTIONS
-
+//Display menu options in main container
 window.onload = menuOptions();
 
-
-//Display menu options in main container
 function menuOptions() {
-    document.getElementById("main-container").innerHTML = menu;
-   document.getElementById("mid-container").innerHTML;
-  
+    document.getElementById("main-container").innerHTML = menu;  
 }
 
 
@@ -90,11 +87,37 @@ function showCalcContainer() {
 //to hide pay container
 function hideCalcsContainer() {
     payContainer.style.display = 'none';
+    window.onload = menuOptions();  
    
 }
 
+//Calculation variables
+    const yearlySalary = document.getElementById('salary').value;
+    const monthlySalary = yearlySalary/12;
+    const weeklySalary = yearlySalary/52;
+    const timePeriods = ['Yearly','Monthly','Weekly'];
+    const netPay = [yearlySalary, monthlySalary, weeklySalary];
+    const tableContent = document.getElementById('tableResults').getElementsByTagName('tbody')[0];
+    let basicButton = document.getElementById("calculateBasic-btn");
+//Calculate table event listeners
+basicButton.addEventListener = ('click', calculateSalary);
+   
+//Clear table rows
+   tableContent.innerHTML = '';
 
 //Basic calculation formula
+function calculateSalary () {
+    for (let i=0; i< timePeriods.length; i++) {
+        const row = tableContent.insertRow(i);
+        const cell1 = row.insertCell(0);
+        const cell2 = row.insertCell(1);
+
+        cell1.textContent = timePeriods[i];
+        cell2.textContent = `$${netPay[i]}`;
+
+
+    }
+}
 
 
 

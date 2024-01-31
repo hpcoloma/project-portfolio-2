@@ -119,42 +119,57 @@
               <span class="close" id="calc-close">&times;</span>
                <h2>CALCULATE PAY</h2>
             </div>      
-        <div class="info-text">
-            <div class="tabs-container">
+            <div class="info-text">
+                <div class="tabs-container">
                 <!--Tab Links-->
                     <button class="tablinks" data-tab="basic">Basic</button>
                     <button class="tablinks" data-tab="advanced">Advanced</button>
-                <!--Tab Contents-->
-                <div class="tab-contents">
+                    <!--Tab Contents-->
+                    <div class="tab-contents">
 
                     <!-- Basic Pay calculation-->
-                    <div id="basic" class="tabscontent">
+                      <div id="basic" class="tabscontent">
                         <h3>Your Details:</h3>
                         <br>
                         <Label for="salary">Gross Salary: </Label>
-                        <input type="number" id="salary" name="salary" placeholder="1000" required>
+                        <input type="number" id="salary" name="salary" placeholder="Enter yearly salary" required>
                         <br>
                         <br>
-                        <input type="submit" value="Calculate Pay">
-                    </div>
+                        <input type="submit" value="Calculate Pay" id="calculateBasic-btn">
+                      </div>
                     
                     <!-- Advanced Pay calculation-->
-                    <div id="advanced" class="tabscontent">
+                       <div id="advanced" class="tabscontent">
                         <h3>Your Details:</h3>
                         <br>
                         <Label for="salary">Gross Salary: </Label>
-                        <input type="number" id="salary" name="salary" placeholder="1000" required>
+                        <input type="number" id="salary" name="salary" placeholder="Enter yearly salary" required>
                         <br>
                         <Label for="bik">Benefit In Kind: </Label>
                         <input type="number" id="bik" name="bik" placeholder="1000" required>
                         <br>
                         <br>
                         <input type="submit" value="Calculate Pay">
+                      </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+<!--Results Table-->
+    <div class="calcResults">
+        <table id="tableResults">
+            <thead>
+                <tr>
+                    <th>Time Period</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+            <!--Result will be printed here-->
+            </tbody>
+        </table>
     </div>
 
 

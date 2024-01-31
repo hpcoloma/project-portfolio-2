@@ -173,7 +173,7 @@ main > div {
 
 #pay-container {
     /*change the value to block to display when the button is clicked*/
-    
+    align-self: center;
 }
 
 /*Tabs Style*/
@@ -187,7 +187,7 @@ main > div {
 /*Tabs button style*/
 
 .tabs-container {
-    min-height: 500px;
+    min-height: 300px;
     
 }
 
@@ -219,10 +219,28 @@ main > div {
     display: none;
 }
 
-
-
 .tab-contents {
     align-items: center;
+}
+
+/*Table*/
+table {
+    width: 75%%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.calcResults {
+    align-self: center;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th, td {
+    background-color: #f2f2f2;
 }
 
 /*Footer*/
