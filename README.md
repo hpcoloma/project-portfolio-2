@@ -135,6 +135,7 @@ These images were reduced using [TinyPNG](https://tinypng.com).
     - [Fontawesome] for menu icons.
     - [Favicon](https://favicon.io/) used to create favicons using logo from flaticon.
     - [Am I Responsive](https://amiresponsive.co.uk/) to show the image of the website on different device size.
+    - [Visual Studio Online](https://visualstudio.microsoft.com/services/visual-studio-online/)
 
 ## **Testing**<a name="testing"></a>
 - **Code Validation**
