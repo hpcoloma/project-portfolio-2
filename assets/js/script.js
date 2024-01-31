@@ -56,6 +56,7 @@ calcButton.addEventListener('click', showCalcContainer);
 //Show information container
 function showInfoContainer() {
     informationContainer.style.display = 'block';
+
 }
 
 //Hide information container
@@ -142,14 +143,12 @@ function calculateSalary() {
     // Calculate PRSI deductions
     if (yearlySalary <= 18304) {
         prsiDeduction = 0;
-    } else if (yearlySalary)
+    } else {
+        prsiDeduction = Math.round(yearlySalary * prsiRate);
+    }
 
-
-
-
-
-        //Monthly and weekly calculations
-        const monthlyUsc = Math.round(uscDeduction / 12);
+    //Monthly and weekly calculations
+    const monthlyUsc = Math.round(uscDeduction / 12);
     const monthlyPrsi = Math.round(prsiDeduction / 12);
     const weeklyUsc = Math.round(uscDeduction / 52);
     const weeklyPrsi = Math.round(prsiDeduction / 52);
