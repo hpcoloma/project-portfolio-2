@@ -178,6 +178,7 @@ Also, [Favicons](https://favicon.io/) for some icons used.
     - Desktop
        ![Lighthouse Desktop Test Results](assets/images/lighthousetestingDesktop.PNG)
 - **Other Testing**
+    - Calculation Test - I compare results of my calculate pay to the result of this calculator online to check the accuracy of my calculator. [Link Here](https://salaryaftertax.com/ie/salary-calculator)
     - No Javascript Page - display of noscript message by disabling JavaScript in browser options.
 
         ![No Javascript](assets/images/nojspage.PNG)
@@ -253,6 +254,8 @@ This project will not be live today without the help and support of the followin
 - https://irishtaxrebates.ie – on terminology definitions.
 
 - https://flaticon.com - for icons
+
+- https://salaryaftertax.com - to compare calculations.
 
 - [www.tinypng.com](www.tinypng.com) for resizing images.
 
