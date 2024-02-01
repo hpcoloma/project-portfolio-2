@@ -124,19 +124,13 @@ Also, [Favicons](https://favicon.io/) for some icons used.
     ![Calculate pay](assets/images/featcalc.PNG)
 
         - Basic - provides a standard calculation of take-home pay base on the salary entered, assuming that the user is a single person with no dependents and other income.
-            ![Basic calculator](assets/images/featcalc.PNG)
+            ![Basic calculator](assets/images/featcalcresults.PNG)
 
         - Advanced - calculates take-home pay base on salary, other income such as BIK and pension contribution. Factors such as dependents and status are considered. 
             ![Advanced calculator](assets/images/featadv.PNG)
 
-    INSERT PHOTO HERE
-
-
-    
-
-
-    INSERT PHOTO HERE
-
+        - 404 page is also created fo the advanced section which is yet to be developed.
+            ![Error Page](assets/images/errorpage.png)
 
 
 ## **Technology Used**<a name="technology"></a>
