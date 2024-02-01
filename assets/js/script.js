@@ -31,11 +31,11 @@ function menuOptions() {
 }
 
 //modal container elements
-let infoButton = document.getElementById("information-button");
+let infoButton = document.getElementById("info-button");
 let infoButtonHide = document.getElementById("information-close");
-let instructButton = document.getElementById("instruction-button");
+let instructButton = document.getElementById("inst-button");
 let instructButtonHide = document.getElementById("instruction-close");
-let calcButton = document.getElementById("calculatePay-button");
+let calcButton = document.getElementById("calcPay-button");
 let calcButtonHide = document.getElementById("calc-close");
 
 //Show-Hide event listeners for main container
