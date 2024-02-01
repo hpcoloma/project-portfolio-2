@@ -1,4 +1,4 @@
-# **Luscious Bliss IE**
+# **PayCalcs IE**
 
 ![Am I responsive screenshot](assets/readme/AmIresponsive.PNG)
 
@@ -37,9 +37,9 @@
 
 ## **Project Introduction**<a name="introduction"></a>
 ### PayCalcs IE
-PayCalcs IE is an app designed to calculate net pay base on your total income, tax deductions, pension contribution and other personal circumstances. This will help you estimate your take-home pay taking into consideration tax regulations and allowances.
+PayCalcs IE is a web based calculator designed to calculate net pay base on your total income, tax deductions, and other personal circumstances. This will help you estimate your take-home pay by taking into consideration tax regulations and allowances.
 
-### [Link to live project]
+### [Link to live project](https://hpcoloma.github.io/project-portfolio-2/)
 ### Objectives
 ## **Planning Stage**<a name="planning"></a>
 ### User Goals
