@@ -1,6 +1,6 @@
 # **PayCalcs IE**
 
-![Am I responsive screenshot](assets/readme/AmIresponsive.PNG)
+![Am I responsive screenshot](assets/images/amiresponsive.PNG)
 
 # Table of Contents
 
@@ -37,12 +37,17 @@
 
 ## **Project Introduction**<a name="introduction"></a>
 ### PayCalcs IE
-PayCalcs IE is a web based calculator designed to calculate net pay base on your total income, tax deductions, and other personal circumstances. This will help you estimate your take-home pay by taking into consideration tax regulations and allowances.
+Welcome to PayCalcs IE! This is a web based calculator designed to calculate net pay base on your total income, tax deductions, and other personal circumstances. This will help you estimate your take-home pay by taking into consideration tax regulations and allowances. Whether you are an individual planning your finances or a business owner managing your payroll, this calculator will help you simplify the process.
 
 ### [Link to live project](https://hpcoloma.github.io/project-portfolio-2/)
 ### Objectives
 ## **Planning Stage**<a name="planning"></a>
 ### User Goals
+- Calculate take home pay - Users should be able to effortlessly input their salary details and receive accurate calculations for gross and net income.
+- Consider Multiple Factors - The calculator should allow users to consider various factors such as tax rates, deductions, and bonuses, providing a comprehensive overview of their financial situation.
+- Understand Results Clearly - The calculator should present results in a clear and understandable format, breaking down the details of gross income, net income, taxes paid, and deductions.
+- Access a Consistent Interface - Users should experience a consistent interface with a title bar and site background that remains visible across all screens for easy navigation.
+
 ### Site Owner Goals
 ## **Design**<a name="design"></a>
 ### Wireframes
@@ -50,28 +55,23 @@ I used [Balsamiq](https://balsamiq.com) to generate digital sketches of how I wa
 
 - **Home screen/Main Menu**
 
-    INSERT PHOTO HERE
+    ![](assets/images/wireframehome.png)
 
 - **Information**
 
-    INSERT PHOTO HERE
+    ![](assets/images/wireframeterm.png)
 
 
 - **Instruction**
 
-    INSERT PHOTO HERE
+    ![](assets/images/wireframeins.png)
 
 
 - **Calculate Pay**
     - *Basic and results*
 
-        INSERT PHOTO HERE
+        ![](assets/images/wireframecalc.png)
 
-
-    - *Advanced and results*
-
-
-        INSERT PHOTO HERE
 
     
 ### Colour Scheme
@@ -81,39 +81,58 @@ I wanted a combination of earthy tones with vibrant pops of colors that creates 
 ![Cour Palette used](assets/images/colourpalette2.png)
 
 I also checked the colour combination contrast on 
-[Eightshapes Grid Contrast](https://contrast-grid.eightshapes.com/)
+[Eightshapes Grid Contrast](https://contrast-grid.eightshapes.com/) to ensure that text will be readable on the chosen background.
 
 ![Eightshapes Grid Contrast](assets/images/colourcontrast.png)
-Link to the resuls [here](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%232A968B%0D%0A%234486DB%0D%0A%23C9F2EB%0D%0A%23F2AE2E%0D%0A%23FF8C36%0D%0A%23FFFFFF%0D%0A%230D0D0D&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp)
+
+Link to the results [here](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%232A968B%0D%0A%234486DB%0D%0A%23C9F2EB%0D%0A%23F2AE2E%0D%0A%23FF8C36%0D%0A%23FFFFFF%0D%0A%230D0D0D&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp)
 
 ### Fonts
 I wanted a plain sans serif text that is easy to read both on big and small screens. Also, that looks like a calculator texts. Quicksand is a display sans serif with rounded terminals. It's rounded letterforms give a soft and approachable feel, making it suitable for user interfaces. Quicksand maintains good readability, making it easy for users to view and understand salary-related information. The font's versatility allows it to adapt top various design styles while maintaining a cotemporary look. Font was downloaded from [Google Fonts](https://fonts.google.com/).
 
 ### Imagery Used
-I have very limited images used on this project. The logo was sourced from [Flaticon](https://flaticon.com) and the background was from [Stackoverflow](https://stackoverflow.com/). 
-These images were reduced using [TinyPNG](https://tinypng.com).
+- I have very limited images used on this project. 
+
+    The logo was sourced from [Flaticon](https://flaticon.com)
+
+<img src="assets/images/taxicon.png" width="200">
+
+- The background was from [Stackoverflow](https://stackoverflow.com/).
+
+<img src="assets/images/paycalcsbg.png">
+
+
+ These images were reduced using [TinyPNG](https://tinypng.com).
+
+Also, [Favicons](https://favicon.io/) for some icons used.
 
 ## **Features**<a name="features"></a>
-- Header
+- The website incorporates a central column where JavaScript dynamically injects the pertinent HTML content. The title bar and site background persist across all screens
 
-- Main 
+- Main Menu - on page loads, the main menu are displayed. Also, a description of the web app and a disclaimer.
+![Main menu](assets/images/featindex.PNG)
+
     - Information - list all terminologies that the user may come accross on processing pay.
 
-    INSERT PHOTO HERE
+    ![Information](assets/images/featterm.PNG)
 
-    - Instruction - provides instruction on how to use Basic and Advance feature
-        - Basic - provides a standard calculation of take-home pay base on the salary entered, assuming that the user is a single person with no dependents and other income.
-        
-    INSERT PHOTO HERE
-
-
-        - Advanced - calculates take-home pay base on salary, other income such as BIK and pension contribution. Factors such as dependents and status are considered. 
-
-
-    INSERT PHOTO HERE
-
+    - Instruction - provides instruction on how to use Basic and Advance feature.
+               
+    ![Instruction](assets/images/featins.PNG)
 
     - Calculate Pay - this provides the form to collect data entered by user to calculate pay. User can choose to do BASIC or ADVANCED calculcation.
+    ![Calculate pay](assets/images/featcalc.PNG)
+
+        - Basic - provides a standard calculation of take-home pay base on the salary entered, assuming that the user is a single person with no dependents and other income.
+            ![Basic calculator](assets/images/featcalc.PNG)
+
+        - Advanced - calculates take-home pay base on salary, other income such as BIK and pension contribution. Factors such as dependents and status are considered. 
+            ![Advanced calculator](assets/images/featadv.PNG)
+
+    INSERT PHOTO HERE
+
+
+    
 
 
     INSERT PHOTO HERE
@@ -136,12 +155,13 @@ These images were reduced using [TinyPNG](https://tinypng.com).
     - [Favicon](https://favicon.io/) used to create favicons using logo from flaticon.
     - [Am I Responsive](https://amiresponsive.co.uk/) to show the image of the website on different device size.
     - [Visual Studio Online](https://visualstudio.microsoft.com/services/visual-studio-online/)
+    - ChatGPT for assistance on some description on this readme.
 
 ## **Testing**<a name="testing"></a>
 - **Code Validation**
     - [W3C Validator](https://validator.w3.org/#validate_by_input) for HTML validation.
-       [Link to results here.]()
-       INSERT RESULT HERE
+    
+      ![](assets/images/htmltest.PNG)
 
      - [W3c Validator](https://jigsaw.w3.org/css-validator/) for CSS validation.
         

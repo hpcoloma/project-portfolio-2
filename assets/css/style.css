@@ -237,7 +237,6 @@ table {
 
 .calcResults {
     display: flex;
-    justify-content: column;
 }
 
 th,
