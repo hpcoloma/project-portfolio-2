@@ -135,7 +135,7 @@ Also, [Favicons](https://favicon.io/) for some icons used.
 
         - 404 page is also created fo the advanced section which is yet to be developed.
             ![Error Page](assets/images/errorpage.png)
-    - No Javascript Page is also 
+    - No Javascript Page is also set up if browser has javascript disabled.
 
 
 ## **Technology Used**<a name="technology"></a>
