@@ -94,6 +94,7 @@ function hideCalcsContainer() {
 function calculateSalary() {
     const yearlySalary = parseFloat(document.getElementById('salary').value);
 
+    //Alert message if salary is empty
     if (!yearlySalary) {
         alert('Please enter your salary.');
         return;
