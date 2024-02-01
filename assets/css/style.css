@@ -222,7 +222,8 @@ main>div {
     align-items: center;
 }
 
-#calculateButton {
+#calculateButton,
+#calculateButton-adv {
     background-color: #f2f2f2;
     height: auto;
 }
@@ -252,6 +253,16 @@ td {
     background-color: #f2f2f2;
 }
 
+#error-container {
+    display: flex;
+}
+
+#error-container img {
+    width: 10%;
+    height: 10%;
+}
+
+
 /*Footer*/
 footer {
     width: 100%;
@@ -272,8 +283,4 @@ footer {
 
     .info-container {
         max-width: 700px;
-
-
     }
-
-    @media screen and {}
