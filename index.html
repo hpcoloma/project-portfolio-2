@@ -237,22 +237,26 @@
                 <label for="adv-salary">Yearly Salary: </label>
                 <input type="number" id="adv-salary" placeholder="Enter yearly salary" required>
                 <br>
-                <br>
                 <label for="bik">Benefit In Kind: </label>
                 <input
                   type="number" id="bik" placeholder="1000" required>
                 <br>
+                <p>Status: 
+                <label for="single">Single</label>
+                <input type="radio" id="single" value="single">
+                <label for="married">Married</label>
+                <input type="radio" id="married" value="married">
+                </p>
+                <label for="spouse-income">Spouse Income: </label>
+                <input type="number" id="bik" placeholder="1000" required>
                 <br>
-                
-                <br>
-                <br>
-                <label for="status">Status:</label>
-                <select name="status" id="status">
-                  <option value="single">Single</option>
-                  <option value="married">Married</option>
-                </select>
-                <br>
-                <br>
+                <p>Do you have dependents?
+                <label for="depyes">Yes</label>
+                <input type="radio" id="depyes" value="yes">
+                <label for="depno">No</label>
+                <input type="radio" id="depno" value="no">
+                </p>
+                <br>              
                 <button id="calculateButton-adv">Calculate Salary</button>
               </div>
             </div>
