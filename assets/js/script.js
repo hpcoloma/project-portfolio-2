@@ -18,7 +18,7 @@ for (let i = 0; i < tabButtons.length; i++) {
 
         //Show the active tab
         document.getElementById(tabId).style.display = 'block';
-        document.getElementById(tabId).style.backgroundColor = 'rgb(86,191,181)';
+        document.getElementById(tabId).style.backgroundColor = '#56BFB5';
     });
 }
 

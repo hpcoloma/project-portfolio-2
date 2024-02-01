@@ -21,7 +21,6 @@ body {
 /*Header*/
 header {
     text-align: center;
-
 }
 
 header img {
@@ -31,13 +30,11 @@ header img {
 header a {
     text-decoration: none;
     color: inherit;
-
 }
 
 .img-title {
     display: flex;
     justify-content: space-around;
-
 }
 
 #logo-img {
@@ -188,6 +185,7 @@ main>div {
 
 .tabs-container {
     min-height: 300px;
+    padding-top: 10px;
 }
 
 .tabs-container button {
