@@ -7,12 +7,12 @@
 - [**Project Introduction**](#introduction)
     - **PayCalcs IE**
     - **Link to live project**
+    - **Objective**
 - [**Planning Stage**](#planning)
     - **User Goals**
     - **Site Owner Goals**
 - [**Design**](#design)
     - **Wireframes**
-        - **Desktop Wireframes**
     - **Colour Scheme**
     - **Fonts**
     - **Imagery Used**
@@ -24,7 +24,7 @@
     - **Code Validation**
     - **Contrast Grid**
     - **Testing Performance**
-    - **Further Testing**
+    - **Other Testing**
 - [**Challenges**](#challenges)
 - [**Future Enhancements**](#enhancements)
 - [**Deployment**](#deployment)
@@ -41,6 +41,8 @@ Welcome to PayCalcs IE! This is a web based calculator designed to calculate net
 
 ### [Link to live project](https://hpcoloma.github.io/project-portfolio-2/)
 ### Objectives
+Ensure that users can quickly understand the purpose and functionality of the salary calculator.
+Provide users with instruction on how to effectively use the salary calculator, making the process intuitive and user-friendly.
 ## **Planning Stage**<a name="planning"></a>
 ### User Goals
 - Calculate take home pay - Users should be able to effortlessly input their salary details and receive accurate calculations for gross and net income.
@@ -49,6 +51,8 @@ Welcome to PayCalcs IE! This is a web based calculator designed to calculate net
 - Access a Consistent Interface - Users should experience a consistent interface with a title bar and site background that remains visible across all screens for easy navigation.
 
 ### Site Owner Goals
+- To provide users a tool to calculate take home pay and give them an idea on how much tax they pay. Enhancing this calculator with additional target features in the future would benefit not just an individual users but also business owners.
+
 ## **Design**<a name="design"></a>
 ### Wireframes
 I used [Balsamiq](https://balsamiq.com) to generate digital sketches of how I want my site to look like on different devices. Balsamiq had helped me visualised my idea and finalised my design before I start writing my codes.
@@ -131,6 +135,7 @@ Also, [Favicons](https://favicon.io/) for some icons used.
 
         - 404 page is also created fo the advanced section which is yet to be developed.
             ![Error Page](assets/images/errorpage.png)
+    - No Javascript Page is also 
 
 
 ## **Technology Used**<a name="technology"></a>
@@ -164,7 +169,7 @@ Also, [Favicons](https://favicon.io/) for some icons used.
     - [JSHint](assets/images/jshint.png) for Javascript code validation.
     
        ![JS Hint ](assets/images/jshint.png)
-
+    
 - **Contrast Grid**
     - [Eightshapes Grid Contrast](https://contrast-grid.eightshapes.com/) for checking the colour contrast of my colour palette.
 - **Testing Performance**
@@ -172,16 +177,26 @@ Also, [Favicons](https://favicon.io/) for some icons used.
        ![Lighthouse Mobile Test Results](assets/images/lighthousetesting.PNG) 
     - Desktop
        ![Lighthouse Desktop Test Results](assets/images/lighthousetestingDesktop.PNG)
-        
-- **Further Testing**
-- I've tested this using the following digital device:
-    - Iphone 12 Pro
-    - Samsung Galaxy A51
-    - Macbook pro 
-    - Different browsers such as Google Chrome, Edge and Safari
+- **Other Testing**
+    - No Javascript Page - display of noscript message by disabling JavaScript in browser options.
+
+        ![No Javascript](assets/images/nojspage.PNG)
+
+    - Functionality Test - I validate each menu and links on the website with the help of a third party. User was able to navigate easily and can easily find functions.
+
+     ![Functionality](assets/images/menu.PNG)
+
+    - Compatibility Testing - I've tested this using the following digital device:
+        - Iphone 12 Pro
+        - Samsung Galaxy A51
+        - Macbook pro
+        - Windows laptop
+    - Crossbrowser Testing 
+        - Different browsers such as Google Chrome, Edge and Safari were used to test   
+
 
 ## **Challenges**<a name="challenges"></a>
-- Ran out of credit in Gitpod
+- Ran out of credit in Gitpod so had to install VSCode and set up last minute to continue working on project. Codeanywhere performance is very poor.
 
 ## **Future Enhancements**<a name="enhancements"></a>
 - Aim to get the Advanced Calculate Pay section completed
@@ -206,8 +221,6 @@ Retirement Planning:
 
 ## **Deployment**<a name="deployments"></a>
 
-ADD MORE DETAILS
-
 The project was deployed to Github pages. Below are the steps used to deploy the site.
 
 1. Once all changes were pushed from VScode. I then go to Github.
@@ -222,7 +235,6 @@ This project will not be live today without the help and support of the followin
 
 1. Arnold Ambida - my husband, who looks after my 3 children while I do this course.
 2. Matt Boden - my mentor who have made a significant impact on completing this projecs with all the tips and the encouragements.
-3. 
 
 ## **Credits**<a name="credits"></a>
 
@@ -242,9 +254,7 @@ This project will not be live today without the help and support of the followin
 
 - https://flaticon.com - for icons
 
-
-- **Image resizing**
-    - [www.tinypng.com](www.tinypng.com)
+- [www.tinypng.com](www.tinypng.com) for resizing images.
 
 
 
