@@ -94,6 +94,11 @@ function hideCalcsContainer() {
 function calculateSalary() {
     const yearlySalary = parseFloat(document.getElementById('salary').value);
 
+    if (!yearlySalary) {
+        alert('Please enter your salary.');
+        return;
+    }
+
     //Income Tax Bands and rates
     const taxBand1 = 42000;
     const lowerRate = 0.20;
