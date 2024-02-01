@@ -36,7 +36,7 @@
     
 
 ## **Project Introduction**<a name="introduction"></a>
-### PayCalcs IE
+### PayCalcs IE <a name="paycalcs"></a>
 Welcome to PayCalcs IE! This is a web based calculator designed to calculate net pay base on your total income, tax deductions, and other personal circumstances. This will help you estimate your take-home pay by taking into consideration tax regulations and allowances. Whether you are an individual planning your finances or a business owner managing your payroll, this calculator will help you simplify the process.
 
 ### [Link to live project](https://hpcoloma.github.io/project-portfolio-2/)
@@ -151,7 +151,7 @@ Also, [Favicons](https://favicon.io/) for some icons used.
     - [GitHub](https://github.com/) for hosting project codes, maintaining repository.
     - [Gitpod](https://www.gitpod.io/d) used to work on my wokspace and build the app.
     - [Flaticon](https://www.flaticon.com) where I downlaoded the my logo.
-    - [Fontawesome] for menu icons.
+    - [Fontawesome](https://fontawesome.com/icons) for menu icons.
     - [Favicon](https://favicon.io/) used to create favicons using logo from flaticon.
     - [Am I Responsive](https://amiresponsive.co.uk/) to show the image of the website on different device size.
     - [Visual Studio Online](https://visualstudio.microsoft.com/services/visual-studio-online/)
@@ -163,41 +163,52 @@ Also, [Favicons](https://favicon.io/) for some icons used.
     
       ![](assets/images/htmltest.PNG)
 
-     - [W3c Validator](https://jigsaw.w3.org/css-validator/) for CSS validation.
+     - [W3C Validator](https://jigsaw.w3.org/css-validator/) for CSS validation.
         
-       INSERT RESULT HERE
+       ![](assets/images/cssvalidator.PNG)
        
-
-    - [JSHint]() for Javascript code validation.
+    - [JSHint](assets/images/jshint.png) for Javascript code validation.
     
-       INSERT RESULT HERE
-       
+       ![JS Hint ](assets/images/jshint.png)
 
 - **Contrast Grid**
     - [Eightshapes Grid Contrast](https://contrast-grid.eightshapes.com/) for checking the colour contrast of my colour palette.
 - **Testing Performance**
-    - Mobile
-     
-     
-       INSERT RESULT HERE
-       
-
-    
+    - Mobile    
+       ![Lighthouse Mobile Test Results](assets/images/lighthousetesting.PNG) 
     - Desktop
-       
-
-       INSERT RESULT HERE
-       
-
-
+       ![Lighthouse Desktop Test Results](assets/images/lighthousetestingDesktop.PNG)
+        
 - **Further Testing**
+- I've tested this using the following digital device:
+    - Iphone 12 Pro
+    - Samsung Galaxy A51
+    - Macbook pro 
+    - Different browsers such as Google Chrome, Edge and Safari
 
 ## **Challenges**<a name="challenges"></a>
-
 - Ran out of credit in Gitpod
 
 ## **Future Enhancements**<a name="enhancements"></a>
+- Aim to get the Advanced Calculate Pay section completed
+- Convert to a payroll application where data can be stored.
+- Multi-Currency Support enable users to input and calculate salaries in different currencies, providing flexibility for international users or businesses operating in multiple countries.
 
+- Additional Income Sources - Incorporate features that allow users to include various income sources beyond the basic salary, such as bonuses, commissions, or freelance earnings.
+- Expense Tracking - Integrate an expense tracking module to help users better understand their disposable income after accounting for essential expenses, savings, and discretionary spending.
+
+- Tax Optimization Suggestions - provide recommendations on tax optimization strategies based on the user's financial situation, helping them minimize tax liabilities and maximize take-home pay.
+
+- Graphical Representation of Data - Implement charts or graphs to visually represent the breakdown of income, taxes, and deductions, offering users a more intuitive understanding of their financial data.
+Retirement Planning:
+
+- Include tools for estimating retirement savings goals and projections, helping users plan for long-term financial security.
+
+- Mobile App Integration - Develop a mobile application to make the salary calculator more accessible on smartphones, allowing users to perform salary calculations on the go.
+
+- User Accounts and Saving Profiles - Introduce user accounts to save and retrieve salary profiles, enabling users to track changes over time and easily compare different scenarios.
+
+- Machine Learning Predictions - Implement machine learning algorithms to predict future salary growth based on historical data and industry trends, offering users insights into their potential earnings trajectory.
 
 ## **Deployment**<a name="deployments"></a>
 
@@ -205,7 +216,7 @@ ADD MORE DETAILS
 
 The project was deployed to Github pages. Below are the steps used to deploy the site.
 
-1. Once all changes were pushed from Gitpod. I then go to Github.
+1. Once all changes were pushed from VScode. I then go to Github.
 2. On Github site's repository, under the Codes tab, lookk for the Deployments section on rigth side of the page.
 3. Click + XX deployments under Deployments.
 4. Once on teh active deployments page, click the link under github-pages. 
@@ -216,18 +227,28 @@ The project was deployed to Github pages. Below are the steps used to deploy the
 This project will not be live today without the help and support of the following people:
 
 1. Arnold Ambida - my husband, who looks after my 3 children while I do this course.
-2. Matt Boden - my mentor who gave lots of tips and advise during our first meeting.
+2. Matt Boden - my mentor who have made a significant impact on completing this projecs with all the tips and the encouragements.
 3. 
 
 ## **Credits**<a name="credits"></a>
 
-- **Websites source for images**
-    - [www.pexels.com](www.pexels.com)
-    - [www.pinimg.com](www.pinimg.com)
-    - [www.bing.com](www.bing.com)
-    - [www.tasteofhome.com](www.tasteofhome.com)
-    - [www.carlsbadcravings.com](www.carlsbadcravings.com)
-    - [www.shugarysweets.com](www.shugarysweets.com)
+ **Website sources**
+
+- https://revenue.ie - on terminology definitions.
+
+- https://shanahan.ie - on terminology definitions.
+
+- https://assets.gov.ie – on terminology definitions.
+
+- https://w3schools.com – code sources for html, css and javascript
+
+- https://stackoverflow.com/ - for codes, background image, tips and answers to some q&a.
+
+- https://irishtaxrebates.ie – on terminology definitions.
+
+- https://flaticon.com - for icons
+
+
 - **Image resizing**
     - [www.tinypng.com](www.tinypng.com)
 
