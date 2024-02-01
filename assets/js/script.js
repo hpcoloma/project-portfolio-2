@@ -4,12 +4,9 @@ let menu = document.getElementById('menu-container').innerHTML;
 let informationContainer = document.getElementById("information-container");
 let instructionContainer = document.getElementById("instruction-container");
 let payContainer = document.getElementById("pay-container");
-
-
 let tabButtons = document.querySelectorAll('.tablinks');
 
 //Iteration Statement
-
 for (let i = 0; i < tabButtons.length; i++) {
     tabButtons[i].addEventListener('click', () => {
         let tabId = tabButtons[i].getAttribute('data-tab');
@@ -34,7 +31,6 @@ function menuOptions() {
     document.getElementById("main-container").innerHTML = menu;
 }
 
-
 //modal container elements
 let infoButton = document.getElementById("information-button");
 let infoButtonHide = document.getElementById("information-close");
@@ -51,12 +47,10 @@ instructButtonHide.addEventListener('click', hideInstructionContainer);
 calcButtonHide.addEventListener('click', hideCalcsContainer);
 calcButton.addEventListener('click', showCalcContainer);
 
-
 //To show/hide info container
 //Show information container
 function showInfoContainer() {
     informationContainer.style.display = 'block';
-
 }
 
 //Hide information container
@@ -75,19 +69,17 @@ function hideInstructionContainer() {
     instructionContainer.style.display = 'none';
 }
 
-
 //To show calculate pay container occupying replacing all elements in the main-container
 function showCalcContainer() {
     payContainer.style.display = 'block';
-
 }
 
 //to hide pay container
 function hideCalcsContainer() {
     payContainer.style.display = 'none';
-
+    document.getElementById('calcResultsContainer').innerHTML = '';
+    document.getElementById('salary').value = '';
 }
-
 
 //Calculation Section
 //Functions
@@ -108,12 +100,13 @@ function calculateSalary() {
     const taxCreditPaye = 1875;
     let netIncomeTax = 0;
 
-    if (yearlySalary <= taxBand1) {
+    if (yearlySalary <= 18750) {
+        netIncomeTax = 0;
+    } else if (yearlySalary > 18750 && yearlySalary <= taxBand1) {
         netIncomeTax = Math.round((yearlySalary * lowerRate) - (taxCreditSingle + taxCreditPaye));
     } else {
         netIncomeTax = Math.round(((taxBand1 * 0.20) + ((yearlySalary - taxBand1) * higherRate)) - (taxCreditPaye + taxCreditSingle));
     }
-
 
     //USC Rates
     const uscRate1 = 0.005;
@@ -155,14 +148,13 @@ function calculateSalary() {
     const monthlyTax = Math.round(netIncomeTax / 12);
     const weeklyTax = Math.round(netIncomeTax / 52);
 
-
     // Calculate net salary after deductions
     const netYearlySalary = yearlySalary - uscDeduction - prsiDeduction;
     const netMonthlySalary = Math.round(netYearlySalary / 12);
     const netWeeklySalary = Math.round(netYearlySalary / 52);
 
     const timePeriods = ['Yearly', 'Monthly', 'Weekly'];
-    const details = ['Gross Salary', 'Income Tax', 'USC Deduction', 'PRSI Deduction'];
+    const details = ['Salary', 'Income Tax', 'USC', 'PRSI'];
     const values = [yearlySalary, grossMonthlySalary, grossWeeklySalary, netIncomeTax, monthlyTax, weeklyTax, uscDeduction, monthlyUsc, weeklyUsc, prsiDeduction, monthlyPrsi, weeklyPrsi];
 
     const netPay = [netYearlySalary, netMonthlySalary, netWeeklySalary];

@@ -50,8 +50,8 @@
         web page functional. If JavaScript has been disabled within your
         browser, the content or the functionality of the web page can be limited
         or unavailabe.
-      </h3></noscript
-    >
+      </h3>
+    </noscript>
     <main id="main">
       <div class="calculator-container" id="calculator-container">
         <div class="mid-container" id="mid-container">
@@ -67,6 +67,17 @@
         <br />
         <div class="main-container" id="main-container">
           <!--container for the form, results and main menu-->
+        </div>
+        <div id="disclaimer">
+          <h6>
+            Disclaimer: This calculator is designed for illustrative purpose
+            only and do not constitute financial or investment advice. The
+            results obtained are estimates and should be used as a general guide
+            only. Users are encouraged to seek professional advice on the
+            accuracy of the calculations. The creator of this calculator is not
+            responsible for any consequences arising from the use of the
+            information provided. Use this tool at your own discretion.
+          </h6>
         </div>
       </div>
     </main>
@@ -205,14 +216,17 @@
               <div id="basic" class="tabscontent">
                 <h3>Your Details:</h3>
                 <br />
-                <label for="salary">Enter yearly salary:</label>
+                <label for="salary">Yearly Salary:</label>
                 <input
                   type="number"
                   id="salary"
                   placeholder="Enter yearly salary"
+                  required
                 />
-                <br />
-                <button id="calculateButton">Calculate Salary</button>
+                <br /><br />
+                <button id="calculateButton">
+                  <h4>Calculate Pay</h4>
+                </button>
 
                 <div class="calcResults" id="calcResultsContainer">
                   <!-- Results will be printed here -->
