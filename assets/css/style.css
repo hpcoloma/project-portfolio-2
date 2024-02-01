@@ -112,7 +112,6 @@ main>div {
     border-radius: 8px;
     margin: auto;
     overflow-y: auto;
-
 }
 
 .info-header {
@@ -120,13 +119,10 @@ main>div {
     position: relative;
     width: 100%;
     z-index: 100;
-
-
 }
 
 .info-text {
     padding-left: 10px;
-
     min-height: 60%;
 }
 
@@ -156,6 +152,30 @@ main>div {
     padding-right: 50px;
     padding-bottom: 50px;
     padding-left: 50px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
 
 /*Tabs Style*/

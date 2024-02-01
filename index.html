@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta
       name="description"
-      content="Web base payroll calculator base on Budget 2024"
-    />
+      content="Web base payroll calculator base on Budget 2024">
 
     <!--Favicon-->
     <link
       rel="shortcut icon"
       href="assets/images/favicon.ico"
       type="image/x-icon"
-    />
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    >
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 
     <!--Fontawesome-->
     <script
@@ -22,7 +21,7 @@
       crossorigin="anonymous"
     ></script>
     <!--Stylesheet-->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Payroll Calculator</title>
   </head>
@@ -36,7 +35,7 @@
             src="assets/images/taxicon.png"
             id="logo-img"
             alt="Irish Tax Salary Calculator"
-          />
+          >
           <h1 class="img-title">PayCalcs IE</h1>
         </a>
       </div>
@@ -64,7 +63,7 @@
             allowances.
           </h4>
         </div>
-        <br />
+        <br>
         <div class="main-container" id="main-container">
           <!--container for the form, results and main menu-->
         </div>
@@ -139,17 +138,16 @@
                 - defined contribution plan.
               </li>
             </ul>
-            <br />
+            <br>
             <h3>How is your tax calculated?</h3>
             <p>
               Please refer to this article -
               <a
                 href="https://www.citizensinformation.ie/en/money-and-tax/tax/income-tax/how-your-tax-is-calculated/"
                 target="_blank"
-                >TAX</a
-              >
+                >TAX</a>
             </p>
-            <br />
+            <br>
           </div>
         </div>
       </div>
@@ -164,36 +162,36 @@
         <div class="info-text">
           <p>All figures entered must be a yearly figure.</p>
           <p>To use our salary calculator:</p>
-          <br />
+          <br>
           <h4>Basic:</h4>
           <p>
             Enter your Gross Yearly Salary or the one you would like to get and
             then click Calculate.
           </p>
-          <br /><br />
+          <br><br>
           <h4>Advanced:</h4>
           <p>
             Additional information are required to calculate your take-home pay.
           </p>
-          <br />
+          <br>
           <p>Choose your marital status between Single or Married.</p>
-          <br />
+          <br>
           <p>
             Add the percentage of your pension contributions. Additional
             information are required to calculate pay.
           </p>
-          <br />
+          <br>
           <p>
             Once done, a table will display your Yearly, Monthly and Weekly
             salary information. This will detail all income and deductions.
           </p>
-          <br />
+          <br>
           <p>
             This calculator is based on 2024 Tax Information from the Revenue
             website. For more information, please click
             <a href="https://revenue.ie">here</a>
           </p>
-          <br />
+          <br>
         </div>
       </div>
     </div>
@@ -215,15 +213,18 @@
               <!-- Basic Pay calculation-->
               <div id="basic" class="tabscontent">
                 <h3>Your Details:</h3>
-                <br />
+                <br>
                 <label for="salary">Yearly Salary:</label>
                 <input
                   type="number"
                   id="salary"
                   placeholder="Enter yearly salary"
-                  required
-                />
-                <br /><br />
+                  required>&nbsp;
+                  <div class="tooltip">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span class="tooltiptext">Enter your Gross Yearly Salary or the one you would like to get and then click Calculate.</span>
+                  </div>
+                <br><br>
                 <button id="calculateButton">
                   <h4>Calculate Pay</h4>
                 </button>
@@ -236,7 +237,7 @@
               <!-- Advanced Pay calculation-->
               <div id="advanced" class="tabscontent">
                 <h3>Your Details:</h3>
-                <br />
+                <br>
                 <label for="salary">Gross Salary: </label>
                 <input
                   type="number"
@@ -244,8 +245,8 @@
                   name="salary"
                   placeholder="Enter yearly salary"
                   required
-                />
-                <br />
+                >
+                <br>
                 <label for="bik">Benefit In Kind: </label>
                 <input
                   type="number"
@@ -253,9 +254,9 @@
                   name="bik"
                   placeholder="1000"
                   required
-                />
-                <br />
-                <br />
+                >
+                <br>
+                <br>
                 <button id="calculateButton">Calculate Salary</button>
               </div>
             </div>
