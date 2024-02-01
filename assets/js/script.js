@@ -20,7 +20,6 @@ for (let i = 0; i < tabButtons.length; i++) {
         document.getElementById(tabId).style.display = 'block';
         document.getElementById(tabId).style.backgroundColor = 'rgb(86,191,181)';
     });
-
 }
 
 //FUNCTIONS
@@ -46,6 +45,15 @@ instructButton.addEventListener('click', showInstructionContainer);
 instructButtonHide.addEventListener('click', hideInstructionContainer);
 calcButtonHide.addEventListener('click', hideCalcsContainer);
 calcButton.addEventListener('click', showCalcContainer);
+
+//Eventlistener for button to open a new page
+document.getElementById('calculateButton-adv').addEventListener('click', function () {
+    //This is the link I want to open
+    const errorPage = '404.html';
+
+    //To open the link
+    window.location.href = errorPage;
+});
 
 //To show/hide info container
 //Show information container

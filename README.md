@@ -140,7 +140,7 @@ These images were reduced using [TinyPNG](https://tinypng.com).
 ## **Testing**<a name="testing"></a>
 - **Code Validation**
     - [W3C Validator](https://validator.w3.org/#validate_by_input) for HTML validation.
-       
+       [Link to results here.]()
        INSERT RESULT HERE
 
      - [W3c Validator](https://jigsaw.w3.org/css-validator/) for CSS validation.
