@@ -174,8 +174,7 @@
           <p>Choose your marital status between Single or Married.</p>
           <br>
           <p>
-            Add the percentage of your pension contributions. Additional
-            information are required to calculate pay.
+            Add the percentage of your pension contributions. 
           </p>
           <br>
           <p>
@@ -186,7 +185,9 @@
           <p>
             This calculator is based on 2024 Tax Information from the Revenue
             website. For more information, please click
-            <a href="https://revenue.ie">here</a>
+            <a href="https://revenue.ie" target="_blank"
+            rel="noopener"
+            aria-label="Visit Revenue website (opens in new tab)">here</a>
           </p>
           <br>
         </div>
@@ -212,10 +213,10 @@
                 <h3>Your Details:</h3>
                 <br>
                 <label for="salary">Yearly Salary:</label>
-                <input type="number" id="salary" placeholder="Enter yearly salary" required>&nbsp;
+                <input type="number" min="0" id="salary" placeholder="Enter yearly salary" required>&nbsp;
                   <div class="tooltip">
                     <i class="fa-solid fa-circle-info"></i>
-                    <span class="tooltiptext">Based on the assumptions about your personal conditions, such as that you are sing and have no dependents</span>
+                    <span class="tooltiptext">Based on the assumptions about your personal conditions, such as that you are single and have no dependents.</span>
                   </div>
                 <br><br>
                 <button id="calculateButton">
@@ -246,7 +247,7 @@
                   </div>
                 <br>
                 <label for="pension">Pension Contribution: </label>
-                <input type="number" id="pension" placeholder="1000" required>
+                <input type="number" id="pension" min="0" max="100" placeholder="100" required>
                 <div class="tooltip">
                     <i class="fa-solid fa-circle-info"></i>
                     <span class="tooltiptext">Enter percentage of your pension contribution.</span>
@@ -254,18 +255,18 @@
                 <br>
                 <p>Status: 
                 <label for="single">Single</label>
-                <input type="radio" id="single" value="single">
+                <input type="radio" name="status" id="single" value="single">
                 <label for="married">Married</label>
-                <input type="radio" id="married" value="married">
+                <input type="radio" name="status" id="married" value="married">
                 </p>
                 <label for="spouse-income">Spouse Income: </label>
                 <input type="number" id="spouse-income" placeholder="1000" required>
                 <br>
                 <p>Do you have dependents?
                 <label for="depyes">Yes</label>
-                <input type="radio" id="depyes" value="yes">
+                <input type="radio" name="dependents" id="depyes" value="yes">
                 <label for="depno">No</label>
-                <input type="radio" id="depno" value="no">
+                <input type="radio" name="dependents" id="depno" value="no">
                 </p>
                 <br>              
                 <button id="calculateButton-adv">Calculate Pay</button>

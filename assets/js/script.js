@@ -147,7 +147,9 @@ function calculateSalary() {
     const prsiRate = 0.04;
     let prsiDeduction = 0;
 
-    // Calculate PRSI deductions
+    /**Calculate PRSI deductions
+    PRSI is nil if the yearly salary is less than or equal to €18,304 per year or €352 per week.
+    **/
     if (yearlySalary <= 18304) {
         prsiDeduction = 0;
     } else {
