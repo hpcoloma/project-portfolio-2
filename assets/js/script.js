@@ -163,7 +163,7 @@ function calculateSalary() {
     const weeklyTax = Math.round(netIncomeTax / 52);
 
     // Calculate net salary after deductions
-    const netYearlySalary = yearlySalary - uscDeduction - prsiDeduction;
+    const netYearlySalary = yearlySalary - netIncomeTax - uscDeduction - prsiDeduction;
     const netMonthlySalary = Math.round(netYearlySalary / 12);
     const netWeeklySalary = Math.round(netYearlySalary / 52);
 
