@@ -5,26 +5,26 @@
 # Table of Contents
 
 - [**Project Introduction**](#introduction)
-    - **PayCalcs IE**
-    - **Link to live project**
-    - **Objective**
+    - [**PayCalcs IE**](#paycalcs-ie)
+    - [**Link to live project**](#link-to-live-project)
+    - [**Objective**](#objectives)
 - [**Planning Stage**](#planning)
-    - **User Goals**
-    - **Site Owner Goals**
+    - [**User Goals**](#user-goals)
+    - [**Site Owner Goals**](#site-owner-goals)
 - [**Design**](#design)
-    - **Wireframes**
-    - **Colour Scheme**
-    - **Fonts**
-    - **Imagery Used**
+    - [**Wireframes**](#wireframes)
+    - [**Colour Scheme**](#colour-scheme)
+    - [**Fonts**](#fonts)
+    - [**Imagery Used**](#imagery-used)
 - [**Features**](#features)
 - [**Technology Used**](#technology)
-    - **Language Used**
-    - **Frameworks, Libararies & Programs**
+    - [**Language Used**](#language-used)
+    - [**Frameworks, Libararies & Programs**](#)
 - [**Testing**](#testing)
-    - **Code Validation**
-    - **Contrast Grid**
-    - **Testing Performance**
-    - **Other Testing**
+    - [**Code Validation**](#code-validation)
+    - [**Contrast Grid**]()
+    - [**Testing Performance**]()
+    - [**Other Testing**]()
 - [**Challenges**](#challenges)
 - [**Future Enhancements**](#enhancements)
 - [**Deployment**](#deployment)
@@ -35,15 +35,15 @@
 
     
 
-## **Project Introduction**<a name="introduction"></a>
-### PayCalcs IE <a name="paycalcs"></a>
+## **Project Introduction**
+### PayCalcs IE
 Welcome to PayCalcs IE! This is a web based calculator designed to calculate net pay base on your total income, tax deductions, and other personal circumstances. This will help you estimate your take-home pay by taking into consideration tax regulations and allowances. Whether you are an individual planning your finances or a business owner managing your payroll, this calculator will help you simplify the process.
 
 ### [Link to live project](https://hpcoloma.github.io/project-portfolio-2/)
 ### Objectives
 Ensure that users can quickly understand the purpose and functionality of the salary calculator.
 Provide users with instruction on how to effectively use the salary calculator, making the process intuitive and user-friendly.
-## **Planning Stage**<a name="planning"></a>
+## **Planning Stage**
 ### User Goals
 - Calculate take home pay - Users should be able to effortlessly input their salary details and receive accurate calculations for gross and net income.
 - Consider Multiple Factors - The calculator should allow users to consider various factors such as tax rates, deductions, and bonuses, providing a comprehensive overview of their financial situation.
@@ -53,7 +53,7 @@ Provide users with instruction on how to effectively use the salary calculator, 
 ### Site Owner Goals
 - To provide users a tool to calculate take home pay and give them an idea on how much tax they pay. Enhancing this calculator with additional target features in the future would benefit not just an individual users but also business owners.
 
-## **Design**<a name="design"></a>
+## **Design**
 ### Wireframes
 I used [Balsamiq](https://balsamiq.com) to generate digital sketches of how I want my site to look like on different devices. Balsamiq had helped me visualised my idea and finalised my design before I start writing my codes.
 
@@ -110,7 +110,7 @@ I wanted a plain sans serif text that is easy to read both on big and small scre
 
 Also, [Favicons](https://favicon.io/) for some icons used.
 
-## **Features**<a name="features"></a>
+## **Features**
 - The website incorporates a central column where JavaScript dynamically injects the pertinent HTML content. The title bar and site background persist across all screens
 
 - Main Menu - on page loads, the main menu are displayed. Also, a description of the web app and a disclaimer.
@@ -138,7 +138,7 @@ Also, [Favicons](https://favicon.io/) for some icons used.
     - No Javascript Page is also set up if browser has javascript disabled.
 
 
-## **Technology Used**<a name="technology"></a>
+## **Technology Used**
 - **Language**
     - HTML
     - CSS3
@@ -153,56 +153,56 @@ Also, [Favicons](https://favicon.io/) for some icons used.
     - [Fontawesome](https://fontawesome.com/icons) for menu icons.
     - [Favicon](https://favicon.io/) used to create favicons using logo from flaticon.
     - [Am I Responsive](https://amiresponsive.co.uk/) to show the image of the website on different device size.
-    - [Visual Studio Online](https://visualstudio.microsoft.com/services/visual-studio-online/)
+    - [Visual Studio Online](https://visualstudio.microsoft.com/services/visual-studio-online/) - to work on github repositories.
     - ChatGPT for assistance on some description on this readme.
 
-## **Testing**<a name="testing"></a>
-- **Code Validation**
-    - [W3C Validator](https://validator.w3.org/#validate_by_input) for HTML validation.
+## **Testing**
+**Code Validation**
+- [W3C Validator](https://validator.w3.org/#validate_by_input) for HTML validation.
         -  Index. html validation
       ![](assets/images/htmltest.PNG)
         - 404.html validation
         ![](assets/images/paycalcs_htmlvalidation404.PNG)
 
-     - [W3C Validator](https://jigsaw.w3.org/css-validator/) for CSS validation.
+-  [W3C Validator](https://jigsaw.w3.org/css-validator/) for CSS validation.
         
        ![](assets/images/cssvalidator.PNG)
-       
-    - [JSHint](assets/images/jshint.png) for Javascript code validation.
+- [JSHint](assets/images/jshint.png) for Javascript code validation.
     
        ![JS Hint ](assets/images/jshint.png)
     
-- **Contrast Grid**
-    - [Eightshapes Grid Contrast](https://contrast-grid.eightshapes.com/) for checking the colour contrast of my colour palette.
-- **Testing Performance**
-    - Mobile    
+**Contrast Grid**
+    - [Eightshapes Grid Contrast](https://contrast-grid.eightshapes.com/) for checking the colour contrast of my colour palette.  
+**Testing Performance**
+- Mobile    
        ![Lighthouse Mobile Test Results](assets/images/lighthousetesting.PNG) 
-    - Desktop
+- Desktop
        ![Lighthouse Desktop Test Results](assets/images/lighthousetestingDesktop.PNG)
-- **Other Testing**
-    - Calculation Test - I compare results of my calculate pay to the result of this calculator online to check the accuracy of my calculator. [Link Here](https://salaryaftertax.com/ie/salary-calculator)
-    - No Javascript Page - display of noscript message by disabling JavaScript in browser options.
+    
+**Other Testing**
+- Calculation Test - I compare results of my calculate pay to the result of this calculator online to check the accuracy of my calculator. [Link Here](https://salaryaftertax.com/ie/salary-calculator)
+- No Javascript Page - display of noscript message by disabling JavaScript in browser options.
 
-        ![No Javascript](assets/images/nojspage.PNG)
+    ![No Javascript](assets/images/nojspage.PNG)
 
-    - Functionality Test - I validate each menu and links on the website with the help of a third party. User was able to navigate easily and can easily find functions.
+- Functionality Test - I validate each menu and links on the website with the help of a third party. User was able to navigate easily and can easily find functions.
 
      ![Functionality](assets/images/menu.PNG)
 
-    - Compatibility Testing - I've tested this using the following digital device:
-        - Iphone 12 Pro
-        - Samsung Galaxy A51
-        - Macbook pro
-        - Windows laptop
-    - Crossbrowser Testing 
-        - Different browsers such as Google Chrome, Edge and Safari were used to test   
+- Compatibility Testing - I've tested this using the following digital device:
+    - Iphone 12 Pro
+    - Samsung Galaxy A51
+    - Macbook pro
+     - Windows laptop
+- Crossbrowser Testing 
+    - Different browsers such as Google Chrome, Edge and Safari were used to test   
 
 
-## **Challenges**<a name="challenges"></a>
+## **Challenges**
 - Ran out of credit in Gitpod so had to install VSCode and set up last minute to continue working on project. Codeanywhere performance is very poor.
 
-## **Future Enhancements**<a name="enhancements"></a>
-- Aim to get the Advanced Calculate Pay section completed
+## **Future Enhancements**
+
 - Convert to a payroll application where data can be stored.
 - Multi-Currency Support enable users to input and calculate salaries in different currencies, providing flexibility for international users or businesses operating in multiple countries.
 
@@ -222,7 +222,7 @@ Retirement Planning:
 
 - Machine Learning Predictions - Implement machine learning algorithms to predict future salary growth based on historical data and industry trends, offering users insights into their potential earnings trajectory.
 
-## **Deployment**<a name="deployments"></a>
+## **Deployment**
 
 The project was deployed to Github pages. Below are the steps used to deploy the site.
 
@@ -232,14 +232,14 @@ The project was deployed to Github pages. Below are the steps used to deploy the
 4. Once on teh active deployments page, click the link under github-pages. 
 5. Page will open the site.
 
-## **Acknowledgements**<a name="acknowledgement"></a>
+## **Acknowledgements**
 
 This project will not be live today without the help and support of the following people:
 
 1. Arnold Ambida - my husband, who looks after my 3 children while I do this course.
-2. Matt Boden - my mentor who have made a significant impact on completing this projecs with all the tips and the encouragements.
+2. Matt Bodden - my mentor who have made a significant impact on completing this projecs with all the tips and the encouragements.
 
-## **Credits**<a name="credits"></a>
+## **Credits**
 
  **Website sources**
 

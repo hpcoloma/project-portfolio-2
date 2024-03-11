@@ -47,6 +47,10 @@ header a {
     display: inline-block;
 }
 
+h3 {
+    margin-bottom: 10px;
+}
+
 /*Main Content*/
 
 main {
@@ -191,7 +195,7 @@ main>div {
 
 .tabs-container button {
     display: inline-block;
-    border: none;
+    border: 1px solid #000000;
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
@@ -203,6 +207,11 @@ main>div {
 
 .tabs-container button:hover {
     background-color: rgb(86, 191, 181);
+}
+
+.tabs-container button:active {
+    background-color: rgb(86, 191, 181);
+    border: 1px solid #F2AE2E;
 }
 
 /*Tabs content*/
@@ -219,6 +228,11 @@ main>div {
 
 .tab-contents {
     align-items: center;
+}
+
+.tab-contents button {
+    display: block;
+    margin: 10px 0px;
 }
 
 #calculateButton,

@@ -211,14 +211,13 @@
               <!-- Basic Pay calculation-->
               <div id="basic" class="tabscontent">
                 <h3>Your Details:</h3>
-                <br>
                 <label for="salary">Yearly Salary:</label>
                 <input type="number" id="salary" placeholder="Enter yearly salary" required>&nbsp;
                   <div class="tooltip">
                     <i class="fa-solid fa-circle-info"></i>
                     <span class="tooltiptext">Based on the assumptions about your personal conditions, such as that you are single and have no dependents.</span>
                   </div>
-                <br><br>
+                
                 <button id="calculateButton">
                   Calculate Pay
                 </button>
@@ -231,7 +230,6 @@
               <!-- Advanced Pay calculation-->
               <div id="advanced" class="tabscontent">
                 <h3>Your Details:</h3>
-                <br>
                 <label for="adv-salary">Yearly Salary: </label>
                 <input type="number" id="adv-salary" placeholder="Enter yearly salary" required>
                 <div class="tooltip">
@@ -267,8 +265,7 @@
                 <input type="radio" name="dependents" id="depyes" value="yes">
                 <label for="depno">No</label>
                 <input type="radio" name="dependents" id="depno" value="no">
-                </p>
-                <br>              
+                </p>            
                 <button id="calculateButton-adv">Calculate Pay</button>
                 <div class="calcResults2" id="calcResultsContainer2">
                   <!-- Results will be printed here -->
