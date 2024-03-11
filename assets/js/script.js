@@ -94,12 +94,15 @@ function hideCalcsContainer() {
 function calculateSalary() {
     const yearlySalary = parseFloat(document.getElementById('salary').value);
 
-    //Alert message if salary is empty
-    if (!yearlySalary) {
-        alert('Please enter your salary.');
+    //Validate the salary input to not accept 0 and negative values
+    if (yearlySalary < 0) {
+        alert('Salary cannot be negative.');
         return;
-    }
-
+    } else if (!yearlySalary) {
+        alert('Please enter your salary.')
+        return;
+    } 
+    
     //Income Tax Bands and rates
     const taxBand1 = 42000;
     const lowerRate = 0.20;
@@ -217,3 +220,4 @@ function calculateSalary() {
 }
 
 document.getElementById('calculateButton').addEventListener('click', calculateSalary);
+
