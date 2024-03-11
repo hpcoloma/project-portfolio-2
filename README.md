@@ -159,8 +159,10 @@ Also, [Favicons](https://favicon.io/) for some icons used.
 ## **Testing**<a name="testing"></a>
 - **Code Validation**
     - [W3C Validator](https://validator.w3.org/#validate_by_input) for HTML validation.
-    
+        -  Index. html validation
       ![](assets/images/htmltest.PNG)
+        - 404.html validation
+        ![](assets/images/paycalcs_htmlvalidation404.PNG)
 
      - [W3C Validator](https://jigsaw.w3.org/css-validator/) for CSS validation.
         
