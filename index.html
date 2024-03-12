@@ -211,13 +211,13 @@
               <!-- Basic Pay calculation-->
               <div id="basic" class="tabscontent">
                 <h3>Your Details:</h3>
-                <label for="salary">Yearly Salary:</label>
-                <input type="number" id="salary" placeholder="Enter yearly salary" required>&nbsp;
+                <label for="salary">Yearly Salary
                   <div class="tooltip">
                     <i class="fa-solid fa-circle-info"></i>
                     <span class="tooltiptext">Based on the assumptions about your personal conditions, such as that you are single and have no dependents.</span>
                   </div>
-                
+                </label>
+                <input type="number" id="salary" placeholder="Enter yearly salary" required>&nbsp;                
                 <button id="calculateButton">
                   Calculate Pay
                 </button>
@@ -230,42 +230,51 @@
               <!-- Advanced Pay calculation-->
               <div id="advanced" class="tabscontent">
                 <h3>Your Details:</h3>
-                <label for="adv-salary">Yearly Salary: </label>
-                <input type="number" id="adv-salary" placeholder="Enter yearly salary" required>
-                <div class="tooltip">
+                <h4>Your Status</h4>
+                <p>Marital Status</p>
+                <label for="single" id="status"><input type="radio" name="status" id="single">Single</label>
+                <label for="married" id="status"><input type="radio" name="status" id="married">Married</label>
+                
+                <label for="dependents">Do you have dependents?</label>
+                <label for="depyes" id="status"><input type="radio" name="dependents" id="depyes">Yes</label>
+                <label for="depno" id="status"><input type="radio" name="dependents" id="depno">No</label>
+
+                <label for="dependents">What is your age?</label>
+                <input type="number" name="age" required>
+                
+                
+                <h4>Your Income</h4>
+                <label for="adv-salary">Yearly Salary
+                  <div class="tooltip">
                     <i class="fa-solid fa-circle-info"></i>
                     <span class="tooltiptext">Enter your Gross Yearly Salary or the one you would like to get and then click Calculate.</span>
                   </div>
-                <br>
-                <label for="bik">Benefit In Kind: </label>
+                </label>
+                <input type="number" id="adv-salary" placeholder="Enter yearly salary" required>
+                
+                <label for="spouse-income">Spouse Income</label>
+                <input type="number" id="spouse-income" placeholder="1000"> 
+                
+                <label for="bik">Benefit In Kind
+                  <div class="tooltip">
+                  <i class="fa-solid fa-circle-info"></i>
+                  <span class="tooltiptext">Other income.</span>
+                </div>
+                </label>
                 <input type="number" id="bik" placeholder="1000" required>
-                <div class="tooltip">
-                    <i class="fa-solid fa-circle-info"></i>
-                    <span class="tooltiptext">Other income.</span>
-                  </div>
-                <br>
-                <label for="pension">Pension Contribution: </label>
-                <input type="number" id="pension" min="0" max="100" placeholder="100" required>
-                <div class="tooltip">
+                
+                <label for="pension">Pension Contribution
+                  <div class="tooltip">
                     <i class="fa-solid fa-circle-info"></i>
                     <span class="tooltiptext">Enter percentage of your pension contribution.</span>
                   </div>
-                <br>
-                <p>Status: 
-                <label for="single">Single</label>
-                <input type="radio" name="status" id="single" value="single">
-                <label for="married">Married</label>
-                <input type="radio" name="status" id="married" value="married">
-                </p>
-                <label for="spouse-income">Spouse Income: </label>
-                <input type="number" id="spouse-income" placeholder="1000" required>
-                <br>
-                <p>Do you have dependents?
-                <label for="depyes">Yes</label>
-                <input type="radio" name="dependents" id="depyes" value="yes">
-                <label for="depno">No</label>
-                <input type="radio" name="dependents" id="depno" value="no">
-                </p>            
+                </label>
+                <input type="number" id="pension" min="0" max="100" placeholder="100" required>           
+                
+                
+                
+                
+                
                 <button id="calculateButton-adv">Calculate Pay</button>
                 <div class="calcResults2" id="calcResultsContainer2">
                   <!-- Results will be printed here -->

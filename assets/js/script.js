@@ -21,9 +21,16 @@ const usc2 = 13748 * uscRate2;
 const usc3 = 44284 * uscRate3;
 let uscDeduction = 0;
 
-//Calculate income tax
+//Tax credits for 2024
 const taxCreditSingle = 1875;
 const taxCreditPaye = 1875;
+const taxCreditMarried = 1875;
+const taxCreditSpcc = 1750;
+//const taxCreditIncapacitated = 3500;
+const taxCreditRentS = 750;
+const taxCreditRentM = 1500;
+const taxCreditHomeCare = 1800;
+const taxCreditDependentRelative = 245;
 let netIncomeTax = 0;
 
 //PRSI rates
@@ -125,9 +132,9 @@ function calculateSalary() {
     } else if (!yearlySalary) {
         alert('Please enter your salary.')
         return;
-    } 
+    }
 
-    // Calculate Monthly and Weekly Gross Salary
+    // Calculate Gross Monthly and Weekly Gross Salary
     const grossMonthlySalary = Math.round(yearlySalary / 12);
     const grossWeeklySalary = Math.round(yearlySalary / 52);
 

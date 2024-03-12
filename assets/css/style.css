@@ -51,6 +51,15 @@ h3 {
     margin-bottom: 10px;
 }
 
+label {
+    display: block;
+    margin-left: 10px;
+}
+
+input {
+    margin: 10px 0 10px 20px;
+}
+
 /*Main Content*/
 
 main {
@@ -235,10 +244,34 @@ main>div {
     margin: 10px 0px;
 }
 
+.tabscontent input[type="radio"] {
+    display: none;
+}
+
+.tabscontent input {
+    width: 200px;
+}
+
+.tabscontent #status {
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 5px 10px;
+    width: 75px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px 0 10px 20px;
+}
+
+.tabscontent p {
+    margin-left: 10px;
+}
+
+
 #calculateButton,
 #calculateButton-adv {
     background-color: #f2f2f2;
     height: auto;
+    margin-left: 10px;
 }
 
 /*Table*/
