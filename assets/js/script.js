@@ -6,6 +6,30 @@ let instructionContainer = document.getElementById("instruction-container");
 let payContainer = document.getElementById("pay-container");
 let tabButtons = document.querySelectorAll('.tablinks');
 
+//Income Tax Bands and rates
+const taxBand1 = 42000;
+const lowerRate = 0.20;
+const higherRate = 0.40;
+
+//USC Rates
+const uscRate1 = 0.005;
+const uscRate2 = 0.02;
+const uscRate3 = 0.04;
+const uscRate4 = 0.08;
+const usc1 = 12012 * uscRate1;
+const usc2 = 13748 * uscRate2;
+const usc3 = 44284 * uscRate3;
+let uscDeduction = 0;
+
+//Calculate income tax
+const taxCreditSingle = 1875;
+const taxCreditPaye = 1875;
+let netIncomeTax = 0;
+
+//PRSI rates
+const prsiRate = 0.04;
+let prsiDeduction = 0;
+
 //Iteration Statement
 for (let i = 0; i < tabButtons.length; i++) {
     tabButtons[i].addEventListener('click', () => {
@@ -102,20 +126,10 @@ function calculateSalary() {
         alert('Please enter your salary.')
         return;
     } 
-    
-    //Income Tax Bands and rates
-    const taxBand1 = 42000;
-    const lowerRate = 0.20;
-    const higherRate = 0.40;
 
     // Calculate Monthly and Weekly Gross Salary
     const grossMonthlySalary = Math.round(yearlySalary / 12);
     const grossWeeklySalary = Math.round(yearlySalary / 52);
-
-    //Calculate income tax
-    const taxCreditSingle = 1875;
-    const taxCreditPaye = 1875;
-    let netIncomeTax = 0;
 
     if (yearlySalary <= 18750) {
         netIncomeTax = 0;
@@ -124,16 +138,6 @@ function calculateSalary() {
     } else {
         netIncomeTax = Math.round(((taxBand1 * 0.20) + ((yearlySalary - taxBand1) * higherRate)) - (taxCreditPaye + taxCreditSingle));
     }
-
-    //USC Rates
-    const uscRate1 = 0.005;
-    const uscRate2 = 0.02;
-    const uscRate3 = 0.04;
-    const uscRate4 = 0.08;
-    const usc1 = 12012 * uscRate1;
-    const usc2 = 13748 * uscRate2;
-    const usc3 = 44284 * uscRate3;
-    let uscDeduction = 0;
 
     //USC Calculation
     if (yearlySalary <= 13000) {
@@ -144,11 +148,7 @@ function calculateSalary() {
         uscDeduction = Math.round(usc1 + usc2 + ((yearlySalary - 25760) * uscRate3));
     } else {
         uscDeduction = Math.round(usc1 + usc2 + usc3 + ((yearlySalary - 70044) * uscRate4));
-    }
-
-    //PRSI rates
-    const prsiRate = 0.04;
-    let prsiDeduction = 0;
+    }  
 
     /**Calculate PRSI deductions
     PRSI is nil if the yearly salary is less than or equal to €18,304 per year or €352 per week.
