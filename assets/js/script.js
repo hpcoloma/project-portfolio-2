@@ -31,6 +31,8 @@ const taxCreditRentS = 750;
 const taxCreditRentM = 1500;
 const taxCreditHomeCare = 1800;
 const taxCreditDependentRelative = 245;
+const taxCreditAgeSingle = 245;
+const taxCreditAgeMarried = 490; 
 let netIncomeTax = 0;
 
 //PRSI rates
@@ -77,14 +79,11 @@ instructButtonHide.addEventListener('click', hideInstructionContainer);
 calcButtonHide.addEventListener('click', hideCalcsContainer);
 calcButton.addEventListener('click', showCalcContainer);
 
-//Eventlistener for button to open a new page
-document.getElementById('calculateButton-adv').addEventListener('click', function () {
-    //This is the link I want to open
-    const errorPage = '404.html';
 
-    //To open the link
-    window.location.href = errorPage;
-});
+
+//Eventlistener for calculation
+document.getElementById('calculateButton-adv').addEventListener('click', function());
+document.getElementById('calculateButton').addEventListener('click', calculateSalary);   
 
 //To show/hide info container
 //Show information container
@@ -226,5 +225,5 @@ function calculateSalary() {
     resultsContainer.appendChild(table);
 }
 
-document.getElementById('calculateButton').addEventListener('click', calculateSalary);
+
 

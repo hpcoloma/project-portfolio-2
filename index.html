@@ -231,18 +231,35 @@
               <div id="advanced" class="tabscontent">
                 <h3>Your Details:</h3>
                 <h4>Your Status</h4>
-                <p>Marital Status</p>
-                <label for="single" id="status"><input type="radio" name="status" id="single">Single</label>
-                <label for="married" id="status"><input type="radio" name="status" id="married">Married</label>
+                <label class="question" for="status">Marital Status
+                  <div class="tooltip">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span class="tooltiptext">If Married, you will be the assessible spouse</span>
+                  </div>
+                </label>
+                <label for="single" class="details">
+                  <input type="radio" name="status" id="single" checked="checked">Single
+                </label>
+                <label for="married" class="details">
+                  <input type="radio" name="status" id="married">Married
+                </label>
                 
                 <label for="dependents">Do you have dependents?</label>
-                <label for="depyes" id="status"><input type="radio" name="dependents" id="depyes">Yes</label>
-                <label for="depno" id="status"><input type="radio" name="dependents" id="depno">No</label>
+                <label for="depyes" class="details"><input type="radio" name="dependents" id="depyes" checked="checked">Yes</label>
+                <label for="depno" class="details"><input type="radio" name="dependents" id="depno">No</label>
 
-                <label for="dependents">What is your age?</label>
+                <label for="rent">Are you renting?</label>
+                <label for="rentyes" class="details"><input type="radio" name="rent" id="rentyes" checked="checked">Yes</label>
+                <label for="rentno" class="details"><input type="radio" name="rent" id="rentno">No</label>
+
+                <label for="dependents">What is your age?
+                  <div class="tooltip">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span class="tooltiptext">This will determine your eligibility for the Aged Tax Credits</span>
+                  </div>
+                </label>
                 <input type="number" name="age" required>
-                
-                
+                                
                 <h4>Your Income</h4>
                 <label for="adv-salary">Yearly Salary
                   <div class="tooltip">
@@ -252,17 +269,13 @@
                 </label>
                 <input type="number" id="adv-salary" placeholder="Enter yearly salary" required>
                 
-                <label for="spouse-income">Spouse Income</label>
-                <input type="number" id="spouse-income" placeholder="1000"> 
-                
-                <label for="bik">Benefit In Kind
+                <label for="spouse-income">Spouse Income
                   <div class="tooltip">
-                  <i class="fa-solid fa-circle-info"></i>
-                  <span class="tooltiptext">Other income.</span>
-                </div>
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span class="tooltiptext">Amount your spouse make.</span>
+                  </div>
                 </label>
-                <input type="number" id="bik" placeholder="1000" required>
-                
+                <input type="number" id="spouse-income" placeholder="1000">                
                 <label for="pension">Pension Contribution
                   <div class="tooltip">
                     <i class="fa-solid fa-circle-info"></i>
