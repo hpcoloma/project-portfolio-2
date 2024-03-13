@@ -34,6 +34,7 @@ const taxCreditDependentRelative = 245;
 const taxCreditAgeSingle = 245;
 const taxCreditAgeMarried = 490; 
 let netIncomeTax = 0;
+let otherTaxCredits = 0;
 
 //PRSI rates
 const prsiRate = 0.04;
@@ -82,7 +83,7 @@ calcButton.addEventListener('click', showCalcContainer);
 
 
 //Eventlistener for calculation
-document.getElementById('calculateButton-adv').addEventListener('click', function());
+document.getElementById('calculateButton-adv').addEventListener('click', calculateSalaryAdv);
 document.getElementById('calculateButton').addEventListener('click', calculateSalary);   
 
 //To show/hide info container
@@ -137,12 +138,13 @@ function calculateSalary() {
     const grossMonthlySalary = Math.round(yearlySalary / 12);
     const grossWeeklySalary = Math.round(yearlySalary / 52);
 
+    //Calculate Net Income 
     if (yearlySalary <= 18750) {
         netIncomeTax = 0;
     } else if (yearlySalary > 18750 && yearlySalary <= taxBand1) {
         netIncomeTax = Math.round((yearlySalary * lowerRate) - (taxCreditSingle + taxCreditPaye));
     } else {
-        netIncomeTax = Math.round(((taxBand1 * 0.20) + ((yearlySalary - taxBand1) * higherRate)) - (taxCreditPaye + taxCreditSingle));
+        netIncomeTax = Math.round(((taxBand1 * lowerRate) + ((yearlySalary - taxBand1) * higherRate)) - (taxCreditPaye + taxCreditSingle));
     }
 
     //USC Calculation
@@ -225,5 +227,7 @@ function calculateSalary() {
     resultsContainer.appendChild(table);
 }
 
-
+function calculateSalaryAdv() {
+    
+}
 
