@@ -185,8 +185,18 @@ function calculateSalary() {
     const values = [yearlySalary, grossMonthlySalary, grossWeeklySalary, netIncomeTax, monthlyTax, weeklyTax, uscDeduction, monthlyUsc, weeklyUsc, prsiDeduction, monthlyPrsi, weeklyPrsi];
 
     const netPay = [netYearlySalary, netMonthlySalary, netWeeklySalary];
-    const resultsContainer = document.getElementById('calcResultsContainer');
 
+    createResultTable(details, timePeriods, values, netPay);
+}
+
+function calculateSalaryAdv() {
+    
+}
+
+
+function createResultTable(details, timePeriods, values, netPay) {
+    const resultsContainer = document.getElementById('calcResultsContainer');
+   
     // Clear existing content
     resultsContainer.innerHTML = '';
 
@@ -210,7 +220,7 @@ function calculateSalary() {
 
         for (let j = 0; j < timePeriods.length; j++) {
             const valueCell = row.insertCell(j + 1);
-            valueCell.textContent = `€${values[i * timePeriods.length + j]}`;
+            valueCell.textContent = `€${values[i * timePeriods.length + j].toLocaleString()}`;
         }
     }
 
@@ -219,15 +229,11 @@ function calculateSalary() {
     netPayRow.insertCell(0).textContent = 'Net Pay';
     for (let i = 0; i < netPay.length; i++) {
         const cell = netPayRow.insertCell(i + 1);
-        cell.textContent = `€${netPay[i]}`;
+        cell.textContent = `€${netPay[i].toLocaleString()}`;
     }
 
     table.appendChild(thead);
     table.appendChild(tbody);
     resultsContainer.appendChild(table);
-}
-
-function calculateSalaryAdv() {
-    
 }
 
