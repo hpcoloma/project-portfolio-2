@@ -87,9 +87,24 @@ calcButton.addEventListener('click', showCalcContainer);
 
 
 
-//Eventlistener for calculation
+//Eventlisteners
 document.getElementById('calculateButton-adv').addEventListener('click', calculateSalaryAdv);
-document.getElementById('calculateButton').addEventListener('click', calculateSalary);   
+document.getElementById('calculateButton').addEventListener('click', calculateSalary);
+document.addEventListener('DOMContentLoaded', function() {
+    const singleInput = document.getElementById('single');
+    const marriedInput = document.getElementById('married');
+    const spouseIncomeInput = document.getElementById('spouse-income');
+
+    singleInput.addEventListener('change', function() {
+        spouseIncomeInput.disabled = true;
+    });
+
+    marriedInput.addEventListener('change', function() {
+        spouseIncomeInput.disabled = false;
+    });
+});
+
+
 
 //To show/hide info container
 //Show information container
@@ -325,5 +340,6 @@ function displayResultTableAdv(table) {
     //Append the generated table
     resultsContainer.appendChild(table);
 }
+
 
 
