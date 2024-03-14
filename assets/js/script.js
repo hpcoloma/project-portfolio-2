@@ -19,7 +19,7 @@ const uscRate4 = 0.08;
 const usc1 = 12012 * uscRate1;
 const usc2 = 13748 * uscRate2;
 const usc3 = 44284 * uscRate3;
-let uscDeduction = 0;
+
 
 //Tax credits for 2024
 const taxCreditSingle = 1875;
@@ -36,9 +36,14 @@ const taxCreditAgeMarried = 490;
 let netIncomeTax = 0;
 let otherTaxCredits = 0;
 
+let details = ['Salary', 'Income Tax', 'USC', 'PRSI'];
+let timePeriods = ['Yearly', 'Monthly', 'Weekly'];
+let values;
+let netPay;
+
 //PRSI rates
 const prsiRate = 0.04;
-let prsiDeduction = 0;
+
 
 //Iteration Statement
 for (let i = 0; i < tabButtons.length; i++) {
@@ -134,6 +139,38 @@ function validateYearlySalary(yearlySalary) {
 
 //Calculation Section
 //Functions
+function calculateUSCDeduction(yearlySalary) {
+    let uscDeduction = 0;
+    
+    //USC Calculation
+    if (yearlySalary <= 13000) {
+        uscDeduction = 0;
+    } else if (yearlySalary > 12012 && yearlySalary <= 25760) {
+        uscDeduction = Math.round(usc1 + ((yearlySalary - 12012) * uscRate2));
+    } else if (yearlySalary > 25760 && yearlySalary <= 70044) {
+        uscDeduction = Math.round(usc1 + usc2 + ((yearlySalary - 25760) * uscRate3));
+    } else {
+        uscDeduction = Math.round(usc1 + usc2 + usc3 + ((yearlySalary - 70044) * uscRate4));
+    }  
+
+    return uscDeduction;
+}
+
+function calculatePRSIDeduction(yearlySalary) {
+    let prsiDeduction = 0;
+    /**Calculate PRSI deductions
+    PRSI is nil if the yearly salary is less than or equal to €18,304 per year or €352 per week.
+    **/
+    if (yearlySalary <= 18304) {
+        prsiDeduction = 0;
+    } else {
+        prsiDeduction = Math.round(yearlySalary * prsiRate);
+    }
+
+    return prsiDeduction;
+}
+
+
 function calculateSalary() {
     const yearlySalary = parseFloat(document.getElementById('salary').value);
 
@@ -151,28 +188,45 @@ function calculateSalary() {
         netIncomeTax = Math.round(((taxBand1 * lowerRate) + ((yearlySalary - taxBand1) * higherRate)) - (taxCreditPaye + taxCreditSingle));
     }
 
-    //USC Calculation
-    if (yearlySalary <= 13000) {
-        uscDeduction = 0;
-    } else if (yearlySalary > 12012 && yearlySalary <= 25760) {
-        uscDeduction = Math.round(usc1 + ((yearlySalary - 12012) * uscRate2));
-    } else if (yearlySalary > 25760 && yearlySalary <= 70044) {
-        uscDeduction = Math.round(usc1 + usc2 + ((yearlySalary - 25760) * uscRate3));
-    } else {
-        uscDeduction = Math.round(usc1 + usc2 + usc3 + ((yearlySalary - 70044) * uscRate4));
-    }  
+    //Calculate USC Deductions
+    uscDeduction = calculateUSCDeduction(yearlySalary);
 
-    /**Calculate PRSI deductions
-    PRSI is nil if the yearly salary is less than or equal to €18,304 per year or €352 per week.
-    **/
-    if (yearlySalary <= 18304) {
-        prsiDeduction = 0;
-    } else {
-        prsiDeduction = Math.round(yearlySalary * prsiRate);
+    //Calculate PRSI Deductions
+    prsiDeduction = calculatePRSIDeduction(yearlySalary);
+
+    calculateMonthlyWeekly(yearlySalary, netIncomeTax, uscDeduction, prsiDeduction);
+    
+    //function to create the result table
+    createResultTable(details, timePeriods, values, netPay);
+}
+
+function calculateSalaryAdv() {
+    const yearlySalary = parseFloat(document.getElementById('salary-adv').value);
+
+    //Validate the salary input
+    if (!validateYearlySalary(yearlySalary)) {
+        return;
     }
+    
+    //Calculate Net Income 
+    if (yearlySalary <= 18750) {
+        netIncomeTax = 0;
+    } else if (yearlySalary > 18750 && yearlySalary <= taxBand1) {
+        netIncomeTax = Math.round((yearlySalary * lowerRate) - (taxCreditSingle + taxCreditPaye));
+    } else {
+        netIncomeTax = Math.round(((taxBand1 * lowerRate) + ((yearlySalary - taxBand1) * higherRate)) - (taxCreditPaye + taxCreditSingle));
+    }
+
+    //Calculate USC Deductions
+    uscDeduction = calculateUSCDeduction(yearlySalary);
+
+    //Calculate PRSI Deductions
+    prsiDeduction = calculatePRSIDeduction(yearlySalary);
 
     calculateMonthlyWeekly(yearlySalary, netIncomeTax, uscDeduction, prsiDeduction);
 
+    //function to create the result table
+    createResultTableAdv(details, timePeriods, values, netPay);
 }
 
 function calculateMonthlyWeekly(yearlySalary, netIncomeTax, uscDeduction, prsiDeduction){
@@ -194,36 +248,25 @@ function calculateMonthlyWeekly(yearlySalary, netIncomeTax, uscDeduction, prsiDe
     const netWeeklySalary = Math.round(netYearlySalary / 52);
 
     //Data for the table
-    const timePeriods = ['Yearly', 'Monthly', 'Weekly'];
-    const details = ['Salary', 'Income Tax', 'USC', 'PRSI'];
-    const values = [yearlySalary, grossMonthlySalary, grossWeeklySalary, netIncomeTax, monthlyTax, weeklyTax, uscDeduction, monthlyUsc, weeklyUsc, prsiDeduction, monthlyPrsi, weeklyPrsi];
-    const netPay = [netYearlySalary, netMonthlySalary, netWeeklySalary];
+    values = [yearlySalary, grossMonthlySalary, grossWeeklySalary, netIncomeTax, monthlyTax, weeklyTax, uscDeduction, monthlyUsc, weeklyUsc, prsiDeduction, monthlyPrsi, weeklyPrsi];
+    netPay = [netYearlySalary, netMonthlySalary, netWeeklySalary];
 
-    //function to create the result table
-    createResultTable(details, timePeriods, values, netPay);
+    
 }
 
-function calculateSalaryAdv() {
-    const yearlySalary = parseFloat(document.getElementById('salary').value);
-
-    //Calculate Net Income 
-    if (yearlySalary <= 18750) {
-        netIncomeTax = 0;
-    } else if (yearlySalary > 18750 && yearlySalary <= taxBand1) {
-        netIncomeTax = Math.round((yearlySalary * lowerRate) - (taxCreditSingle + taxCreditPaye));
-    } else {
-        netIncomeTax = Math.round(((taxBand1 * lowerRate) + ((yearlySalary - taxBand1) * higherRate)) - (taxCreditPaye + taxCreditSingle));
-    }
-
-
-}
-
+//Table for Basic
 function createResultTable(details, timePeriods, values, netPay) {
-    const resultsContainer = document.getElementById('calcResultsContainer');
-   
-    // Clear existing content
-    resultsContainer.innerHTML = '';
+    const table = ResultTable(details, timePeriods, values, netPay); displayResultTable(table);   
+}
 
+//Table for Advance
+function createResultTableAdv(details, timePeriods, values, netPay) {
+    const table = ResultTable(details, timePeriods, values, netPay); displayResultTableAdv(table);   
+}
+
+
+
+function ResultTable(details, timePeriods, values, netPay) {
     const table = document.createElement('table');
     const thead = document.createElement('thead');
     const tbody = document.createElement('tbody');
@@ -258,6 +301,29 @@ function createResultTable(details, timePeriods, values, netPay) {
 
     table.appendChild(thead);
     table.appendChild(tbody);
+    
+    return table;
+}
+
+
+function displayResultTable(table){
+    const resultsContainer = document.getElementById('calcResultsContainer');
+   
+    // Clear existing content
+    resultsContainer.innerHTML = '';
+
+    //Append the generated table
     resultsContainer.appendChild(table);
 }
+
+function displayResultTableAdv(table) {
+    const resultsContainer = document.getElementById('calcResultsContainerAdv');
+   
+    // Clear existing content
+    resultsContainer.innerHTML = '';
+
+    //Append the generated table
+    resultsContainer.appendChild(table);
+}
+
 

@@ -198,8 +198,10 @@ Also, [Favicons](https://favicon.io/) for some icons used.
     - Different browsers such as Google Chrome, Edge and Safari were used to test   
 
 
-## **Challenges**
+## **Bugs and Challenges**
 - Ran out of credit in Gitpod so had to install VSCode and set up last minute to continue working on project. Codeanywhere performance is very poor.
+- On the Advanced Tab, I am having difficulty 
+
 
 ## **Future Enhancements**
 
