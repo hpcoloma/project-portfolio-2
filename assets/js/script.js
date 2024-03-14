@@ -120,24 +120,28 @@ function hideCalcsContainer() {
     document.getElementById('salary').value = '';
 }
 
+function validateYearlySalary(yearlySalary) {
+    //Validate the salary input to not accept 0 and negative values
+    if (yearlySalary < 0) {
+        alert('Salary cannot be negative.');
+        return false;
+    } else if (!yearlySalary) {
+        alert('Please enter your salary.')
+        return false;
+    }
+    return true;
+}
+
 //Calculation Section
 //Functions
 function calculateSalary() {
     const yearlySalary = parseFloat(document.getElementById('salary').value);
 
-    //Validate the salary input to not accept 0 and negative values
-    if (yearlySalary < 0) {
-        alert('Salary cannot be negative.');
-        return;
-    } else if (!yearlySalary) {
-        alert('Please enter your salary.')
+    //Validate the salary input
+    if (!validateYearlySalary(yearlySalary)) {
         return;
     }
-
-    // Calculate Gross Monthly and Weekly Gross Salary
-    const grossMonthlySalary = Math.round(yearlySalary / 12);
-    const grossWeeklySalary = Math.round(yearlySalary / 52);
-
+    
     //Calculate Net Income 
     if (yearlySalary <= 18750) {
         netIncomeTax = 0;
@@ -167,32 +171,52 @@ function calculateSalary() {
         prsiDeduction = Math.round(yearlySalary * prsiRate);
     }
 
+    calculateMonthlyWeekly(yearlySalary, netIncomeTax, uscDeduction, prsiDeduction);
+
+}
+
+function calculateMonthlyWeekly(yearlySalary, netIncomeTax, uscDeduction, prsiDeduction){
+    // Calculate Gross Monthly and Weekly Gross Salary
+    const grossMonthlySalary = Math.round(yearlySalary / 12);
+    const grossWeeklySalary = Math.round(yearlySalary / 52);
+ 
     //Monthly and weekly calculations
-    const monthlyUsc = Math.round(uscDeduction / 12);
-    const monthlyPrsi = Math.round(prsiDeduction / 12);
-    const weeklyUsc = Math.round(uscDeduction / 52);
-    const weeklyPrsi = Math.round(prsiDeduction / 52);
-    const monthlyTax = Math.round(netIncomeTax / 12);
-    const weeklyTax = Math.round(netIncomeTax / 52);
+     const monthlyUsc = Math.round(uscDeduction / 12);
+     const monthlyPrsi = Math.round(prsiDeduction / 12);
+     const weeklyUsc = Math.round(uscDeduction / 52);
+     const weeklyPrsi = Math.round(prsiDeduction / 52);
+     const monthlyTax = Math.round(netIncomeTax / 12);
+     const weeklyTax = Math.round(netIncomeTax / 52);
 
     // Calculate net salary after deductions
     const netYearlySalary = yearlySalary - netIncomeTax - uscDeduction - prsiDeduction;
     const netMonthlySalary = Math.round(netYearlySalary / 12);
     const netWeeklySalary = Math.round(netYearlySalary / 52);
 
+    //Data for the table
     const timePeriods = ['Yearly', 'Monthly', 'Weekly'];
     const details = ['Salary', 'Income Tax', 'USC', 'PRSI'];
     const values = [yearlySalary, grossMonthlySalary, grossWeeklySalary, netIncomeTax, monthlyTax, weeklyTax, uscDeduction, monthlyUsc, weeklyUsc, prsiDeduction, monthlyPrsi, weeklyPrsi];
-
     const netPay = [netYearlySalary, netMonthlySalary, netWeeklySalary];
 
+    //function to create the result table
     createResultTable(details, timePeriods, values, netPay);
 }
 
 function calculateSalaryAdv() {
-    
-}
+    const yearlySalary = parseFloat(document.getElementById('salary').value);
 
+    //Calculate Net Income 
+    if (yearlySalary <= 18750) {
+        netIncomeTax = 0;
+    } else if (yearlySalary > 18750 && yearlySalary <= taxBand1) {
+        netIncomeTax = Math.round((yearlySalary * lowerRate) - (taxCreditSingle + taxCreditPaye));
+    } else {
+        netIncomeTax = Math.round(((taxBand1 * lowerRate) + ((yearlySalary - taxBand1) * higherRate)) - (taxCreditPaye + taxCreditSingle));
+    }
+
+
+}
 
 function createResultTable(details, timePeriods, values, netPay) {
     const resultsContainer = document.getElementById('calcResultsContainer');
