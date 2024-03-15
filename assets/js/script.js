@@ -26,15 +26,15 @@ const taxCreditSingle = 1875;
 const taxCreditPaye = 1875;
 const taxCreditMarried = 1875;
 const taxCreditSpcc = 1750;
-//const taxCreditIncapacitated = 3500;
 const taxCreditRentS = 750;
 const taxCreditRentM = 1500;
 const taxCreditHomeCare = 1800;
-const taxCreditDependentRelative = 245;
 const taxCreditAgeSingle = 245;
 const taxCreditAgeMarried = 490; 
 let netIncomeTax = 0;
 let otherTaxCredits = 0;
+const incomeTax = 0;
+let pensionContribution = 0;
 
 let details = ['Salary', 'Income Tax', 'USC', 'PRSI'];
 let timePeriods = ['Yearly', 'Monthly', 'Weekly'];
@@ -102,6 +102,11 @@ document.addEventListener('DOMContentLoaded', function() {
     marriedInput.addEventListener('change', function() {
         spouseIncomeInput.disabled = false;
     });
+
+    singleInput.addEventListener('change', updateTaxCredits);
+    marriedInput.addEventListener('change', updateTaxCredits);
+
+    updateTaxCredits();
 });
 
 
@@ -185,6 +190,45 @@ function calculatePRSIDeduction(yearlySalary) {
     return prsiDeduction;
 }
 
+function calculateIncomeTax(yearlySalary) {
+//Calculate income tax
+    if (yearlySalary <= 18750) {
+        incomeTax = 0;
+    } else if (yearlySalary > 18750 && yearlySalary <= taxBand1) {
+        incomeTax = Math.round((yearlySalary * lowerRate));
+    } else {
+        incomeTax = Math.round(((taxBand1 * lowerRate) + ((yearlySalary - taxBand1) * higherRate)));
+    }
+}
+
+function otherTaxCredits(yearlySalary) {
+
+}
+
+function updateTaxCredits() {
+    const singleInput = document.getElementById('single');
+    const ageInput = document.getElementById('age')[0];
+    const depYesInput = document.getElementById('depyes');
+    const rentYesInput = document.getElementById('rentyes');
+   
+    //Reset other tax credits
+    let otherTaxCredits = 0;
+
+    if (singleInput.checked && ageInput.value) >= 65 {
+        otherTaxCredits += taxCreditAgeSingle;
+    }
+    if (singleInput.checked && depYesInput.checked) {
+        otherTaxCredits += taxCreditSpcc;
+    }
+    if (singleInput.checked && rentYesInput.checked) {
+        otherTaxCredits += taxCreditRentS;
+    }
+
+
+
+
+}
+
 
 function calculateSalary() {
     const yearlySalary = parseFloat(document.getElementById('salary').value);
@@ -194,14 +238,11 @@ function calculateSalary() {
         return;
     }
     
-    //Calculate Net Income 
-    if (yearlySalary <= 18750) {
-        netIncomeTax = 0;
-    } else if (yearlySalary > 18750 && yearlySalary <= taxBand1) {
-        netIncomeTax = Math.round((yearlySalary * lowerRate) - (taxCreditSingle + taxCreditPaye));
-    } else {
-        netIncomeTax = Math.round(((taxBand1 * lowerRate) + ((yearlySalary - taxBand1) * higherRate)) - (taxCreditPaye + taxCreditSingle));
-    }
+    //Calculate Net Income
+    incomeTax = calculateIncomeTax(yearlySalary);
+
+    netIncomeTax = incomeTax - taxCreditPaye - taxCreditSingle;
+   
 
     //Calculate USC Deductions
     uscDeduction = calculateUSCDeduction(yearlySalary);
@@ -222,15 +263,13 @@ function calculateSalaryAdv() {
     if (!validateYearlySalary(yearlySalary)) {
         return;
     }
-    
-    //Calculate Net Income 
-    if (yearlySalary <= 18750) {
-        netIncomeTax = 0;
-    } else if (yearlySalary > 18750 && yearlySalary <= taxBand1) {
-        netIncomeTax = Math.round((yearlySalary * lowerRate) - (taxCreditSingle + taxCreditPaye));
-    } else {
-        netIncomeTax = Math.round(((taxBand1 * lowerRate) + ((yearlySalary - taxBand1) * higherRate)) - (taxCreditPaye + taxCreditSingle));
-    }
+      
+
+    //Calculate Net Income tax
+    netIncomeTax = incomeTax - taxCreditPaye - taxCreditSingle - otherTaxCredits;
+
+    //
+
 
     //Calculate USC Deductions
     uscDeduction = calculateUSCDeduction(yearlySalary);
@@ -243,6 +282,16 @@ function calculateSalaryAdv() {
     //function to create the result table
     createResultTableAdv(details, timePeriods, values, netPay);
 }
+
+function pensionContribution() {
+    //Calculate base on user input
+
+
+}
+
+function 
+
+
 
 function calculateMonthlyWeekly(yearlySalary, netIncomeTax, uscDeduction, prsiDeduction){
     // Calculate Gross Monthly and Weekly Gross Salary
