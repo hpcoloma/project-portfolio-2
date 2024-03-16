@@ -31,10 +31,13 @@ const taxCreditRentM = 1500;
 const taxCreditHomeCare = 1800;
 const taxCreditAgeSingle = 245;
 const taxCreditAgeMarried = 490; 
-let netIncomeTax = 0;
+let incomeTax;
+let netIncomeTax;
 let otherTaxCredits = 0;
-const incomeTax = 0;
-let pensionContribution = 0;
+
+let pensionContribution;
+let uscDeduction;
+let prsiDeduction;
 
 let details = ['Salary', 'Income Tax', 'USC', 'PRSI'];
 let timePeriods = ['Yearly', 'Monthly', 'Weekly'];
@@ -97,16 +100,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     singleInput.addEventListener('change', function() {
         spouseIncomeInput.disabled = true;
+        updateTaxCredits(); // Update tax credits whenever singleInput Changes
     });
 
     marriedInput.addEventListener('change', function() {
         spouseIncomeInput.disabled = false;
     });
 
-    singleInput.addEventListener('change', updateTaxCredits);
-    marriedInput.addEventListener('change', updateTaxCredits);
+    
+    ageInput.addEventListener('change', updateTaxCredits)
 
-    updateTaxCredits();
 });
 
 
@@ -151,7 +154,7 @@ function validateYearlySalary(yearlySalary) {
         alert('Salary cannot be negative.');
         return false;
     } else if (!yearlySalary) {
-        alert('Please enter your salary.')
+        alert('Please enter your salary.');
         return false;
     }
     return true;
@@ -160,7 +163,6 @@ function validateYearlySalary(yearlySalary) {
 //Calculation Section
 //Functions
 function calculateUSCDeduction(yearlySalary) {
-    let uscDeduction = 0;
     
     //USC Calculation
     if (yearlySalary <= 13000) {
@@ -177,7 +179,6 @@ function calculateUSCDeduction(yearlySalary) {
 }
 
 function calculatePRSIDeduction(yearlySalary) {
-    let prsiDeduction = 0;
     /**Calculate PRSI deductions
     PRSI is nil if the yearly salary is less than or equal to €18,304 per year or €352 per week.
     **/
@@ -190,7 +191,9 @@ function calculatePRSIDeduction(yearlySalary) {
     return prsiDeduction;
 }
 
+
 function calculateIncomeTax(yearlySalary) {
+    
 //Calculate income tax
     if (yearlySalary <= 18750) {
         incomeTax = 0;
@@ -199,36 +202,9 @@ function calculateIncomeTax(yearlySalary) {
     } else {
         incomeTax = Math.round(((taxBand1 * lowerRate) + ((yearlySalary - taxBand1) * higherRate)));
     }
+
+    return incomeTax;
 }
-
-function otherTaxCredits(yearlySalary) {
-
-}
-
-function updateTaxCredits() {
-    const singleInput = document.getElementById('single');
-    const ageInput = document.getElementById('age')[0];
-    const depYesInput = document.getElementById('depyes');
-    const rentYesInput = document.getElementById('rentyes');
-   
-    //Reset other tax credits
-    let otherTaxCredits = 0;
-
-    if (singleInput.checked && ageInput.value) >= 65 {
-        otherTaxCredits += taxCreditAgeSingle;
-    }
-    if (singleInput.checked && depYesInput.checked) {
-        otherTaxCredits += taxCreditSpcc;
-    }
-    if (singleInput.checked && rentYesInput.checked) {
-        otherTaxCredits += taxCreditRentS;
-    }
-
-
-
-
-}
-
 
 function calculateSalary() {
     const yearlySalary = parseFloat(document.getElementById('salary').value);
@@ -238,12 +214,17 @@ function calculateSalary() {
         return;
     }
     
-    //Calculate Net Income
+    // Calculate Income Tax
     incomeTax = calculateIncomeTax(yearlySalary);
 
-    netIncomeTax = incomeTax - taxCreditPaye - taxCreditSingle;
+    
+    //Calculate Net Income tax
+    if (incomeTax == 0) {
+        netIncomeTax = 0;
+    } else {
+        netIncomeTax = incomeTax - taxCreditSingle - taxCreditPaye;
+    }    
    
-
     //Calculate USC Deductions
     uscDeduction = calculateUSCDeduction(yearlySalary);
 
@@ -256,6 +237,28 @@ function calculateSalary() {
     createResultTable(details, timePeriods, values, netPay);
 }
 
+function updateTaxCredits() {
+    const singleInput = document.getElementById('single');
+    const ageInput = document.getElementById('age');
+    const depInput = document.getElementById('depyes');
+    const rentInput = document.getElementById('rentyes');
+
+    //Reset otherTaxCredits
+    otherTaxCredits = 0;
+
+    if (singleInput.checked && parseInt(ageInput.value) >= 65) {
+        otherTaxCredits += taxCreditAgeSingle;
+    }
+    if (singleInput.checked && depInput.checked) {
+        otherTaxCredits += taxCreditSpcc;
+    }
+    if (singleInput.checked && rentInput.checked) {
+        otherTaxCredits += taxCreditRentS;
+    }
+
+}
+
+
 function calculateSalaryAdv() {
     const yearlySalary = parseFloat(document.getElementById('salary-adv').value);
 
@@ -263,13 +266,6 @@ function calculateSalaryAdv() {
     if (!validateYearlySalary(yearlySalary)) {
         return;
     }
-      
-
-    //Calculate Net Income tax
-    netIncomeTax = incomeTax - taxCreditPaye - taxCreditSingle - otherTaxCredits;
-
-    //
-
 
     //Calculate USC Deductions
     uscDeduction = calculateUSCDeduction(yearlySalary);
@@ -277,19 +273,27 @@ function calculateSalaryAdv() {
     //Calculate PRSI Deductions
     prsiDeduction = calculatePRSIDeduction(yearlySalary);
 
-    calculateMonthlyWeekly(yearlySalary, netIncomeTax, uscDeduction, prsiDeduction);
+    updateTaxCredits();
+
+    //Calculate total tax credits
+    totalTaxCredits = taxCreditSingle + taxCreditPaye + otherTaxCredits;
+
+    // Calculate Income Tax
+    incomeTax = calculateIncomeTax(yearlySalary);   
+
+     //Calculate Net Income tax
+     if (incomeTax == 0) {
+        netIncomeTax = 0;
+    } else {
+        netIncomeTax = incomeTax - totalTaxCredits;
+    }
+
+    calculateMonthlyWeekly(yearlySalary, incomeTax, uscDeduction, prsiDeduction);
 
     //function to create the result table
     createResultTableAdv(details, timePeriods, values, netPay);
 }
 
-function pensionContribution() {
-    //Calculate base on user input
-
-
-}
-
-function 
 
 
 
