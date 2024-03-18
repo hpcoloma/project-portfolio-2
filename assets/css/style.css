@@ -87,6 +87,14 @@ main>div {
     padding-bottom: 20px;
 }
 
+#main-container {
+    padding-top: 20px;
+}
+
+h3, h4, p {
+    padding-top: 10px;
+}
+
 #main-container>button {
     background-color: #F2AE2E;
     border-radius: 10px;
@@ -101,6 +109,8 @@ main>div {
     /*this container displays on load*/
     display: none;
 }
+
+
 
 #disclaimer {
     padding: 0 5px 0 5px;

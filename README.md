@@ -159,15 +159,15 @@ Also, [Favicons](https://favicon.io/) for some icons used.
 ## **Testing**
 **Code Validation**
 - [W3C Validator](https://validator.w3.org/#validate_by_input) for HTML validation.
-        -  Index. html validation
-      ![](assets/images/htmltest.PNG)
+        -  Index. html validation. [Click here for the result](https://validator.w3.org/nu/?doc=https%3A%2F%2Fhpcoloma.github.io%2Fproject-portfolio-2%2F)
+      ![](assets/images/html_validation.PNG)
         - 404.html validation
         ![](assets/images/paycalcs_htmlvalidation404.PNG)
 
 -  [W3C Validator](https://jigsaw.w3.org/css-validator/) for CSS validation.
         
        ![](assets/images/cssvalidator.PNG)
-- [JSHint](assets/images/jshint.png) for Javascript code validation.
+- [JSHint](assets/images/jshint.png) for Javascript code validation. [Link here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fhpcoloma.github.io%2Fproject-portfolio-2%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
     
        ![JS Hint ](assets/images/jshint.png)
     
