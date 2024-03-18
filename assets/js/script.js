@@ -1,4 +1,4 @@
-//Global variables
+// Global variables
 
 let menu = document.getElementById('menu-container').innerHTML;
 let informationContainer = document.getElementById("information-container");
@@ -6,12 +6,12 @@ let instructionContainer = document.getElementById("instruction-container");
 let payContainer = document.getElementById("pay-container");
 let tabButtons = document.querySelectorAll('.tablinks');
 
-//Income Tax Bands and rates
+// Income Tax Bands and rates
 const taxBand1 = 42000;
 const lowerRate = 0.20;
 const higherRate = 0.40;
 
-//USC Rates
+// USC Rates
 const uscRate1 = 0.005;
 const uscRate2 = 0.02;
 const uscRate3 = 0.04;
@@ -21,7 +21,7 @@ const usc2 = 13748 * uscRate2;
 const usc3 = 44284 * uscRate3;
 
 
-//Tax credits for 2024
+// Tax credits for 2024
 const taxCreditSingle = 1875;
 const taxCreditPaye = 1875;
 const taxCreditMarried = 1875;
@@ -36,7 +36,6 @@ let netIncomeTax;
 let otherTaxCredits = 0;
 let reducedTaxCredit = 0;
 
-let pensionContribution;
 let uscDeduction;
 let prsiDeduction;
 
@@ -49,7 +48,7 @@ let netPay;
 const prsiRate = 0.04;
 
 
-//Iteration Statement
+// Iteration Statement
 for (let i = 0; i < tabButtons.length; i++) {
     tabButtons[i].addEventListener('click', () => {
         let tabId = tabButtons[i].getAttribute('data-tab');
@@ -65,15 +64,15 @@ for (let i = 0; i < tabButtons.length; i++) {
     });
 }
 
-//FUNCTIONS
-//Display menu options in main container
+// FUNCTIONS
+// Display menu options in main container
 window.onload = menuOptions();
 
 function menuOptions() {
     document.getElementById("main-container").innerHTML = menu;
 }
 
-//modal container elements
+// Modal container elements
 let infoButton = document.getElementById("info-button");
 let infoButtonHide = document.getElementById("information-close");
 let instructButton = document.getElementById("inst-button");
@@ -81,7 +80,7 @@ let instructButtonHide = document.getElementById("instruction-close");
 let calcButton = document.getElementById("calcPay-button");
 let calcButtonHide = document.getElementById("calc-close");
 
-//Show-Hide event listeners for main container
+// Show-Hide event listeners for main container
 infoButton.addEventListener('click', showInfoContainer);
 infoButtonHide.addEventListener('click', hideInfoContainer);
 instructButton.addEventListener('click', showInstructionContainer);
@@ -91,7 +90,7 @@ calcButton.addEventListener('click', showCalcContainer);
 
 
 
-//Eventlisteners
+// Eventlisteners
 document.getElementById('calculateButton-adv').addEventListener('click', calculateSalaryAdv);
 document.getElementById('calculateButton').addEventListener('click', calculateSalary);
 document.addEventListener('DOMContentLoaded', function() {
@@ -116,34 +115,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-//To show/hide info container
-//Show information container
+// To show/hide info container
+// Show information container
 function showInfoContainer() {
     informationContainer.style.display = 'block';
 }
 
-//Hide information container
+// Hide information container
 function hideInfoContainer() {
     informationContainer.style.display = 'none';
 }
 
-//To show/hide instructions container
-//Instruction container show
+// To show/hide instructions container
+// Instruction container show
 function showInstructionContainer() {
     instructionContainer.style.display = 'block';
 }
 
-//Instruction container hide
+// Instruction container hide
 function hideInstructionContainer() {
     instructionContainer.style.display = 'none';
 }
 
-//To show calculate pay container occupying replacing all elements in the main-container
+// To show calculate pay container occupying replacing all elements in the main-container
 function showCalcContainer() {
     payContainer.style.display = 'block';
 }
 
-//to hide pay container
+// to hide pay container
 function hideCalcsContainer() {
     payContainer.style.display = 'none';
     document.getElementById('calcResultsContainer').innerHTML = '';
@@ -151,7 +150,7 @@ function hideCalcsContainer() {
 }
 
 function validateYearlySalary(yearlySalary) {
-    //Validate the salary input to not accept 0 and negative values
+    // Validate the salary input to not accept 0 and negative values
     if (yearlySalary < 0) {
         alert('Salary cannot be negative.');
         return false;
@@ -162,8 +161,7 @@ function validateYearlySalary(yearlySalary) {
     return true;
 }
 
-//Calculation Section
-//Functions
+// Calculation Section
 function calculateUSCDeduction(yearlySalary) {
     
     //USC Calculation
@@ -196,7 +194,7 @@ function calculatePRSIDeduction(yearlySalary) {
 
 function calculateIncomeTax(yearlySalary) {
     
-//Calculate income tax
+// Calculate income tax
     if (yearlySalary <= 18750) {
         incomeTax = 0;
     } else if (yearlySalary > 18750 && yearlySalary <= taxBand1) {
@@ -211,7 +209,7 @@ function calculateIncomeTax(yearlySalary) {
 function calculateSalary() {
     const yearlySalary = parseFloat(document.getElementById('salary').value);
 
-    //Validate the salary input
+    // Validate the salary input
     if (!validateYearlySalary(yearlySalary)) {
         return;
     }
@@ -220,7 +218,7 @@ function calculateSalary() {
     incomeTax = calculateIncomeTax(yearlySalary);
 
     
-    //Calculate Net Income tax
+    // Calculate Net Income tax
     if (incomeTax == 0) {
         netIncomeTax = 0;
     } else {
@@ -320,7 +318,7 @@ function calculatePension(yearlySalary) {
 function calculateSalaryAdv() {
     const yearlySalary = parseFloat(document.getElementById('salary-adv').value);
 
-    //Validate the salary input
+    // Validate the salary input
     if (!validateYearlySalary(yearlySalary)) {
         return;
     }
@@ -344,7 +342,7 @@ function calculateSalaryAdv() {
     // Calculate Income Tax
     incomeTax = calculateIncomeTax(taxableIncome);   
 
-     //Calculate Net Income tax
+     // Calculate Net Income tax
      if (incomeTax == 0) {
         netIncomeTax = 0;
     } else {
@@ -357,7 +355,7 @@ function calculateSalaryAdv() {
 
     calculateMonthlyWeekly(yearlySalary, netIncomeTax, uscDeduction, prsiDeduction);
 
-    //function to create the result table
+    // function to create the result table
     createResultTableAdv(details, timePeriods, values, netPay, pensionContribution);
 
     
@@ -369,7 +367,7 @@ function calculateMonthlyWeekly(yearlySalary, netIncomeTax, uscDeduction, prsiDe
     const grossMonthlySalary = Math.round(yearlySalary / 12);
     const grossWeeklySalary = Math.round(yearlySalary / 52);
  
-    //Monthly and weekly calculations
+    // Monthly and weekly calculations
      const monthlyUsc = Math.round(uscDeduction / 12);
      const monthlyPrsi = Math.round(prsiDeduction / 12);
      const weeklyUsc = Math.round(uscDeduction / 52);
@@ -384,22 +382,22 @@ function calculateMonthlyWeekly(yearlySalary, netIncomeTax, uscDeduction, prsiDe
     const netMonthlySalary = Math.round(netYearlySalary / 12);
     const netWeeklySalary = Math.round(netYearlySalary / 52);
 
-    //Data for the table
+    // Data for the table
     values = [yearlySalary, grossMonthlySalary, grossWeeklySalary, netIncomeTax, monthlyTax, weeklyTax, uscDeduction, monthlyUsc, weeklyUsc, prsiDeduction, monthlyPrsi, weeklyPrsi];
     netPay = [netYearlySalary, netMonthlySalary, netWeeklySalary];
 
     
 }
 
-//Table for Basic
+// Table for Basic
 function createResultTable(details, timePeriods, values, netPay) {
     const table = ResultTable(details, timePeriods, values, netPay); 
     displayResultTable(table);   
 }
 
-//Table for Advance
-function createResultTableAdv(details, timePeriods, values, netPay, pensionContribution) {
-    const table = ResultTable(details, timePeriods, values, netPay, pensionContribution); 
+// Table for Advance
+function createResultTableAdv(details, timePeriods, values, netPay) {
+    const table = ResultTable(details, timePeriods, values, netPay); 
     displayResultTableAdv(table);   
 }
 
@@ -428,14 +426,6 @@ function ResultTable(details, timePeriods, values, netPay) {
         }
     }
 
-    // Add a row for pension contribution
-    //const pensionRow = tbody.insertRow(details.length);
-    //pensionRow.insertCell(0).textContent = "Pension Contribution"l;
-    //pensionRow.insertCell(1).textContent = '€${pensionContribution.toLocaleString()}';
-    //for (let i = 0; i < timePeriods.length -1; ++1) {
-    //    pensionRow.insertCell(i + 2).textContent = '';
-    //}
-
     // Create a row for net pay values
     const netPayRow = tbody.insertRow(details.length);
     netPayRow.insertCell(0).textContent = 'Net Pay';
@@ -457,7 +447,7 @@ function displayResultTable(table){
     // Clear existing content
     resultsContainer.innerHTML = '';
 
-    //Append the generated table
+    // Append the generated table
     resultsContainer.appendChild(table);
 }
 
@@ -467,7 +457,7 @@ function displayResultTableAdv(table) {
     // Clear existing content
     resultsContainer.innerHTML = '';
 
-    //Append the generated table
+    // Append the generated table
     resultsContainer.appendChild(table);
 }
 
