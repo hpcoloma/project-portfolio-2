@@ -97,7 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const singleInput = document.getElementById('single');
     const marriedInput = document.getElementById('married');
     const spouseIncomeInput = document.getElementById('spouse-income');
-    //const pensionInput = document.getElementById('pension');
     const ageInput = document.getElementById('age');
 
     singleInput.addEventListener('change', function() {
@@ -282,6 +281,9 @@ function calculatePension(yearlySalary) {
     if (isNaN(pensionPercentage)) {
         alert('Please enter a valid pension contribution percentage.');
         return;
+    } else if(pensionPercentage < 0 || pensionPercentage > 40 ) {
+        alert('Invalid pension contribution.')
+        return;
     }
 
     return (yearlySalary * pensionPercentage) / 100;
@@ -336,7 +338,7 @@ function calculateSalaryAdv() {
 }
 
 
-function calculateMonthlyWeekly(yearlySalary, pensionContribution, netIncomeTax, uscDeduction, prsiDeduction){
+function calculateMonthlyWeekly(yearlySalary, netIncomeTax, uscDeduction, prsiDeduction){
     // Calculate Gross Monthly and Weekly Gross Salary
     const grossMonthlySalary = Math.round(yearlySalary / 12);
     const grossWeeklySalary = Math.round(yearlySalary / 52);
@@ -348,8 +350,8 @@ function calculateMonthlyWeekly(yearlySalary, pensionContribution, netIncomeTax,
      const weeklyPrsi = Math.round(prsiDeduction / 52);
      const monthlyTax = Math.round(netIncomeTax / 12);
      const weeklyTax = Math.round(netIncomeTax / 52);
-     const monthlyPension = Math.round(pensionContribution/12);
-     const weeklyPension = Math.round(pensionContribution/52);
+     //const monthlyPension = Math.round(pensionContribution/12);
+     //const weeklyPension = Math.round(pensionContribution/52);
 
     // Calculate net salary after deductions
     const netYearlySalary = yearlySalary - netIncomeTax - uscDeduction - prsiDeduction;
@@ -365,12 +367,14 @@ function calculateMonthlyWeekly(yearlySalary, pensionContribution, netIncomeTax,
 
 //Table for Basic
 function createResultTable(details, timePeriods, values, netPay) {
-    const table = ResultTable(details, timePeriods, values, netPay); displayResultTable(table);   
+    const table = ResultTable(details, timePeriods, values, netPay); 
+    displayResultTable(table);   
 }
 
 //Table for Advance
 function createResultTableAdv(details, timePeriods, values, netPay) {
-    const table = ResultTable(details, timePeriods, values, netPay); displayResultTableAdv(table);   
+    const table = ResultTable(details, timePeriods, values, netPay); 
+    displayResultTableAdv(table);   
 }
 
 function ResultTable(details, timePeriods, values, netPay) {
