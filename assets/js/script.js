@@ -275,7 +275,7 @@ function updateTaxCredits() {
 }
 
 
-function calculatePension() {
+function calculatePension(yearlySalary) {
     const pensionInput = document.getElementById('pension');
     const pensionPercentage = parseFloat(pensionInput.value);
 
@@ -297,20 +297,24 @@ function calculateSalaryAdv() {
         return;
     }
 
-    //Calculate USC Deductions
+    // Calculate pension contribution
+    const pensionContribution = calculatePension(yearlySalary);
+
+    // Calculate USC Deductions
     uscDeduction = calculateUSCDeduction(yearlySalary);
 
-    //Calculate PRSI Deductions
+    // Calculate PRSI Deductions
     prsiDeduction = calculatePRSIDeduction(yearlySalary);
 
     updateTaxCredits();
-
-    //Calculate total tax credits
+      
+    // Calculate total tax credits
     const totalTaxCredits = taxCreditSingle + taxCreditPaye + otherTaxCredits;
 
+    const taxableIncome = yearlySalary - pensionContribution;
 
     // Calculate Income Tax
-    incomeTax = calculateIncomeTax(yearlySalary);   
+    incomeTax = calculateIncomeTax(taxableIncome);   
 
      //Calculate Net Income tax
      if (incomeTax == 0) {
@@ -319,7 +323,11 @@ function calculateSalaryAdv() {
         netIncomeTax = incomeTax - totalTaxCredits;
     }
 
-    calculateMonthlyWeekly(yearlySalary, netIncomeTax, uscDeduction, prsiDeduction);
+    if (netIncomeTax < 0) {
+        netIncomeTax = 0;
+    }
+
+    calculateMonthlyWeekly(yearlySalary, pensionContribution, netIncomeTax, uscDeduction, prsiDeduction);
 
     //function to create the result table
     createResultTableAdv(details, timePeriods, values, netPay);
@@ -328,7 +336,7 @@ function calculateSalaryAdv() {
 }
 
 
-function calculateMonthlyWeekly(yearlySalary, netIncomeTax, uscDeduction, prsiDeduction){
+function calculateMonthlyWeekly(yearlySalary, pensionContribution, netIncomeTax, uscDeduction, prsiDeduction){
     // Calculate Gross Monthly and Weekly Gross Salary
     const grossMonthlySalary = Math.round(yearlySalary / 12);
     const grossWeeklySalary = Math.round(yearlySalary / 52);
@@ -340,6 +348,8 @@ function calculateMonthlyWeekly(yearlySalary, netIncomeTax, uscDeduction, prsiDe
      const weeklyPrsi = Math.round(prsiDeduction / 52);
      const monthlyTax = Math.round(netIncomeTax / 12);
      const weeklyTax = Math.round(netIncomeTax / 52);
+     const monthlyPension = Math.round(pensionContribution/12);
+     const weeklyPension = Math.round(pensionContribution/52);
 
     // Calculate net salary after deductions
     const netYearlySalary = yearlySalary - netIncomeTax - uscDeduction - prsiDeduction;
