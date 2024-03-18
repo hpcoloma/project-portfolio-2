@@ -97,6 +97,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const singleInput = document.getElementById('single');
     const marriedInput = document.getElementById('married');
     const spouseIncomeInput = document.getElementById('spouse-income');
+    //const pensionInput = document.getElementById('pension');
+    const ageInput = document.getElementById('age');
 
     singleInput.addEventListener('change', function() {
         spouseIncomeInput.disabled = true;
@@ -108,8 +110,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     
-    ageInput.addEventListener('change', updateTaxCredits)
-
+    ageInput.addEventListener('change', updateTaxCredits);
+    
 });
 
 
@@ -239,6 +241,7 @@ function calculateSalary() {
 
 function updateTaxCredits() {
     const singleInput = document.getElementById('single');
+    const marriedInput = document.getElementById('married');
     const ageInput = document.getElementById('age');
     const depInput = document.getElementById('depyes');
     const rentInput = document.getElementById('rentyes');
@@ -248,16 +251,52 @@ function updateTaxCredits() {
 
     if (singleInput.checked && parseInt(ageInput.value) >= 65) {
         otherTaxCredits += taxCreditAgeSingle;
-    }
+    } 
     if (singleInput.checked && depInput.checked) {
         otherTaxCredits += taxCreditSpcc;
     }
     if (singleInput.checked && rentInput.checked) {
         otherTaxCredits += taxCreditRentS;
     }
+    if (marriedInput.checked) {
+        otherTaxCredits += taxCreditMarried
+    }
+    if (marriedInput.checked && parseInt(ageInput.value) >= 65) {
+        otherTaxCredits += taxCreditAgeMarried;
+    }
+    if (marriedInput.checked && rentInput.checked) {
+        otherTaxCredits += taxCreditRentM;
+    }
 
 }
 
+
+function calculatePension() {
+    const pensionInput = document.getElementById('pension');
+    const pensionPercentage = parseFloat(pensionInput.value);
+
+    if (isNaN(pensionPercentage)) {
+        alert('Please enter a valid pension contribution percentage.');
+        return;
+    }
+
+    return (yearlySalary * pensionPercentage) / 100;
+
+}
+
+/*function calculateTaxableIncome(taxableIncome) {
+    
+    //Calculate income tax
+        if (taxableIncome <= 18750) {
+            incomeTax = 0;
+        } else if (taxableIncome > 18750 && taxableIncome <= taxBand1) {
+            incomeTax = Math.round((taxableIncome * lowerRate));
+        } else {
+            incomeTax = Math.round(((taxBand1 * lowerRate) + ((yearlySalary - taxBand1) * higherRate)));
+        }
+    
+        return incomeTax;
+    }*/
 
 function calculateSalaryAdv() {
     const yearlySalary = parseFloat(document.getElementById('salary-adv').value);
@@ -266,6 +305,12 @@ function calculateSalaryAdv() {
     if (!validateYearlySalary(yearlySalary)) {
         return;
     }
+
+    //Calculate pension contribition
+    //const pensionContribution = calculatePension(yearlySalary);
+
+    //Calculate taxableIncome
+    //const taxableIncome = yearlySalary - pensionContribution;
 
     //Calculate USC Deductions
     uscDeduction = calculateUSCDeduction(yearlySalary);
@@ -276,7 +321,7 @@ function calculateSalaryAdv() {
     updateTaxCredits();
 
     //Calculate total tax credits
-    totalTaxCredits = taxCreditSingle + taxCreditPaye + otherTaxCredits;
+    const totalTaxCredits = taxCreditSingle + taxCreditPaye + otherTaxCredits;
 
     // Calculate Income Tax
     incomeTax = calculateIncomeTax(yearlySalary);   
@@ -288,13 +333,13 @@ function calculateSalaryAdv() {
         netIncomeTax = incomeTax - totalTaxCredits;
     }
 
-    calculateMonthlyWeekly(yearlySalary, incomeTax, uscDeduction, prsiDeduction);
+    calculateMonthlyWeekly(yearlySalary, netIncomeTax, uscDeduction, prsiDeduction);
 
     //function to create the result table
     createResultTableAdv(details, timePeriods, values, netPay);
+
+    
 }
-
-
 
 
 function calculateMonthlyWeekly(yearlySalary, netIncomeTax, uscDeduction, prsiDeduction){
@@ -331,8 +376,6 @@ function createResultTable(details, timePeriods, values, netPay) {
 function createResultTableAdv(details, timePeriods, values, netPay) {
     const table = ResultTable(details, timePeriods, values, netPay); displayResultTableAdv(table);   
 }
-
-
 
 function ResultTable(details, timePeriods, values, netPay) {
     const table = document.createElement('table');
