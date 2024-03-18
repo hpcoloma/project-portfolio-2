@@ -173,45 +173,45 @@
           </p>
           <p>Th following are the tax credits avaialable depending on your circumstances.</p>
           <ul>
-            <li>Choose your marital status between Single or Married.</li>
+            <li>Choose your marital status between Single or Married.
                 <ul>
                   <li>Single: € 1,875</li>
                   <li>Married: Additional € 1,875</li>
                 </ul>
-            <li>Confirm if you have dependents.</li>
+            </li>
+            <li>Confirm if you have dependents.
                 <ul>
                   <li>Single with Dependent: € 1,750</li>
-                  <li>Married with Dependent:</li>
-                      <p>If spouse income is:
-                      <ul>
-                        <li>Between € 0 - € 7,200: € 1,800 </li>
-                        <li>Between € 7,200 - € 10,800: Reduced Tax credit applies</li>
-                        <li>Above € 10,800: No additional tax credits.</li>
-                      </ul>
-                      </p>
+                  <li>Married with Dependent:
+                      <p>If spouse income is:</p>
+                        <ul>
+                          <li>Between € 0 - € 7,200: € 1,800 </li>
+                          <li>Between € 7,200 - € 10,800: Reduced Tax credit applies</li>
+                          <li>Above € 10,800: No additional tax credits.</li>
+                        </ul>
+                  </li>
                 </ul>
-            <li>Confirm if you are renting.</li>
+              </li>
+            <li>Confirm if you are renting.
                 <ul>
                   <li>Rent Tax Credit - Single: € 750</li>
                   <li>Rent Tax Credit - Married: € 1,500</li>
                 </ul>
-            <li>Provide your age.</li>
-                <p>If you or your spouse or civil partner are over 65 years of age.
+            </li>
+            <li>Provide your age.
+                <p>If you or your spouse or civil partner are over 65 years of age.</p>
                 <ul>
                   <li>Age Tax Credt - Single: € 750</li>
                   <li>Age Tax Credit - Married: € 1,500</li>
-                </ul>
-              </p>
+                </ul>              
+            </li>
             <li>Add the percentage of your pension contributions.</li>
         </ul>
         <br>
-          <p>
-            Once done, click calculate and a table will display your Yearly, Monthly and Weekly
-            salary information.
-          </p>
+          <p>Once done, click calculate and a table will display your Yearly, Monthly and Weekly
+            salary information.</p>
           <br>
-          <p>
-            This calculator is based on 2024 Tax Information from the Revenue
+          <p>This calculator is based on 2024 Tax Information from the Revenue
             website. For more information, please click
             <a href="https://revenue.ie" target="_blank"
             rel="noopener"
@@ -239,13 +239,12 @@
               <!-- Basic Pay calculation-->
               <div id="basic" class="tabscontent">
                 <h3>Your Details:</h3>
-                <label for="salary">Yearly Salary
-                  <div class="tooltip">
-                    <i class="fa-solid fa-circle-info"></i>
-                    <span class="tooltiptext">Based on the assumptions about your personal conditions, such as that you are single and have no dependents.</span>
-                  </div>
-                </label>
+                <label for="salary">Yearly Salary</label>
                 <input type="number" id="salary" placeholder="Enter yearly salary" required>&nbsp;                
+                <div class="tooltip">
+                  <i class="fa-solid fa-circle-info"></i>
+                  <span class="tooltiptext">Based on the assumptions about your personal conditions, such as that you are single and have no dependents.</span>
+                </div>
                 <button id="calculateButton">
                   Calculate Pay
                 </button>
@@ -258,57 +257,65 @@
               <div id="advanced" class="tabscontent">
                 <h3>Your Details:</h3>
                 <h4>Your Status</h4>
-                <label class="question" for="status">Marital Status
+                <div class ="radio-option-container">
+                  <label>Marital Status</label>
                   <div class="tooltip">
                     <i class="fa-solid fa-circle-info"></i>
                     <span class="tooltiptext">If Married, you will be the assessible spouse</span>
                   </div>
-                </label>
-                <label for="single" class="details">
-                  <input type="radio" name="status" id="single">Single
-                </label>
-                <label for="married" class="details">
-                  <input type="radio" name="status" id="married">Married
-                </label>
+                </div>
+                <div class="radio-options">
+                  <label for="single" class="details">
+                    <input type="radio" name="status" id="single">Single
+                  </label>
+                  <label for="married" class="details">
+                    <input type="radio" name="status" id="married">Married
+                  </label>
+                </div>
                 
-                <label for="dependents">Do you have dependents?</label>
+                <label>Do you have dependents?</label>
                 <label for="depyes" class="details"><input type="radio" name="dependents" id="depyes">Yes</label>
                 <label for="depno" class="details"><input type="radio" name="dependents" id="depno">No</label>
 
-                <label for="rent">Are you renting?</label>
+                <label>Are you renting?</label>
                 <label for="rentyes" class="details"><input type="radio" name="rent" id="rentyes">Yes</label>
                 <label for="rentno" class="details"><input type="radio" name="rent" id="rentno">No</label>
 
-                <label for="age">What is your age?
+                <div class ="radio-option-container">
+                <label for="age">What is your age?</label>
                   <div class="tooltip">
                     <i class="fa-solid fa-circle-info"></i>
                     <span class="tooltiptext">This will determine your eligibility for the Aged Tax Credits</span>
                   </div>
-                </label>
+                </div>
                 <input type="number" name="age" id="age" required>
                                 
                 <h4>Your Income</h4>
-                <label for="salary">Yearly Salary
+                <div class ="radio-option-container">
+                  <label for="salary">Yearly Salary</label>
                   <div class="tooltip">
                     <i class="fa-solid fa-circle-info"></i>
                     <span class="tooltiptext">Based on the assumptions about your personal conditions, such as that you are single and have no dependents.</span>
                   </div>
-                </label>
+                </div>
                 <input type="number" id="salary-adv" placeholder="Enter yearly salary" required>&nbsp;
                 
-                <label for="spouse-income">Spouse Income
+                <div class ="radio-option-container">
+                  <label for="spouse-income">Spouse Income</label>
                   <div class="tooltip">
                     <i class="fa-solid fa-circle-info"></i>
                     <span class="tooltiptext">Amount your spouse make.</span>
                   </div>
-                </label>
+                </div>
                 <input type="number" id="spouse-income" placeholder="1000" value="0">                
-                <label for="pension">Pension Contribution
+                
+                <div class ="radio-option-container">
+                  <label for="pension">Pension Contribution</label>
                   <div class="tooltip">
                     <i class="fa-solid fa-circle-info"></i>
                     <span class="tooltiptext">Enter percentage of your pension contribution.</span>
                   </div>
-                </label>
+                </div>
                 <input type="number" id="pension" placeholder="0" value="0"> %           
                        
                 <button id="calculateButton-adv">
@@ -317,10 +324,7 @@
 
                 <div class="calcResultsAdv" id="calcResultsContainerAdv">
                   <!-- Results will be printed here -->
-               
-              
 
-             
                 </div>
               </div>
             </div>
