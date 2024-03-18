@@ -245,6 +245,7 @@ function updateTaxCredits() {
     const ageInput = document.getElementById('age');
     const depInput = document.getElementById('depyes');
     const rentInput = document.getElementById('rentyes');
+    const spouseIncomeInput = document.getElementById('spouse-income');
 
     //Reset otherTaxCredits
     otherTaxCredits = 0;
@@ -267,6 +268,9 @@ function updateTaxCredits() {
     if (marriedInput.checked && rentInput.checked) {
         otherTaxCredits += taxCreditRentM;
     }
+    if (marriedInput.checked && parseInt(spouseIncomeInput.value) == 0 && depInput.checked) {
+        otherTaxCredits += taxCreditHomeCare;
+    }
 
 }
 
@@ -284,19 +288,6 @@ function calculatePension() {
 
 }
 
-/*function calculateTaxableIncome(taxableIncome) {
-    
-    //Calculate income tax
-        if (taxableIncome <= 18750) {
-            incomeTax = 0;
-        } else if (taxableIncome > 18750 && taxableIncome <= taxBand1) {
-            incomeTax = Math.round((taxableIncome * lowerRate));
-        } else {
-            incomeTax = Math.round(((taxBand1 * lowerRate) + ((yearlySalary - taxBand1) * higherRate)));
-        }
-    
-        return incomeTax;
-    }*/
 
 function calculateSalaryAdv() {
     const yearlySalary = parseFloat(document.getElementById('salary-adv').value);
@@ -305,12 +296,6 @@ function calculateSalaryAdv() {
     if (!validateYearlySalary(yearlySalary)) {
         return;
     }
-
-    //Calculate pension contribition
-    //const pensionContribution = calculatePension(yearlySalary);
-
-    //Calculate taxableIncome
-    //const taxableIncome = yearlySalary - pensionContribution;
 
     //Calculate USC Deductions
     uscDeduction = calculateUSCDeduction(yearlySalary);
@@ -322,6 +307,7 @@ function calculateSalaryAdv() {
 
     //Calculate total tax credits
     const totalTaxCredits = taxCreditSingle + taxCreditPaye + otherTaxCredits;
+
 
     // Calculate Income Tax
     incomeTax = calculateIncomeTax(yearlySalary);   
