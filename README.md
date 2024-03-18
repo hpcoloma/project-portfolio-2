@@ -174,9 +174,9 @@ Also, [Favicons](https://favicon.io/) for some icons used.
     - [Eightshapes Grid Contrast](https://contrast-grid.eightshapes.com/) for checking the colour contrast of my colour palette.  
     
 **Testing Performance**
-- Mobile    
+- Mobile result. [Click here for complete result](assets/validation/lighthouse_testmobile.pdf)
        ![Lighthouse Mobile Test Results](assets/images/lighthouse_mobile.PNG) 
-- Desktop
+- Desktop result. [Click here for complete result.](assets/validation/lighthouse_testdesktop.pdf)
        ![Lighthouse Desktop Test Results](assets/images/lighthouse_desktop.PNG)
     
 **Other Testing**
