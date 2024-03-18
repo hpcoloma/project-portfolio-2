@@ -113,8 +113,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
 });
 
-
-
 // To show/hide info container
 // Show information container
 function showInfoContainer() {
@@ -191,7 +189,6 @@ function calculatePRSIDeduction(yearlySalary) {
     return prsiDeduction;
 }
 
-
 function calculateIncomeTax(yearlySalary) {
     
 // Calculate income tax
@@ -217,7 +214,6 @@ function calculateSalary() {
     // Calculate Income Tax
     incomeTax = calculateIncomeTax(yearlySalary);
 
-    
     // Calculate Net Income tax
     if (incomeTax == 0) {
         netIncomeTax = 0;
@@ -248,7 +244,6 @@ function updateTaxCredits() {
     let spouseIncome = parseInt(spouseIncomeInput.value);
     const age = parseFloat(ageInput.value);
     
-
     // Reset otherTaxCredits
     otherTaxCredits = 0;
 
@@ -297,7 +292,6 @@ function updateTaxCredits() {
 
 }
 
-
 function calculatePension(yearlySalary) {
     const pensionInput = document.getElementById('pension');
     const pensionPercentage = parseFloat(pensionInput.value);
@@ -313,7 +307,6 @@ function calculatePension(yearlySalary) {
     return (yearlySalary * pensionPercentage) / 100;
 
 }
-
 
 function calculateSalaryAdv() {
     const yearlySalary = parseFloat(document.getElementById('salary-adv').value);
@@ -336,7 +329,6 @@ function calculateSalaryAdv() {
       
     // Calculate total tax credits
     const totalTaxCredits = taxCreditSingle + taxCreditPaye + otherTaxCredits;
-
     const taxableIncome = yearlySalary - pensionContribution;
 
     // Calculate Income Tax
@@ -358,7 +350,6 @@ function calculateSalaryAdv() {
     // function to create the result table
     createResultTableAdv(details, timePeriods, values, netPay, pensionContribution);
 
-    
 }
 
 
@@ -385,7 +376,6 @@ function calculateMonthlyWeekly(yearlySalary, netIncomeTax, uscDeduction, prsiDe
     // Data for the table
     values = [yearlySalary, grossMonthlySalary, grossWeeklySalary, netIncomeTax, monthlyTax, weeklyTax, uscDeduction, monthlyUsc, weeklyUsc, prsiDeduction, monthlyPrsi, weeklyPrsi];
     netPay = [netYearlySalary, netMonthlySalary, netWeeklySalary];
-
     
 }
 
@@ -460,6 +450,3 @@ function displayResultTableAdv(table) {
     // Append the generated table
     resultsContainer.appendChild(table);
 }
-
-
-

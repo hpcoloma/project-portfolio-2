@@ -8,7 +8,7 @@
     - [**PayCalcs IE**](#paycalcs-ie)
     - [**Link to live project**](#link-to-live-project)
     - [**Objective**](#objectives)
-- [**Planning Stage**](#planning)
+- [**Planning Stage**](#planning-stage)
     - [**User Goals**](#user-goals)
     - [**Site Owner Goals**](#site-owner-goals)
 - [**Design**](#design)
@@ -17,23 +17,20 @@
     - [**Fonts**](#fonts)
     - [**Imagery Used**](#imagery-used)
 - [**Features**](#features)
-- [**Technology Used**](#technology)
-    - [**Language Used**](#language-used)
+- [**Technology Used**](#technology-used)
+    - [**Language Used**](#technology-used)
     - [**Frameworks, Libararies & Programs**](#)
 - [**Testing**](#testing)
-    - [**Code Validation**](#code-validation)
-    - [**Contrast Grid**]()
-    - [**Testing Performance**]()
-    - [**Other Testing**]()
-- [**Challenges**](#challenges)
-- [**Future Enhancements**](#enhancements)
+    - [**Code Validation**](#testing)
+    - [**Contrast Grid**](#testing)
+    - [**Testing Performance**](#testing)
+    - [**Other Testing**](#testing)
+- [**Bugs and Challenges**](#bugs-and-challenges)
+- [**Future Enhancements**](#future-enhancements)
 - [**Deployment**](#deployment)
-- [**Acknowledgements**](#acknowledgement)
+- [**Acknowledgements**](#acknowledgements)
 - [**Credits**](#credits)
-
-
-
-    
+   
 
 ## **Project Introduction**
 ### PayCalcs IE
@@ -122,7 +119,7 @@ Also, [Favicons](https://favicon.io/) for some icons used.
 
     - Instruction - provides instruction on how to use Basic and Advance feature.
                
-    ![Instruction](assets/images/featins.PNG)
+    ![Instruction](assets/images/feat_instruction.PNG)
 
     - Calculate Pay - this provides the form to collect data entered by user to calculate pay. User can choose to do BASIC or ADVANCED calculcation.
     ![Calculate pay](assets/images/featcalc.PNG)
@@ -131,11 +128,13 @@ Also, [Favicons](https://favicon.io/) for some icons used.
             ![Basic calculator](assets/images/featcalcresults.PNG)
 
         - Advanced - calculates take-home pay base on salary, other income such as BIK and pension contribution. Factors such as dependents and status are considered. 
-            ![Advanced calculator](assets/images/featadv.PNG)
+            ![Advanced calculator](assets/images/feat_advance2.PNG)
+            ![Advanced calculator](assets/images/feat_advance1.PNG)
 
-        - 404 page is also created fo the advanced section which is yet to be developed.
+    - 404 page is also created fo the advanced section which is yet to be developed.
             ![Error Page](assets/images/errorpage.png)
     - No Javascript Page is also set up if browser has javascript disabled.
+            ![No Javascript Page](assets/images/nojspage.PNG)
 
 
 ## **Technology Used**
@@ -144,8 +143,8 @@ Also, [Favicons](https://favicon.io/) for some icons used.
     - CSS3
     - Javascript
 - **Frameworks, Libararies & Programs**
-    - Photoshop to enhanced logo downlaoded from Flaticon.
-    - [Balsamiq] for the wireframes
+    - [Adobe Photoshop](https://www.adobe.com/ie/products/photoshop.html) to enhanced logo downlaoded from Flaticon.
+    - [Balsamiq](https://balsamiq.com/) for the wireframes
     - [Google Fonts](https://www.googlefonts.com) to import Quicksand to the stylesheet.
     - [GitHub](https://github.com/) for hosting project codes, maintaining repository.
     - [Gitpod](https://www.gitpod.io/d) used to work on my wokspace and build the app.
@@ -160,24 +159,25 @@ Also, [Favicons](https://favicon.io/) for some icons used.
 **Code Validation**
 - [W3C Validator](https://validator.w3.org/#validate_by_input) for HTML validation.
         -  Index. html validation. [Click here for the result](https://validator.w3.org/nu/?doc=https%3A%2F%2Fhpcoloma.github.io%2Fproject-portfolio-2%2F)
-      ![](assets/images/html_validation.PNG)
+      ![](assets/validation/html_validation.PNG)
         - 404.html validation
-        ![](assets/images/paycalcs_htmlvalidation404.PNG)
+        ![](assets/validation/paycalcs_htmlvalidation404.PNG)
 
--  [W3C Validator](https://jigsaw.w3.org/css-validator/) for CSS validation.
+-  [W3C Validator](https://jigsaw.w3.org/css-validator/) for CSS validation. [Click here for the result](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fhpcoloma.github.io%2Fproject-portfolio-2%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+    ![](assets/validation/css_validation.PNG)
         
-       ![](assets/images/cssvalidator.PNG)
-- [JSHint](assets/images/jshint.png) for Javascript code validation. [Link here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fhpcoloma.github.io%2Fproject-portfolio-2%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-    
-       ![JS Hint ](assets/images/jshint.png)
+       
+- [JSHint](https://jshint.com/) for Javascript code validation. [Click here for the result](assets/validation/js_validationComplete.pdf) 
+       ![JS Hint ](assets/validation/js_validation.PNG)
     
 **Contrast Grid**
     - [Eightshapes Grid Contrast](https://contrast-grid.eightshapes.com/) for checking the colour contrast of my colour palette.  
+    
 **Testing Performance**
 - Mobile    
-       ![Lighthouse Mobile Test Results](assets/images/lighthousetesting.PNG) 
+       ![Lighthouse Mobile Test Results](assets/images/lighthouse_mobile.PNG) 
 - Desktop
-       ![Lighthouse Desktop Test Results](assets/images/lighthousetestingDesktop.PNG)
+       ![Lighthouse Desktop Test Results](assets/images/lighthouse_desktop.PNG)
     
 **Other Testing**
 - Calculation Test - I compare results of my calculate pay to the result of this calculator online to check the accuracy of my calculator. [Link Here](https://salaryaftertax.com/ie/salary-calculator)
@@ -200,7 +200,6 @@ Also, [Favicons](https://favicon.io/) for some icons used.
 
 ## **Bugs and Challenges**
 - Ran out of credit in Gitpod so had to install VSCode and set up last minute to continue working on project. Codeanywhere performance is very poor.
-- On the Advanced Tab, I am having difficulty 
 
 
 ## **Future Enhancements**
@@ -245,23 +244,25 @@ This project will not be live today without the help and support of the followin
 
  **Website sources**
 
-- https://revenue.ie - on terminology definitions.
+- [Revenue](https://revenue.ie) - on terminology definitions.
 
-- https://shanahan.ie - on terminology definitions.
+- [Shanahan](https://shanahan.ie) - on terminology definitions.
 
-- https://assets.gov.ie – on terminology definitions.
+- [Assets.Gov](https://assets.gov.ie) – on terminology definitions.
 
-- https://w3schools.com – code sources for html, css and javascript
+- [Citizen Information](https://www.citizensinformation.ie/en/money-and-tax/tax/income-tax/how-your-tax-is-calculated/) - for information regarding taxation on income.
 
-- https://stackoverflow.com/ - for codes, background image, tips and answers to some q&a.
+- [W3Schools](https://w3schools.com) – code sources for html, css and javascript
 
-- https://irishtaxrebates.ie – on terminology definitions.
+- [Stackoverflow](https://stackoverflow.com/) - for codes, background image, tips and answers to some q&a.
 
-- https://flaticon.com - for icons
+- [Irish Tax Rebats](https://irishtaxrebates.ie) – on terminology definitions.
 
-- https://salaryaftertax.com - to compare calculations.
+- [Flaticon](https://flaticon.com) - for icons
 
-- [www.tinypng.com](www.tinypng.com) for resizing images.
+- [Salary After tax](https://salaryaftertax.com) and [The Salary Calculator](https://ie.thesalarycalculator.co.uk/) - to compare calculations.
+
+- [Tinypng](www.tinypng.com) for resizing images.
 
 
 
