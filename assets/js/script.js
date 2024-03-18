@@ -249,6 +249,13 @@ function updateTaxCredits() {
     //Reset otherTaxCredits
     otherTaxCredits = 0;
 
+    //validate age input
+    const age = parseFloat(ageInput.value);
+    if(isNaN(age) || age < 14 || age > 110) {
+        alert('Please enter a valid age between 14 to 110.')
+        return;
+    }
+
     if (singleInput.checked && parseInt(ageInput.value) >= 65) {
         otherTaxCredits += taxCreditAgeSingle;
     } 
@@ -329,7 +336,7 @@ function calculateSalaryAdv() {
         netIncomeTax = 0;
     }
 
-    calculateMonthlyWeekly(yearlySalary, pensionContribution, netIncomeTax, uscDeduction, prsiDeduction);
+    calculateMonthlyWeekly(yearlySalary, netIncomeTax, uscDeduction, prsiDeduction);
 
     //function to create the result table
     createResultTableAdv(details, timePeriods, values, netPay);
