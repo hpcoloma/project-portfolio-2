@@ -34,6 +34,7 @@ const taxCreditAgeMarried = 490;
 let incomeTax;
 let netIncomeTax;
 let otherTaxCredits = 0;
+let reducedTaxCredit = 0;
 
 let pensionContribution;
 let uscDeduction;
@@ -236,6 +237,7 @@ function calculateSalary() {
     
     //function to create the result table
     createResultTable(details, timePeriods, values, netPay);
+
 }
 
 function updateTaxCredits() {
@@ -245,20 +247,17 @@ function updateTaxCredits() {
     const depInput = document.getElementById('depyes');
     const rentInput = document.getElementById('rentyes');
     const spouseIncomeInput = document.getElementById('spouse-income');
-
-    //Reset otherTaxCredits
-    otherTaxCredits = 0;
-
-    //validate age input
+    let spouseIncome = parseInt(spouseIncomeInput.value);
     const age = parseFloat(ageInput.value);
-    if(isNaN(age) || age < 14 || age > 110) {
-        alert('Please enter a valid age between 14 to 110.')
-        return;
-    }
+    
+
+    // Reset otherTaxCredits
+    otherTaxCredits = 0;
 
     if (singleInput.checked && parseInt(ageInput.value) >= 65) {
         otherTaxCredits += taxCreditAgeSingle;
-    } 
+    }
+    
     if (singleInput.checked && depInput.checked) {
         otherTaxCredits += taxCreditSpcc;
     }
@@ -266,7 +265,7 @@ function updateTaxCredits() {
         otherTaxCredits += taxCreditRentS;
     }
     if (marriedInput.checked) {
-        otherTaxCredits += taxCreditMarried
+        otherTaxCredits += taxCreditMarried;
     }
     if (marriedInput.checked && parseInt(ageInput.value) >= 65) {
         otherTaxCredits += taxCreditAgeMarried;
@@ -274,8 +273,28 @@ function updateTaxCredits() {
     if (marriedInput.checked && rentInput.checked) {
         otherTaxCredits += taxCreditRentM;
     }
-    if (marriedInput.checked && parseInt(spouseIncomeInput.value) == 0 && depInput.checked) {
-        otherTaxCredits += taxCreditHomeCare;
+
+    if (marriedInput.checked && depInput.checked) {
+        if (parseInt(spouseIncomeInput.value) >= 0 && parseInt(spouseIncomeInput.value) <= 7200) {
+            otherTaxCredits += taxCreditHomeCare;
+        } else if (parseInt(spouseIncomeInput.value) > 7200 && parseInt(spouseIncomeInput.value) <= 10800) {
+            reducedTaxCredit = taxCreditHomeCare - ((parseInt(spouseIncomeInput.value)-7200)/2);
+            otherTaxCredits += reducedTaxCredit;
+        }
+    }
+
+    // Validate age input
+    if(isNaN(age) || age < 14 || age > 110) {
+        alert('Please enter a valid age between 14 to 110.');
+        return;
+    }
+
+    // Validate spouse income
+    if (isNaN(spouseIncome) || spouseIncome < 0) {
+        alert('Spouse income must not be a negative value.');
+        spouseIncome = 0;
+        spouseIncomeInput.value = spouseIncome; // Update the input field
+        return false;
     }
 
 }
@@ -289,7 +308,7 @@ function calculatePension(yearlySalary) {
         alert('Please enter a valid pension contribution percentage.');
         return;
     } else if(pensionPercentage < 0 || pensionPercentage > 40 ) {
-        alert('Invalid pension contribution.')
+        alert('Invalid pension contribution.');
         return;
     }
 
@@ -339,7 +358,7 @@ function calculateSalaryAdv() {
     calculateMonthlyWeekly(yearlySalary, netIncomeTax, uscDeduction, prsiDeduction);
 
     //function to create the result table
-    createResultTableAdv(details, timePeriods, values, netPay);
+    createResultTableAdv(details, timePeriods, values, netPay, pensionContribution);
 
     
 }
@@ -379,8 +398,8 @@ function createResultTable(details, timePeriods, values, netPay) {
 }
 
 //Table for Advance
-function createResultTableAdv(details, timePeriods, values, netPay) {
-    const table = ResultTable(details, timePeriods, values, netPay); 
+function createResultTableAdv(details, timePeriods, values, netPay, pensionContribution) {
+    const table = ResultTable(details, timePeriods, values, netPay, pensionContribution); 
     displayResultTableAdv(table);   
 }
 
@@ -397,7 +416,7 @@ function ResultTable(details, timePeriods, values, netPay) {
         headerCell.textContent = timePeriods[i];
     }
 
-    // Create rows for details and net pay values
+    // Create rows
     for (let i = 0; i < details.length; i++) {
         const row = tbody.insertRow(i);
         const detailsCell = row.insertCell(0);
@@ -408,6 +427,14 @@ function ResultTable(details, timePeriods, values, netPay) {
             valueCell.textContent = `€${values[i * timePeriods.length + j].toLocaleString()}`;
         }
     }
+
+    // Add a row for pension contribution
+    //const pensionRow = tbody.insertRow(details.length);
+    //pensionRow.insertCell(0).textContent = "Pension Contribution"l;
+    //pensionRow.insertCell(1).textContent = '€${pensionContribution.toLocaleString()}';
+    //for (let i = 0; i < timePeriods.length -1; ++1) {
+    //    pensionRow.insertCell(i + 2).textContent = '';
+    //}
 
     // Create a row for net pay values
     const netPayRow = tbody.insertRow(details.length);
